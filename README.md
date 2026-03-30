@@ -16,8 +16,8 @@ Each game:
 
 - seats **8 models**
 - starts from a fixed **800**-coin pot
-- guarantees each seat **10** coins, then splits the rest unevenly
-- announces one public prize ladder from a **3 x 3** bank of prize regimes
+- guarantees each seat **10** coins, then splits the remaining **720** with a controlled Gamma/Dirichlet-style draw
+- announces one of **9** public monotone prize ladders from a **3 x 3** regime bank
 - runs **6 elimination rounds**
 - ends with a special finalist-controlled buyout phase plus a bounded jury bonus
 
@@ -110,7 +110,19 @@ That is why the headline board is **Bradley-Terry over wealth-based pairwise res
 
 ## Why Public Balances But Private Transfers
 
-That combination is deliberate. Public balances keep the economic state auditable: every seat can see who is rich, who is broke, and how the table changes after each transfer phase. Private transfers preserve the harder strategic problem. Models can still buy support, conceal who paid whom, and force the rest of the table to infer coalitions from later balance changes instead of reading a fully revealed transaction log.
+That combination is deliberate. Public balances keep the economic state auditable: every seat can see who is rich, who is broke, and how the table changes after each transfer phase. Private transfers preserve the harder strategic problem. Models can still buy support, conceal who paid whom, and force the rest of the table to infer coalitions from later balance changes instead of reading a fully revealed transaction log. Those public balance deltas are only **net** effects of a simultaneous transfer phase, not a public sender-recipient ledger.
+
+---
+
+## Why This Benchmark Is Controlled
+
+- **Starting balances are controlled, not ad hoc.** Every game starts from `800`. Each seat gets a guaranteed floor of `10`, and the remaining `720` is split with a Gamma/Dirichlet-style draw using concentration `6.0`. In ordinary runs that draw is deterministic from the game seed. In mirrored evaluation packs, the exact starting-balance multiset is reused across both linked games.
+- **Prize variation is explicit and bounded.** The game announces one public monotone ladder chosen from `9` regimes: `0.7x / 0.9x / 1.1x` crossed with `ultra_top_heavy / top_heavy / moderate`. The ladder stays fixed for the whole game. Eliminations and transfers do not confiscate balances or rewrite the prize pool.
+- **Simultaneous phases reduce action-order artifacts.** Private DMs follow a fixed `4,4,3,3,3,2` schedule. In each DM subround, outbound choices are made from the same frozen state, then delivered at once, and seats may reply to up to `2` non-mutual inbound DMs. Transfers are also chosen from one frozen balance snapshot and applied simultaneously, so money received in that phase cannot be re-spent immediately.
+- **The information split is intentional.** Public balances make the economic state auditable. Private transfers keep bargaining, concealment, and coalition inference live because other seats only see later net balance changes, not the full transfer log.
+- **Binding commitments are narrow and explicit.** Ordinary promises, threats, and alliance claims are cheap talk. The binding actions are executed transfers, structured settlement submissions, and sealed fallback buyout bids.
+- **The endgame is rule-bound.** Finalists get `2` private negotiation rounds, then simultaneous settlement submissions. Settlement only executes if both finalists designate the same `1st`-place seat and the feasible payment bounds overlap. Otherwise the game falls to a capped sealed buyout. After placement is fixed, jurors can only reallocate a reserved bounded bonus pool; they cannot reopen `1st` vs `2nd`.
+- **Prompts expose the game state without coaching a house style.** They surface rules, payoffs, and current visible context, but are designed not to tell the models what strategy to use or how to "play correctly."
 
 ---
 
@@ -278,13 +290,13 @@ A few representative profiles:
 ## How One Game Works
 
 1. **Setup**
-   Publicly announce starting balances and one public prize ladder.
+   Publicly announce starting balances and one public prize ladder. The starting pot is fixed at `800`: each seat gets `10`, and the remaining `720` is split by the controlled starting-balance draw.
 
 2. **Public and private play**
-   Each active seat gets one public statement and the scheduled simultaneous private DM subrounds.
+   Each active seat gets one public statement and the scheduled simultaneous private DM subrounds. In the canonical 8-seat flow, the DM schedule is `4,4,3,3,3,2`, and each DM subround is chosen from one frozen table state before messages are delivered.
 
 3. **Transfers**
-   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase, and the later public balance update shows the net effect without fully revealing who paid whom.
+   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase. Transfer choices are made from one frozen balance snapshot and then applied simultaneously, so received money cannot be re-spent in that same phase. The later public balance update shows the net effect without fully revealing who paid whom.
 
    Ordinary promises are non-binding. The binding economic actions in the protocol are transfers, structured settlement submissions, and fallback buyout bids.
 
@@ -292,7 +304,7 @@ A few representative profiles:
    Seats vote publicly. Tie-break speeches and tie-break votes are used when needed.
 
 5. **Final two**
-   The finalists get **2** private negotiation rounds, then simultaneous settlement submissions, then a capped sealed buyout fallback if settlement fails. Settlement payments and fallback bids are bounded by current balances and the underlying prize gap, so the finale cannot create arbitrary value.
+   The finalists get **2** private negotiation rounds, then simultaneous settlement submissions. Settlement only executes if both finalists name the same `1st`-place seat and the feasible payment bounds overlap. Otherwise the game falls to a capped sealed buyout. Settlement payments and fallback bids are bounded by current balances and the underlying prize gap, so the finale cannot create arbitrary value.
 
 6. **Public endgame disclosure**
    After finalist-controlled placement is fixed, the benchmark publicly discloses the economics, the finalists make short public appeals, and the eliminated jurors split only a bounded reserved bonus pool. Jurors cannot overturn who got 1st and 2nd; they only reallocate that reserved bonus after placement is fixed.
