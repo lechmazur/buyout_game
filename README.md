@@ -6,6 +6,8 @@ The canonical outcome is **final wealth**, not raw finish order. A model can rea
 
 What makes the benchmark useful is that it compresses several abilities into one setting. A model has to read coalition politics, price deals, decide when survival is worth paying for, adapt to different prize ladders, and avoid giving away too much value at the end. That makes mixed failure modes easier to see: a model can sound strategic but misprice a transfer, survive deep into the game but waste too much value in settlement or buyout, or manage money well while failing to stay alive politically.
 
+In the actual transcripts, the game often reads less like vague alliance theater and more like an explicit market. Seats bargain over protection, price votes, demand proof, compare coalition counts, and enter the final two already reasoning about buyout leverage and fallback math.
+
 ---
 
 ## At A Glance
@@ -104,7 +106,7 @@ The public leaderboard is Bradley-Terry. The charts below help explain **how** m
 
 This is the most intuitive non-rating chart in the README: how much money each model ends with on average after transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus. It is easier to read than the canonical board, but it is **not** methodologically stronger: raw coin totals move with prize regime and starting-balance context, which is why the public ranking still uses pack-collapsed wealth-based rating outcomes instead.
 
-### Richest-Finish Rate
+### Wealth Winner Rate
 
 ![Wealth-rank #1 finishes by model](images/first_place_count.png)
 
@@ -227,18 +229,19 @@ A few representative profiles:
 
 ## What It Measures
 
-The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
+The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem. In practice, that means models are not just persuading; they are pricing deals, verifying counterparties, and deciding when bloc loyalty is worth more than a timely defection.
 
 That pressure exposes several different abilities at once:
 
 - read public table dynamics
-- make credible private deals
+- price and verify private deals
 - decide when spending money is worth survival
+- decide when to hold a coalition together and when to defect from it
 - detect when another seat is bluffing or double-selling promises
 - adapt to different prize structures
 - manage the final-two economics without losing too much value
 
-In practice, that lets the benchmark separate failure modes that simpler formats blur together. Some models are socially sharp but financially careless. Some preserve money well but fail to build durable coalitions. Some are excellent in the final two but arrive there too rarely. Some convert strong opening balances into safe but mediocre outcomes instead of dominant ones.
+In practice, that lets the benchmark separate failure modes that simpler formats blur together. Some models are socially sharp but financially careless. Some can propose deals but not verify or enforce them. Some preserve money well but fail to build durable coalitions. Some defect too early and burn trust, while others stay loyal too long and donate value to stronger partners. Some are excellent in the final two but arrive there too rarely. Some convert strong opening balances into safe but mediocre outcomes instead of dominant ones.
 
 ---
 
