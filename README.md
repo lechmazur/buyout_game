@@ -71,7 +71,6 @@ This is the headline ranking for the current public snapshot. The published orde
 - `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
 - A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
 - Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
-- For rating purposes, one complete pack counts as **one** unit, not two independent samples. Each model's outcome is first averaged across the paired games, then that pack-collapsed result is used for the public leaderboard update.
 - Only complete mirrored match packs update the public board. Standalone debug or ad hoc games do not.
 
 ---
@@ -92,57 +91,6 @@ This is the headline ranking for the current public snapshot. The published orde
 ![Buyout wealth PVP matrix](images/scoreboard_pvp_matrix.png)
 
 The pairwise heatmap shows how models compare after aggregation across complete mirrored match packs. This matters because a single scalar leaderboard always hides some structure. A model can be strong overall while still having a few specific weak matchups, or can look middle-of-the-pack overall while reliably outperforming one slice of the field.
-
----
-
-## Why Final Wealth And Mirrored Match Packs
-
-This benchmark does **not** use raw 1st-place rate as the headline result.
-
-That choice matters for three reasons:
-
-1. Placement and wealth can diverge. A model can secure 1st place in the final-two showdown and still lose the game on money.
-2. Wealth is the actual incentive surface of the game. Seats bargain over transfers, balances, and endgame payments all the way through, so ranking only by survival would throw away much of what the benchmark is trying to measure.
-3. Raw coin totals are not directly comparable across different prize ladders and starting-balance scenarios. The canonical board therefore uses wealth-derived pairwise / partial-score outcomes rather than simply ranking models by average final coins.
-4. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, rich/poor balance-rank exposure is mirrored, and public speaking-order exposure is balanced across the linked games.
-
-That is why the headline board is **Bradley-Terry over wealth-based pairwise results from complete mirrored packs** rather than a simpler finish-order or finalist-only summary.
-
----
-
-## Why Public Balances But Private Transfers
-
-That combination is deliberate. Public balances keep the economic state auditable: every seat can see who is rich, who is broke, and how the table changes after each transfer phase. Private transfers preserve the harder strategic problem. Models can still buy support, conceal who paid whom, and force the rest of the table to infer coalitions from later balance changes instead of reading a fully revealed transaction log. Those public balance deltas are only **net** effects of a simultaneous transfer phase, not a public sender-recipient ledger.
-
----
-
-## Why This Benchmark Is Controlled
-
-- **Starting balances are controlled, not ad hoc.** Every game starts from `800`. Each seat gets a guaranteed floor of `10`, and the remaining `720` is split with a Gamma/Dirichlet-style draw using concentration `6.0`. In ordinary runs that draw is deterministic from the game seed. In mirrored evaluation packs, the exact starting-balance multiset is reused across both linked games.
-- **Prize variation is explicit and bounded.** The game announces one public monotone ladder chosen from `9` regimes: `0.7x / 0.9x / 1.1x` crossed with `ultra_top_heavy / top_heavy / moderate`. The ladder stays fixed for the whole game. Eliminations and transfers do not confiscate balances or rewrite the prize pool. In top-heavy ladders, upgrading placement matters more; in more moderate ladders, preserving balance matters more.
-- **Simultaneous phases reduce action-order artifacts.** Private DMs follow a fixed `4,4,3,3,3,2` schedule. In each DM subround, outbound choices are made from the same frozen state, then delivered at once, and seats may reply to up to `2` non-mutual inbound DMs. Transfers are also chosen from one frozen balance snapshot and applied simultaneously, so money received in that phase cannot be re-spent immediately.
-- **The information split is intentional.** Public balances make the economic state auditable. Private transfers keep bargaining, concealment, and coalition inference live because other seats only see later net balance changes, not the full transfer log.
-- **Binding commitments are narrow and explicit.** Ordinary promises, threats, and alliance claims are cheap talk. The binding actions are executed transfers, structured settlement submissions, and sealed fallback buyout bids.
-- **The endgame is rule-bound.** Finalists get `2` private negotiation rounds, then simultaneous settlement submissions. Settlement only executes if both finalists designate the same `1st`-place seat and the feasible payment bounds overlap. Otherwise the game falls to a capped sealed buyout. After placement is fixed, jurors can only reallocate a reserved bounded bonus pool; they cannot reopen `1st` vs `2nd`.
-- **The jury bonus has an anti-noise control.** The bonus pool is reserved out of the original `1st`-place prize rather than created after the fact, and low juror turnout shrinks the effective split back toward `50-50` so a tiny number of votes cannot swing the whole reserved pool too aggressively.
-- **Prompts expose the game state without coaching a house style.** They surface rules, payoffs, and current visible context, but are designed not to tell the models what strategy to use or how to "play correctly."
-
----
-
-## What It Measures
-
-The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
-
-That pressure exposes several different abilities at once:
-
-- read public table dynamics
-- make credible private deals
-- decide when spending money is worth survival
-- detect when another seat is bluffing or double-selling promises
-- adapt to different prize structures
-- manage the final-two economics without losing too much value
-
-In practice, that lets the benchmark separate several failure modes that simpler formats blur together. Some models are socially sharp but financially careless. Some preserve money well but fail to build durable coalitions. Some are excellent in the final two but arrive there too rarely. Some convert strong opening balances into safe but mediocre outcomes instead of dominant ones. The leaderboard rewards the models that combine those skills best over many mirrored games.
 
 ---
 
@@ -234,18 +182,6 @@ That is the cleanest reason the benchmark does **not** treat survivor placement 
 
 ---
 
-## What Strong Performance Looks Like
-
-Strong performance in this benchmark is not just polished strategy talk. It usually means some combination of:
-
-- staying politically safe without overpaying for short-term survival
-- spending money when it actually changes vote math or alliance structure
-- preserving flexibility across very different prize ladders
-- converting favorable finalist positions into value without giving too much back in settlement or buyout
-- recovering from weak starting balances instead of only cashing in strong ones
-
----
-
 ## Quotes
 
 The quote gallery helps show what this benchmark sounds like in practice: threats, bribes, coalition maintenance, kingmaking accusations, and blunt endgame pricing. The [full quote gallery](reports/quotes_main_006/quotes/gallery/overall_best_quotes.md) is a post-run highlight pass with game IDs, phases, and model attributions; it is not a rating input. For complete games rather than selected lines, see the [current transcript index](reports/quotes_main_006/transcripts.md).
@@ -290,6 +226,75 @@ A few representative profiles:
 
 ---
 
+## What It Measures
+
+The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
+
+That pressure exposes several different abilities at once:
+
+- read public table dynamics
+- make credible private deals
+- decide when spending money is worth survival
+- detect when another seat is bluffing or double-selling promises
+- adapt to different prize structures
+- manage the final-two economics without losing too much value
+
+In practice, that lets the benchmark separate failure modes that simpler formats blur together. Some models are socially sharp but financially careless. Some preserve money well but fail to build durable coalitions. Some are excellent in the final two but arrive there too rarely. Some convert strong opening balances into safe but mediocre outcomes instead of dominant ones.
+
+---
+
+## How The Public Score Is Built
+
+1. **Inside each game, seats are ranked by final wealth.** That includes starting balances, transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus.
+2. **Exact equal final-wealth ties are shared, not broken arbitrarily.** Tied seats share the same wealth rank and the same canonical partial score.
+3. **Across games, the two mirrored games in one complete match pack are collapsed into one pack result before rating.** Each model's outcome is averaged across the linked pair, and only then does Bradley-Terry update.
+
+That is why the main board is a pack-collapsed wealth leaderboard, while charts like average final wealth remain useful but secondary diagnostics.
+
+---
+
+## Common Misreadings
+
+- Eliminating a seat does **not** confiscate or redistribute that seat's balance.
+- Transfers and eliminations do **not** change the announced prize ladder or total prize pool.
+- A seat with `0` balance is still fully active until eliminated. It just cannot send positive transfers and has no fallback buyout budget.
+- Public balance changes after a transfer phase are **net deltas**, not a public sender-recipient ledger.
+
+---
+
+## Why Final Wealth And Mirrored Match Packs
+
+This benchmark does **not** use raw 1st-place rate as the headline result.
+
+That choice matters for three reasons:
+
+1. Placement and wealth can diverge. A model can secure 1st place in the final-two showdown and still lose the game on money.
+2. Wealth is the actual incentive surface of the game. Seats bargain over transfers, balances, and endgame payments all the way through, so ranking only by survival would throw away much of what the benchmark is trying to measure.
+3. Raw coin totals move with prize ladders and starting-balance scenarios, so the public board compares pack-collapsed wealth outcomes under matched mirrored conditions rather than simply ranking models by average final coins.
+4. Mirrored 2-game match packs reduce seat and speaking-order artifacts by reusing the same lineup, prize regime, and starting-balance multiset while permuting exposure across the linked pair.
+
+---
+
+## Why Public Balances But Private Transfers
+
+That combination is deliberate. Public balances keep the economic state auditable: every seat can see who is rich, who is broke, and how the table changes after each transfer phase. Private transfers preserve the harder strategic problem. Models can still buy support, conceal who paid whom, and force the rest of the table to infer coalitions from later balance changes instead of reading a fully revealed transaction log.
+
+---
+
+## Why This Benchmark Is Controlled
+
+- **Starting balances are controlled, not ad hoc.** Every game starts from `800`. Each seat gets a guaranteed floor of `10`, and the remaining `720` is split with a Gamma/Dirichlet-style draw using concentration `6.0`. In ordinary runs that draw is deterministic from the game seed. In mirrored evaluation packs, the exact starting-balance multiset is reused across both linked games.
+- **Prize variation is explicit and bounded.** The game announces one public monotone ladder chosen from `9` regimes: `0.7x / 0.9x / 1.1x` crossed with `ultra_top_heavy / top_heavy / moderate`. The ladder stays fixed for the whole game. Eliminations and transfers do not confiscate balances or rewrite the prize pool. In top-heavy ladders, upgrading placement matters more; in more moderate ladders, preserving balance matters more.
+- **Simultaneous phases reduce action-order artifacts.** Private DMs follow a fixed `4,4,3,3,3,2` schedule. In each DM subround, outbound choices are made from the same frozen state, then delivered at once, and seats may reply to up to `2` non-mutual inbound DMs. Transfers are also chosen from one frozen balance snapshot and applied simultaneously, so money received in that phase cannot be re-spent immediately.
+- **Word caps prevent mechanical spam.** Private DMs, tie-break speeches, finalist negotiation messages, and finalist public appeals all have hard caps, so the benchmark rewards bargaining quality rather than raw verbosity.
+- **The information split is intentional.** Public balances make the economic state auditable. Private transfers keep bargaining, concealment, and coalition inference live because other seats only see later net balance changes, not the full transfer log.
+- **Binding commitments are narrow and explicit.** Ordinary promises, threats, and alliance claims are cheap talk. The binding actions are executed transfers, structured settlement submissions, and sealed fallback buyout bids.
+- **The endgame is rule-bound.** Finalists get `2` private negotiation rounds, then simultaneous settlement submissions. Settlement only executes if both finalists designate the same `1st`-place seat and the feasible payment bounds overlap. Otherwise the game falls to a capped sealed buyout. After placement is fixed, jurors can only reallocate a reserved bounded bonus pool; they cannot reopen `1st` vs `2nd`.
+- **The jury bonus has an anti-noise control.** The bonus pool is reserved out of the original `1st`-place prize rather than created after the fact, and low juror turnout shrinks the effective split back toward `50-50` so a tiny number of votes cannot swing the whole reserved pool too aggressively.
+- **Prompts expose the game state without coaching a house style.** They surface rules, payoffs, and current visible context, but are designed not to tell the models what strategy to use or how to "play correctly."
+
+---
+
 ## How One Game Works
 
 1. **Setup**
@@ -299,7 +304,7 @@ A few representative profiles:
    Each active seat gets one public statement and the scheduled simultaneous private DM subrounds. In the canonical 8-seat flow, the DM schedule is `4,4,3,3,3,2`, and each DM subround is chosen from one frozen table state before messages are delivered.
 
 3. **Transfers**
-   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase. Transfer choices are made from one frozen balance snapshot and then applied simultaneously, so received money cannot be re-spent in that same phase. The later public balance update shows the net effect without fully revealing who paid whom.
+   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase. Transfer choices are made from one frozen balance snapshot and then applied simultaneously, so received money cannot be re-spent in that same phase. The later public balance update shows only the net effect.
 
    Ordinary promises are non-binding. The binding economic actions in the protocol are transfers, structured settlement submissions, and fallback buyout bids.
 
@@ -311,9 +316,6 @@ A few representative profiles:
 
 6. **Public endgame disclosure**
    After finalist-controlled placement is fixed, the benchmark publicly discloses the economics, the finalists make short public appeals, and the eliminated jurors split only a bounded reserved bonus pool. Jurors cannot overturn who got 1st and 2nd; they only reallocate that reserved bonus after placement is fixed.
-
-7. **Canonical scoring**
-   The benchmark ranks seats by **final wealth**, not by raw finish order. Across games, complete mirrored 2-game match packs are the canonical rating units.
 
 One important consequence: a model can play the social game well enough to reach the end, then still lose the benchmark if it overpays in the buyout or mishandles transfers earlier in the game.
 
