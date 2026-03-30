@@ -8,7 +8,6 @@
 - report_count: `120`
 - quote_count: `89`
 - [source](claude-opus-4-6-0K/dossier_source.md)
-- [prompt](claude-opus-4-6-0K/dossier_prompt.txt)
 - [dossier](claude-opus-4-6-0K/model_dossier.md)
 
 ## Claude Opus 4.6 (high reasoning)
@@ -17,7 +16,6 @@
 - report_count: `120`
 - quote_count: `102`
 - [source](claude-opus-4-6-adaptive/dossier_source.md)
-- [prompt](claude-opus-4-6-adaptive/dossier_prompt.txt)
 - [dossier](claude-opus-4-6-adaptive/model_dossier.md)
 
 ## Claude Sonnet 4.6 (no reasoning)
@@ -26,7 +24,6 @@
 - report_count: `120`
 - quote_count: `91`
 - [source](claude-sonnet-4-6-0K/dossier_source.md)
-- [prompt](claude-sonnet-4-6-0K/dossier_prompt.txt)
 - [dossier](claude-sonnet-4-6-0K/model_dossier.md)
 
 ## Claude Sonnet 4.6 (high reasoning)
@@ -35,7 +32,6 @@
 - report_count: `120`
 - quote_count: `96`
 - [source](claude-sonnet-4-6-adaptive/dossier_source.md)
-- [prompt](claude-sonnet-4-6-adaptive/dossier_prompt.txt)
 - [dossier](claude-sonnet-4-6-adaptive/model_dossier.md)
 
 ## Deepseek V3.2
@@ -44,7 +40,6 @@
 - report_count: `120`
 - quote_count: `7`
 - [source](deepseek-v32-exp/dossier_source.md)
-- [prompt](deepseek-v32-exp/dossier_prompt.txt)
 - [dossier](deepseek-v32-exp/model_dossier.md)
 
 ## Baidu Ernie 5.0
@@ -53,7 +48,6 @@
 - report_count: `120`
 - quote_count: `130`
 - [source](ernie-5/dossier_source.md)
-- [prompt](ernie-5/dossier_prompt.txt)
 - [dossier](ernie-5/model_dossier.md)
 
 ## Gemini 3.1 Flash-Lite Preview
@@ -62,7 +56,6 @@
 - report_count: `120`
 - quote_count: `11`
 - [source](gemini-3.1-flash-lite-preview/dossier_source.md)
-- [prompt](gemini-3.1-flash-lite-preview/dossier_prompt.txt)
 - [dossier](gemini-3.1-flash-lite-preview/model_dossier.md)
 
 ## Gemini 3.1 Pro Preview
@@ -71,7 +64,6 @@
 - report_count: `120`
 - quote_count: `198`
 - [source](gemini-3.1-pro-preview/dossier_source.md)
-- [prompt](gemini-3.1-pro-preview/dossier_prompt.txt)
 - [dossier](gemini-3.1-pro-preview/model_dossier.md)
 
 ## GLM-5
@@ -80,7 +72,6 @@
 - report_count: `120`
 - quote_count: `49`
 - [source](glm-5/dossier_source.md)
-- [prompt](glm-5/dossier_prompt.txt)
 - [dossier](glm-5/model_dossier.md)
 
 ## GPT-5.4 (high reasoning)
@@ -89,7 +80,6 @@
 - report_count: `120`
 - quote_count: `99`
 - [source](gpt-5.4-high/dossier_source.md)
-- [prompt](gpt-5.4-high/dossier_prompt.txt)
 - [dossier](gpt-5.4-high/model_dossier.md)
 
 ## GPT-5.4 (no reasoning)
@@ -98,7 +88,6 @@
 - report_count: `120`
 - quote_count: `42`
 - [source](gpt-5.4-none/dossier_source.md)
-- [prompt](gpt-5.4-none/dossier_prompt.txt)
 - [dossier](gpt-5.4-none/model_dossier.md)
 
 ## GPT-OSS-120B
@@ -107,7 +96,6 @@
 - report_count: `120`
 - quote_count: `18`
 - [source](gpt-oss-120b/dossier_source.md)
-- [prompt](gpt-oss-120b/dossier_prompt.txt)
 - [dossier](gpt-oss-120b/model_dossier.md)
 
 ## Grok 4.20 Beta 0309 (Non-Reasoning)
@@ -116,7 +104,6 @@
 - report_count: `120`
 - quote_count: `48`
 - [source](grok-4.20-beta-0309-non-reasoning/dossier_source.md)
-- [prompt](grok-4.20-beta-0309-non-reasoning/dossier_prompt.txt)
 - [dossier](grok-4.20-beta-0309-non-reasoning/model_dossier.md)
 
 ## Grok 4.20 Beta 0309 (Reasoning)
@@ -125,7 +112,6 @@
 - report_count: `120`
 - quote_count: `17`
 - [source](grok-4.20-beta-0309-reasoning/dossier_source.md)
-- [prompt](grok-4.20-beta-0309-reasoning/dossier_prompt.txt)
 - [dossier](grok-4.20-beta-0309-reasoning/model_dossier.md)
 
 ## Kimi K2.5 Thinking
@@ -134,7 +120,6 @@
 - report_count: `120`
 - quote_count: `101`
 - [source](kimi-k2.5/dossier_source.md)
-- [prompt](kimi-k2.5/dossier_prompt.txt)
 - [dossier](kimi-k2.5/model_dossier.md)
 
 ## Llama 4 Maverick
@@ -143,7 +128,6 @@
 - report_count: `120`
 - quote_count: `8`
 - [source](llama4-maverick/dossier_source.md)
-- [prompt](llama4-maverick/dossier_prompt.txt)
 - [dossier](llama4-maverick/model_dossier.md)
 
 ## Xiaomi MiMo V2 Pro
@@ -152,7 +136,6 @@
 - report_count: `120`
 - quote_count: `14`
 - [source](mimo-v2-pro/dossier_source.md)
-- [prompt](mimo-v2-pro/dossier_prompt.txt)
 - [dossier](mimo-v2-pro/model_dossier.md)
 
 ## MiniMax-M2.7
@@ -161,7 +144,6 @@
 - report_count: `120`
 - quote_count: `38`
 - [source](minimax-m2.7/dossier_source.md)
-- [prompt](minimax-m2.7/dossier_prompt.txt)
 - [dossier](minimax-m2.7/model_dossier.md)
 
 ## Mistral Large 3
@@ -170,7 +152,6 @@
 - report_count: `120`
 - quote_count: `25`
 - [source](mistral-large-2512/dossier_source.md)
-- [prompt](mistral-large-2512/dossier_prompt.txt)
 - [dossier](mistral-large-2512/model_dossier.md)
 
 ## Qwen3.5-397B-A17B
@@ -179,7 +160,6 @@
 - report_count: `120`
 - quote_count: `48`
 - [source](qwen3.5-397b-a17b/dossier_source.md)
-- [prompt](qwen3.5-397b-a17b/dossier_prompt.txt)
 - [dossier](qwen3.5-397b-a17b/model_dossier.md)
 
 ## ByteDance Seed2.0 Pro
@@ -188,5 +168,4 @@
 - report_count: `120`
 - quote_count: `21`
 - [source](seed-2.0-pro/dossier_source.md)
-- [prompt](seed-2.0-pro/dossier_prompt.txt)
 - [dossier](seed-2.0-pro/model_dossier.md)
