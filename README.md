@@ -1,0 +1,298 @@
+# Buyout Game Benchmark: Multi-Agent Bargaining, Transfers, and Hostile Takeovers
+
+This benchmark measures long-horizon social strategy under explicit financial incentives. Eight models play a multi-round elimination game with unequal starting balances, a public prize ladder, private transfers, public votes, and a finalist-only endgame where the last two seats can negotiate, settle, or buy each other out.
+
+The canonical outcome is **final wealth**, not raw finish order. A model can reach the end, take 1st place in the finale, and still lose on money. That is the central design choice: the benchmark rewards models that manage incentives, alliances, spending, and endgame leverage well across many games, not just models that survive the longest.
+
+What makes the benchmark useful is that it compresses several abilities into one setting. A model has to read coalition politics, price deals, decide when survival is worth paying for, adapt to different prize ladders, and avoid giving away too much value at the end. That makes mixed failure modes easier to see: a model can sound strategic but misprice a transfer, survive deep into the game but waste too much value in settlement or buyout, or manage money well while failing to stay alive politically.
+
+---
+
+## At A Glance
+
+![Buyout game protocol infographic](assets/infographic.jpg)
+
+Each game:
+
+- seats **8 models**
+- starts from a fixed **800**-coin pot
+- guarantees each seat **10** coins, then splits the rest unevenly
+- announces one public prize ladder from a **3 x 3** bank of prize regimes
+- runs **6 elimination rounds**
+- ends with a special finalist-controlled buyout phase plus a bounded jury bonus
+
+Current canonical variant:
+
+- **balances are public**
+- **transfers are private**
+- **elimination votes are public**
+- **final wealth is the canonical score**
+- **public ratings use mirrored 2-game match packs**
+
+---
+
+## Main Leaderboard
+
+![Buyout Game Bradley-Terry leaderboard](images/scoreboard_bradley_terry.png)
+
+This is the headline ranking for the current public snapshot. The published order uses **Bradley-Terry** over wealth-based pairwise results from complete mirrored match packs.
+
+| Rank | Model | BT | Games | Match Packs |
+| ---: | --- | ---: | ---: | ---: |
+| 1 | GPT-5.4 (high reasoning) | 2052.8 | 158 | 79 |
+| 2 | GLM-5 | 1840.2 | 162 | 81 |
+| 3 | Claude Opus 4.6 (high reasoning) | 1800.3 | 162 | 81 |
+| 4 | GPT-5.4 (no reasoning) | 1694.8 | 188 | 94 |
+| 5 | Gemini 3.1 Flash-Lite Preview | 1659.3 | 198 | 99 |
+| 6 | Claude Sonnet 4.6 (high reasoning) | 1655.5 | 200 | 100 |
+| 7 | Gemini 3.1 Pro Preview | 1609.1 | 196 | 98 |
+| 8 | Grok 4.20 Beta 0309 (Reasoning) | 1603.6 | 166 | 83 |
+| 9 | Claude Sonnet 4.6 (no reasoning) | 1587.0 | 202 | 101 |
+| 10 | Claude Opus 4.6 (no reasoning) | 1565.1 | 190 | 95 |
+| 11 | Kimi K2.5 Thinking | 1517.0 | 190 | 95 |
+| 12 | Xiaomi MiMo V2 Pro | 1457.0 | 204 | 102 |
+| 13 | ByteDance Seed2.0 Pro | 1448.1 | 186 | 93 |
+| 14 | Deepseek V3.2 | 1440.5 | 182 | 91 |
+| 15 | MiniMax-M2.7 | 1387.7 | 180 | 90 |
+| 16 | Qwen3.5-397B-A17B | 1366.3 | 192 | 96 |
+| 17 | Mistral Large 3 | 1262.6 | 156 | 78 |
+| 18 | Grok 4.20 Beta 0309 (Non-Reasoning) | 1219.1 | 158 | 79 |
+| 19 | Llama 4 Maverick | 1188.6 | 158 | 79 |
+| 20 | GPT-OSS-120B | 1093.8 | 158 | 79 |
+| 21 | Baidu Ernie 5.0 | 1051.6 | 158 | 79 |
+
+---
+
+## How To Read The Main Chart
+
+- Each bar is one model's current **Bradley-Terry rating**.
+- Higher bars mean that model more often finishes with **more money**, not merely a better raw placement.
+- The gray band is an uncertainty envelope around the estimated rating.
+- `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
+- A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same starting-balance multiset, and same prize regime, but mirrored seat assignment.
+- Only complete mirrored match packs update the public board; standalone debug games do not.
+
+---
+
+## Current Snapshot
+
+- **21 rated models**
+- **468 complete games**
+- **234 mirrored 2-game match packs**
+- **8 seats per game**
+- **public balances, private transfers, public elimination votes**
+- **9 public prize ladders** from the `0.7x / 0.9x / 1.1x` by `ultra_top_heavy / top_heavy / moderate` regime bank
+
+---
+
+## Pairwise View
+
+![Buyout wealth PVP matrix](images/scoreboard_pvp_matrix.png)
+
+The pairwise heatmap shows how models compare after aggregation across complete mirrored match packs. This matters because a single scalar leaderboard always hides some structure. A model can be strong overall while still having a few specific weak matchups, or can look middle-of-the-pack overall while reliably outperforming one slice of the field.
+
+---
+
+## Why Final Wealth And Mirrored Match Packs
+
+This benchmark does **not** use raw 1st-place rate as the headline result.
+
+That choice matters for three reasons:
+
+1. Placement and wealth can diverge. A model can secure 1st place in the final-two showdown and still lose the game on money.
+2. Wealth is the actual incentive surface of the game. Seats bargain over transfers, balances, and endgame payments all the way through, so ranking only by survival would throw away much of what the benchmark is trying to measure.
+3. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, so the public leaderboard is less exposed to one lucky seating.
+
+That is why the headline board is **Bradley-Terry over wealth-based pairwise results from complete mirrored packs** rather than a simpler finish-order or finalist-only summary.
+
+---
+
+## What It Measures
+
+This is not just a conversation benchmark in a game wrapper. The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
+
+That pressure exposes several different abilities at once:
+
+- read public table dynamics
+- make credible private deals
+- decide when spending money is worth survival
+- detect when another seat is bluffing or double-selling promises
+- adapt to different prize structures
+- manage the final-two economics without losing too much value
+
+In practice, that lets the benchmark separate several failure modes that simpler formats blur together. Some models are socially sharp but financially careless. Some preserve money well but fail to build durable coalitions. Some are excellent in the final two but arrive there too rarely. Some convert strong opening balances into safe but mediocre outcomes instead of dominant ones. The leaderboard rewards the models that combine those skills best over many mirrored games.
+
+---
+
+## Other Diagnostics
+
+The public leaderboard is Bradley-Terry. The charts below help explain **how** models are winning or losing.
+
+### Average Final Wealth
+
+![Average final wealth by model](images/wealth_summary_average_final_wealth.png)
+
+This is the most intuitive non-rating chart in the README: how much money each model ends with on average after transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus.
+
+### Transfer Activity
+
+![Transfer activity by model](images/transfer_summary_by_model.png)
+
+This chart shows how aggressively models move money around. It separates average outgoing transfers, incoming transfers, and net transfer balance, so you can see who tends to pay for influence and who tends to get paid.
+
+### Buddy Betrayal Rate
+
+![Buddy betrayal rate by model](images/buddy_betrayal_aggregated.png)
+
+This is a same-round private-ally diagnostic, not a moral score. It asks a benchmark-specific question that ordinary leaderboards miss: after privately coordinating with another seat, how often does a model then vote that same seat out in the very same round? Higher values mean a model more often turns private allies into immediate targets. In the current snapshot, Llama 4 Maverick, Mistral Large 3, and Claude Sonnet 4.6 (no reasoning) sit near the high end of that rate.
+
+### Betrayed-By-Allies Rate
+
+![Buddy betrayal victim rate by model](images/buddy_betrayal_victim_aggregated.png)
+
+This is the same signal from the other side: of the private chats a model receives, how often does that chat partner later vote it out in the same round? In the current snapshot, GPT-OSS-120B and GLM-5 are among the models most often on the receiving end of this pattern.
+
+### Final 2 Conversion
+
+![Final 2 conversion by model](images/final2_aggregated.png)
+
+This is a useful secondary diagnostic because the buyout benchmark has an unusually important endgame. But it is **not** the canonical leaderboard. A model can be strong overall without converting the final two at an elite rate, and a model can be dangerous in the final two without being the best wealth maximizer across the full game.
+
+### Wealth-Rank Distribution
+
+![Wealth rank distribution by model](images/rank_distribution_by_model.png)
+
+Each model's bars sum to 100%. This view shows how often a model finishes richest, second-richest, third-richest, and so on. It is based on **final wealth**, not survivor placement.
+
+---
+
+## What Stands Out
+
+- **GPT-5.4 (high reasoning)** leads the main Bradley-Terry board in the current snapshot.
+- **GLM-5** is one of the most interesting results in the field. It ranks `#2` overall despite a much lower outright wealth-winner rate than the leader, which means it is earning strong wealth results very consistently rather than relying on spike wins.
+- **Reasoning mode matters a lot** in several model families. In the current snapshot, GPT-5.4 high exceeds GPT-5.4 no-reasoning by about `358` BT points, Claude Opus 4.6 high exceeds Claude Opus 4.6 no-reasoning by about `235`, and Grok reasoning exceeds Grok non-reasoning by about `384`.
+- **Starting rich helps, but it does not decide the benchmark.** In the poorest-start slice, GPT-5.4 high, Claude Opus 4.6 high, and GLM-5 still lead by wealth partial score.
+- **Final-two skill is real, but it is not the same thing as overall benchmark strength.** The final-two conversion chart is led by GPT-5.4 high, but models such as GLM-5 look much stronger on the canonical wealth board than on simple finalist conversion, which is exactly why the benchmark should not collapse to an endgame-only score.
+- **Private coordination is often fragile.** The buddy-betrayal charts show that some models turn same-round private allies into vote targets much more readily than others, and that some models are much more often on the receiving end of that move.
+- The strongest current model is not just good at one phase. In the secondary diagnostics, **GPT-5.4 (high reasoning)** also ranks `#1` on upset score, conversion score, endgame extraction, and jury extraction.
+
+---
+
+## Why Placement Can Mislead
+
+In the infographic's example end state, **P4** secures **1st place** in the final-two showdown with total wealth `298`, **P7** finishes **2nd** with `326`, and **P2** finishes only **3rd** but ends up with **371**.
+
+So P2 is the actual **wealth winner** of the game.
+
+That is the cleanest reason the benchmark does **not** treat survivor placement as the final answer. The finale matters, but it is only one part of the economics.
+
+---
+
+## What Strong Performance Looks Like
+
+Strong performance in this benchmark is not just polished strategy talk. It usually means some combination of:
+
+- staying politically safe without overpaying for short-term survival
+- spending money when it actually changes vote math or alliance structure
+- preserving flexibility across very different prize ladders
+- converting favorable finalist positions into value without giving too much back in settlement or buyout
+- recovering from weak starting balances instead of only cashing in strong ones
+
+---
+
+## Quotes
+
+The quote gallery helps show what this benchmark sounds like in practice: threats, bribes, coalition maintenance, kingmaking accusations, and blunt endgame pricing. The [full quote gallery](reports/quotes_main_006/quotes/gallery/overall_best_quotes.md) is a post-run highlight pass with game IDs, phases, and model attributions; it is not a rating input.
+
+- “Pay 20 for life, or keep 142 and die.”  
+  Kimi K2.5 Thinking, Round 2 DM 2. A stripped-down survival ultimatum.
+
+- “That's not loyalty; that's a coronation.”  
+  Claude Sonnet 4.6 (high reasoning), Round 6 Public. A one-line indictment of kingmaking.
+
+- “This game pays final wealth, not romance.”  
+  GPT-5.4 (high reasoning), Round 6 Public. The cleanest summary of the benchmark's incentive surface.
+
+- “I'm reliable and desperate enough to be trustworthy.”  
+  GLM-5, Round 1 DM 2. A compact statement of weak-seat bargaining logic.
+
+- “I know I spoke against you publicly, but 60 coins changes everything.”  
+  Gemini 3.1 Pro Preview, Round 1 DM 2. A near-perfect line of cash-over-principle opportunism.
+
+- “Otherwise, I'll submit NO_DEAL, bid 0, and still win.”  
+  Gemini 3.1 Pro Preview, Round 7 Final Negotiation. A reminder that the finale can turn into hard, zero-fluff bargaining.
+
+---
+
+## Model Dossiers
+
+The dossier bundle is a narrative pass over recurring model behavior across 120 game reports per model. It helps make the leaderboard legible: which models act like coalition accountants, which ones become market-makers, which ones overspend when exposed, and which ones turn the endgame into a pricing exercise. The [full dossier index](reports/quotes_main_006/dossiers/index.md) links all 21 model writeups along with their source packs and prompts. Like the quote gallery, the dossiers are interpretive analysis, not rating inputs.
+
+A few representative profiles:
+
+- [GLM-5](reports/quotes_main_006/dossiers/glm-5/model_dossier.md)  
+  Presented as a “transactional coalition technocrat”: strongest when verifying, pricing, and timing, weaker once it becomes the rich visible seat trying to buy its way out.
+
+- [GPT-5.4 (high reasoning)](reports/quotes_main_006/dossiers/gpt-5.4-high/model_dossier.md)  
+  Plays like a skeptical banker: proof-first, price-first, and most dangerous when it can turn the endgame into pure arithmetic.
+
+- [Gemini 3.1 Pro Preview](reports/quotes_main_006/dossiers/gemini-3.1-pro-preview/model_dossier.md)  
+  Described as a market-maker that monetizes chaos brilliantly, but often turns itself into the richest and most obviously profitable target.
+
+- [Mistral Large 3](reports/quotes_main_006/dossiers/mistral-large-2512/model_dossier.md)  
+  A roaming broker that likes to “charge for uncertainty”: dangerous as a slippery middle-stack toll collector, weaker once everyone sees it as permanently for sale.
+
+---
+
+## How One Game Works
+
+1. **Setup**
+   Publicly announce starting balances and one public prize ladder.
+
+2. **Public and private play**
+   Each active seat gets one public statement and the scheduled simultaneous private DM subrounds.
+
+3. **Transfers**
+   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase.
+
+4. **Elimination**
+   Seats vote publicly. Tie-break speeches and tie-break votes are used when needed.
+
+5. **Final two**
+   The finalists get **2** private negotiation rounds, then simultaneous settlement submissions, then a capped sealed buyout fallback if settlement fails.
+
+6. **Public endgame disclosure**
+   After finalist-controlled placement is fixed, the benchmark publicly discloses the economics, the finalists make short public appeals, and the eliminated jurors split only a bounded reserved bonus pool.
+
+7. **Canonical scoring**
+   The benchmark ranks seats by **final wealth**, not by raw finish order. Across games, complete mirrored 2-game match packs are the canonical rating units.
+
+One important consequence: a model can play the social game well enough to reach the end, then still lose the benchmark if it overpays in the buyout or mishandles transfers earlier in the game.
+
+---
+
+## Limits And Caveats
+
+- The current public snapshot is one implemented protocol variant: **public balances** with **private transfers**. A private-balances version could produce meaningfully different behavior.
+- Not every useful diagnostic is canonical. Charts like final-two conversion and buddy betrayal are there to explain *how* models win or lose, not to replace the wealth leaderboard.
+- Even with mirrored match packs, this remains a multi-agent benchmark with evolving opponents and path dependence. That is part of the point, but it also means no single scalar should be read as a complete description of model behavior.
+
+---
+
+## Full Protocol Docs
+
+
+- [Operator and architecture docs](DOCS.md)
+
+---
+
+## Related Benchmarks
+
+- [Elimination Game](https://github.com/lechmazur/elimination_game/) - the closest social-strategy relative: alliances, deception, and jury pressure without buyouts or end-of-game wealth accounting
+- [PACT](https://github.com/lechmazur/pact/) - head-to-head bargaining with hidden private values, useful if you want negotiation without coalition politics
+- [BAZAAR](https://github.com/lechmazur/bazaar/) - competitive market quoting under incomplete information, closer to trading and price discovery than alliance management
+- [Step Race](https://github.com/lechmazur/step_game/) - multi-agent coordination and deception before simultaneous private actions
+- [LLM Persuasion Benchmark](https://github.com/lechmazur/persuasion/) - repeated conversation aimed at moving another model's stated position
+- [LLM Debate Benchmark](https://github.com/lechmazur/debate/) - adversarial multi-turn argument under active opposition
+- [LLM Sycophancy Benchmark](https://github.com/lechmazur/sycophancy/) - opposite-narrator contradictions and narrator-following bias
+- [LLM Thematic Generalization Benchmark](https://github.com/lechmazur/generalization/) - latent-rule induction from examples and anti-examples rather than strategic interaction

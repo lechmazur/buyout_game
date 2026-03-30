@@ -1,0 +1,1642 @@
+You are a benchmark meta-analyst reviewing one buyout_game model.
+
+Model under review: **Mistral Large 3** (`mistral-large-2512`)
+
+Your job:
+- Write a concise but vivid dossier about this model's recurring strategic
+  behavior in buyout_game.
+- Explain how it bargains, spends versus saves, manages trust and betrayal,
+  handles public pressure, and approaches late-game leverage when the source
+  material supports those claims.
+
+Guidelines:
+- Organize the dossier into 4 to 6 short titled sections.
+- Focus on recurring patterns, not raw recap.
+- Use the per-game reports as the main evidence base.
+- Use quotes sparingly and only when a short phrase crystallizes a pattern.
+- Pay attention to contradictions, adaptations, and context sensitivity.
+- Keep the writeup under 700 words.
+- Output Markdown only.
+
+Source pack:
+- report_count: 120
+- notable_quote_count: 25
+
+# Buyout Model Dossier Source: Mistral Large 3
+
+## Snapshot
+
+- model: `mistral-large-2512`
+- display_name: **Mistral Large 3**
+- report_count: `120`
+- notable_quote_count: `25`
+
+## Notable Quotes
+
+- game `1774580376614610409` · score `10` · phase `Round 6 Public`
+> P8’s 119 balance is the clear endgame threat—eliminating them now levels the playing field.
+reason: It’s an accidental self-targeting line so bizarre it instantly jumps off the page.
+
+- game `1774659093668202734` · score `10` · phase `Round 1 Public`
+> first, we eliminate P8 this round to reduce the immediate risk
+reason: P8 casually proposing P8's own elimination is surreal and instantly unforgettable.
+
+- game `1774659093668202816` · score `10` · phase `Round 2 DM 4`
+> I’ll still send the 10, but vote P1 to preserve trust. Survival first.
+reason: It compresses bribery, betrayal, and moral inversion into one brutally funny line.
+
+- game `1774777049869778714` · score `10` · phase `Round 4 DM 3`
+> Post-P2, we target P7 (your 90) immediately to prevent a new runaway.
+reason: It is breathtakingly shameless to tell an ally you plan to eliminate them next while asking them to stay united.
+
+- game `1774777049869778719` · score `10` · phase `Round 3 Transfers`
+> Honoring both deals: 25 to P6 for P8 vote, 20 to P4 for P6 vote. Final wealth first.
+reason: It is a brazenly self-incriminating summary of double-dealing distilled into one deadpan line.
+
+- game `1774514220105253082` · score `9` · phase `Round 7 Final-Two Appeals`
+> P5’s 57 buyout bid broke trust, not math.
+reason: It compresses the whole finale into one sharp, bitter sentence.
+
+- game `1774580376614610415` · score `9` · phase `Round 7 Final Negotiation`
+> your offer of 1 is insulting—fallback gives me 145, and I’d rather risk a tie than accept pennies.
+reason: It’s a sharp, theatrical rejection that turns the negotiation into a memorable slapback.
+
+- game `1774604653487756658` · score `9` · phase `Round 4 Public`
+> P8’s 122 balance is now the biggest threat—eliminating them balances competition and protects collective wealth. I’ll vote P8 this round
+reason: It is an instantly jarring self-indictment that reads like accidental theater.
+
+## Per-Game Reports
+
+### game `1774514220105253062`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "opening_balance": 91,
+  "finish_rank": 5,
+  "wealth_rank": 8,
+  "final_wealth": 18,
+  "arc": "P6 was an early coalition workhorse: reached out widely, helped cement the P7-P8 axis, transferred to both P2 and P7, and contributed to the P4 and P3 eliminations. For a while, P6 looked like the steady lieutenant of the majority.",
+  "leverage": "The problem was that P6 kept paying into stronger players without securing equivalent downstream protection. Too much of P6's game was trust-signaling upward, especially toward P7, and not enough was building independent veto power.",
+  "threat_management": "Round 3 broke them. The off-target vote on P5 instantly reframed P6 from ally to liability. P6 never recovered the narrative, offered weak explanations, then panicked in Round 4 with giant transfers of 30 and 31 while simultaneously proposing multiple contradictory lines to different people.",
+  "conversion": "Worst conversion at the table. P6 helped build the machine, fed the machine, and was then eaten by it. Final wealth of 18 after starting at 91 captures how expensive unreciprocated loyalty can be in this format."
+}
+
+### game `1774514220105253063`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 91,
+  "finish_place": 6,
+  "wealth_rank": 7,
+  "final_wealth": 41,
+  "post_mortem": "P7 had a real seat in the winning early coalition and then detonated it with one stray ballot. Before that, P7 did a lot right: mutual-protection pacts with P6, trust payments to P5, ongoing coordination inside the P5-led core. But in round 2, after publicly and privately reinforcing the P8 plan, P7 voted P4 instead. That single unexplained shot changed P7 from protected insider to public discipline case. The next round became a courtroom, and every reliable voter happily signed the sentence. What makes the post-mortem harsher is that P7 kept paying even after losing trust, sending 10 to P5 and 10 to P6 in round 3 for a relationship that was already gone. This was the game's clearest example of self-inflicted collapse."
+}
+
+### game `1774514220105253064`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 53,
+  "finish_rank": 6,
+  "wealth_rank": 6,
+  "final_wealth": 79,
+  "postmortem": "A nimble early trader who picked the wrong knife fight. P5 did well in the first half as a bilateral dealmaker: cultivated P2 and P6, took trust money from P4, P6, P2, and even P8, then harvested P3's desperate 50-coin plea in R2. That accumulation lifted P5 into real relevance. The problem was target selection. Publicly and privately pushing the 'eliminate P6, the weakest link' frame in R3 made strategic sense only in a vacuum; against this board, it handed P7 a perfect loyalty narrative. P7 could now tell P6, truthfully, that P5 was coming for him, and that turned survival into coalition glue. Once P2 confirmed the numbers were locked, P5 had no rescue lane. A decent climb from 53 to 79 final wealth, but not a winning read on social leverage."
+}
+
+### game `1774514220105253065`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 148,
+  "finish_rank": 8,
+  "wealth_rank": 6,
+  "final_wealth": 114,
+  "verdict": "Started rich, got mobbed, bribed hard, died first.",
+  "post_mortem": "P2 entered as the obvious buyout threat and never escaped the spotlight once P8 named them. Their counterplay was straightforward: buy loyalty. They sent 25 to P1 and 15 to P3, tried to recruit P5, and sought a non-aggression line with P6. The fatal error was trusting P1, who loudly sold loyalty, took the money, and then voted P2 anyway while bragging about the drain. Even so, P2's early balance cushioned the fall enough that they still finished ahead of two later survivors in final wealth. That says less about P2's diplomacy than about how inefficient others were with their own stacks."
+}
+
+### game `1774514220105253069`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 92,
+  "finish_rank": 2,
+  "wealth_rank": 4,
+  "final_wealth": 178,
+  "archetype": "loyal lieutenant who overfunded the machine",
+  "post_mortem": "P7 was P6's steadiest operational partner. It rejected the early anti-P8 efficiency line, synced with P6 in Round 1, and stayed disciplined through every major coalition execution. Its messaging was measured and useful: skeptical in public, firm in private, always reinforcing the bloc. But P7's biggest contribution was financial. Across the game it repeatedly sent good-faith transfers to allies, especially P6, helping cement trust and signal loyalty. That bought placement: P7 reached the final two from a middling start. The catch is that it funded itself into weakness. By Round 6 it sat at 0 balance, which made it the ideal finalist for P6 because it had no buyout leverage whatsoever. P7 did recover something substantial with the full-cap 37 settlement and 6 jury bonus, but the canonical outcome is unforgiving: second place in finish, only fourth in wealth. Excellent alliance discipline, mediocre conversion."
+}
+
+### game `1774514220105253074`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "starting_balance": 83,
+  "finish_rank": 4,
+  "wealth_rank": 5,
+  "final_wealth": 168,
+  "post_mortem": "More lieutenant than kingmaker, but a very functional lieutenant. P4 repeatedly honored transfer promises, kept the under-100 and then anti-whale logistics running, and later layered in a private survival pact with P1. That reliability made P4 a natural recipient of support and pushed the stack up to 127 by round 5. The weakness was authorship: once the table got small, P4 had relationships but not control of the narrative, and the brief P1-P8 convergence was enough to knock P4 out."
+}
+
+### game `1774514220105253075`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 4,
+  "wealth_rank": 5,
+  "final_wealth": 128,
+  "postmortem": "P8 was the game's busiest broker: architect of the original mid-tier coalition, serial conditional dealer, and frequent messenger between camps. The upside was flexibility and occasional extraction, like taking 35 from doomed P3 in Round 3 and still voting them out. The downside was chronic over-hedging. P8 often told different players different threat stories, most glaringly in Round 4 when they called P1 the real threat while still voting P6. That left them outside the true endgame core. By Round 5, P4 and P6 used P8's Round 4 anti-P6 vote to justify a clean 3-1 elimination. P8 influenced the plot but never owned the ending."
+}
+
+### game `1774514220105253080`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "opening_balance": 164,
+  "finish_rank": 7,
+  "final_wealth": 128,
+  "postmortem": "P8 had the biggest stack and never solved the visibility problem. The response was to spend for safety: 20 to P4 in Round 1, then another 10 to P4 and 15 to P5 in Round 2. The trouble was that the money mostly bought promises from people already planning around P8 as the premier buyout threat. P8's biggest strategic error was trusting P4's temporary cooperation; P4 gladly took the Round 1 transfer and then spearheaded the very next elimination against P8. In effect P8 financed the coalition that killed P8. The large opening balance and finish prize still salvaged respectable final wealth, but as threat management this was a cautionary tale in how not to spend from the lead."
+}
+
+### game `1774514220105253081`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 66,
+  "finish_rank": 3,
+  "final_wealth": 97,
+  "verdict": "Survived deep by being everyone's pliable third, then lit almost all chip equity on fire.",
+  "post_mortem": "P3 was the game's elastic broker. It constantly tried to stay useful to multiple sides at once, confirming loyalty to P5 while also taking or honoring side understandings with P7, P4, and later P8. That kept it alive because stronger players repeatedly preferred P3 as a manageable auxiliary rather than a primary target. The cost was financial discipline: P3 kept paying into overlapping deals, dropped to 1 after Round 2, then later rebuilt only to hand out money again. The climax was Round 6, where P3 donated 45 to both finalists and still got clipped, finishing 3rd on placement but effectively on prize money alone. It was a strong survival game and a dreadful wealth-retention game.",
+  "leverage_notes": "Very reachable, very saleable, good at staying relevant; bad at preserving capital and too willing to honor incompatible deals simultaneously.",
+  "turning_point": "Round 6, when it tried generosity as insurance, transferred out its entire 90, and discovered neither finalist had any reason to spare it."
+}
+
+### game `1774514220105253082`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 260,
+  "verdict": "P8 was the game's great fluid broker. He started beside P7, abandoned him when the kill was certain, then repeatedly sold himself as the deciding swing. Round 4 was peak P8: he took 40 from P1 and 10 from P2, then helped remove P2 anyway; Round 5 repeated the pattern with another P1 payment before P1's execution. He carried that flexibility to the final, where he sensibly tried to settle with P5, but the one-chip mismatch and a losing 45 bid turned a near-win into second place.",
+  "leverage": "Excellent ambiguity management. Everyone thought P8 might still be theirs, which kept the offers coming.",
+  "conversion": "Excellent but not perfect. He converted swing power into chips and placement, then lost the title on the final procedural edge."
+}
+
+### game `1774514220105253083`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "starting_balance": 70,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 355,
+  "post_mortem": "Best overall converter of leverage into wealth. P1 was never the richest stack, but repeatedly sold pivotal votes, accepted money from both sides, and still landed on the winning side often enough to survive. Round 1 they took P7's 25 and voted P3; Round 3 they did business with P8; Rounds 4-6 they kept collecting from doomed or desperate rivals while preserving credibility just enough to stay central. The signature move was not any single vote, but the pattern: monetize uncertainty, avoid wearing the leader's crown, and enter the final two at 157 without ever having started near the top. In the heads-up, P1 correctly translated the 157-100 balance edge into a low-friction settlement: first place for a 40 payment. That was clean, rational, and enough to lock the biggest prize. Jury support was split, but the settlement plus first-place prize made that irrelevant. P1 won because they kept turning other players' panic into personal cash while never becoming the table's consensus emergency."
+}
+
+### game `1774556334944727235`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 88,
+  "finish_rank": 4,
+  "wealth_rank": 8,
+  "final_wealth": 55,
+  "postmortem": "The game's most generous lender and its worst return on investment. P5 was initially cautious about rigid blocs, but once aligned, became the coalition's bankroll: 15 to P6 and 10 to P3 in round 1, 20 to P6 and 10 to P3 in round 2, 15 to P6 and 10 to P7 in round 3, then the final scraps in round 4. Those transfers absolutely mattered — they strengthened the coalition and especially fattened P6's position — but P5 never converted the generosity into enforceable endgame protection. Everyone praised the sacrifice; no one spared the seat. By round 5 P5 was at zero and trying to cash in loyalty rhetoric, but P6 and P7 had already decided the math. P5 did reach fourth by finish, yet ended dead last in wealth. More than anyone else, P5 shows that giving money without binding leverage is philanthropy, not strategy."
+}
+
+### game `1774556334944727236`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 92,
+  "finish_rank": 5,
+  "final_wealth": 77,
+  "post_mortem": "P7 helped create the anti-top-stack mood and nearly paid for it instantly. The round-1 public line about trimming P3/P4 made P7 the first designated enemy of the P3/P4 camp. P7 survived only because the P6-led majority was real, but then spent much of the game acting as a paying coalition foot soldier: repeated trust transfers to P6 and P2, plus another 20 to P6 in round 4. That was the fatal round. P7 believed P6's reassurance, voted P1, and got hit by a coordinated 4-1 blindside. Compared with P1, P7 was less suspicious and therefore easier to harvest. The finish rank was decent, but the wallet was wrecked. Among players who survived into the coalition endgame, P7 converted position into wealth the worst."
+}
+
+### game `1774556334944727241`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "finish_rank": 5,
+  "wealth_rank": 5,
+  "final_wealth": 128,
+  "verdict": "A clever middle-round broker who could gather chips from every direction, then got caught holding the top seat at the wrong time.",
+  "dealmaking": "Strong and flexible. P4 paid P3/P8 in Round 1, took part in the anti-P3 market in Round 2, and in Round 3 made the decisive strategic choice of breaking from P1's top-two pitch and joining the anti-P1 coalition.",
+  "leverage": "P4 was most dangerous as a swing partner. When both sides needed P4, they could extract. Once they stood alone at 118 in Round 4, that leverage vanished.",
+  "threat_management": "Mixed. The Round 3 anti-P1 flip was smart. The Round 4 salvage attempt was not: P4 sprayed 20 to P6 and 15 to P5 while already doomed, effectively financing rivals without changing the vote.",
+  "conversion_to_wealth": "Solid but incomplete. P4 never got fleeced cheaply and finished ahead of the middle pack, but failed to turn their excellent brokerage into a finals run."
+}
+
+### game `1774556334944727242`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 203,
+  "arc": "P8 was the coalition banker and reputation engine. From Round 1 onward, P8 kept pacts with P2, P4, and P7, sent repeated goodwill transfers, and consistently chose alliance maintenance over immediate chip preservation. That made P8 trusted enough to survive deep despite a modest stack.",
+  "leverage": "P8's leverage was social rather than numeric. The steady stream of transfers made P8 valuable to keep around and expensive to betray reputationally. The big moment came at Final 3: once P4 admitted the plan to cut P2, P8 flipped and joined P2 to remove the biggest stack instead of entering a hopeless 187-vs-80 final. That was sharp endgame threat recognition.",
+  "conversion": "Mixed financial conversion, excellent reputational conversion. P8 reached Final 2 and then misread finalist bargaining by asking 20 and 24 from a player who could auto-win fallback, so extra settlement value was left on the table. But the 5-1 jury bonus landslide rescued the run and turned loyalty into real wealth."
+}
+
+### game `1774580376614610376`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 5,
+  "wealth_rank": 5,
+  "final_wealth": 141,
+  "postmortem": "P8 was the game's best short-term extractor and one of its worst converters. In R1 they charged both sides of the auction, taking 30 from P4 and 30 from P3 before voting with P3's side anyway. In R2 they did it again, squeezing 10 more from P3 while also getting 30 from P7, then still voting P7 out. By raw dealmaking, that is excellent leverage farming. The issue was that P8 kept reopening price instead of building trust. By R3 and R4, everyone knew P8 would press for one more payment and might shop private anti-partner plans. Once P5 and P6 learned P8 had floated hitting P6, P8's stack stopped looking like strength and started looking like a payday waiting to be confiscated. In R4 P8 even sent 20 to P3 and 20 to P5 trying to redirect the vote onto P6, and the core trio simply pocketed the cash and killed P8 anyway. They won auctions all night, but never won control.",
+  "deal_style": "Relentless bid maximization, double-dipping, and constant repricing of loyalty.",
+  "conversion": "Poor. P8 briefly became the table's monster stack at 183, yet turned that into only fifth place and mid-table wealth because nobody trusted them when the game stopped being an auction and became a trust test."
+}
+
+### game `1774580376614610377`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "finish_rank": 3,
+  "wealth_rank": 3,
+  "starting_balance": 93,
+  "final_wealth": 186,
+  "summary": "P1 was P6's steadiest early investor and the coalition's cleanest deputy until one late knife ruined an otherwise excellent board position.",
+  "leverage": "P1 consistently backed the dominant bloc with real money: early trust to P6, support to P4, and repeated reinforcement of the anti-P3/anti-P2 structure. That bought P1 deep survival and strong influence with P6.",
+  "threat_management": "For four rounds P1 handled threats well: back the majority, keep the coalition coherent, and avoid becoming the tallest stack. P1 also helped kill P7 in the R3 chaos by recognizing that P7's 155 had become the real danger.",
+  "conversion": "Then came the self-inflicted wound: in R5, while P6 and P4 voted P5, P1 voted P4. That one ballot detonated trust. P6 exposed it in R6, and P4 quite rationally chose guaranteed finals with P6 over dying for P1. P1 still finished with solid wealth because the earlier coalition work was real, but the path to the final two was there and slipped away.",
+  "verdict": "Very strong middle game, fatal endgame impatience."
+}
+
+### game `1774580376614610378`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 138,
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 13,
+  "dossier": "A case study in positional collapse. P1 began as one of the natural aristocrats of the board and sensibly joined the anti-P4 high-stack coalition, but never became its driver. The fatal break came in Round 3, when P1 publicly floated loyal low stack P6 as a convenience target; that instantly reframed P1 as the new instability vector. Then came the catastrophe: P5 baited P1 into sending all 98 remaining coins to P6 as an 'apology transfer' that never bought survival. P1 was eliminated anyway, turning a strong opening stack into the worst wealth result by far."
+}
+
+### game `1774580376614610379`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "finish_rank": 3,
+  "final_wealth": 241,
+  "summary": "P7 played the most extreme goat-merchant game. Starting at 52, he quickly embraced low-stack utility, then in round 2 sent all 52 away, splitting 26 each to P8 and P6 to become a literal zero-balance asset. That kept him off the menu for several rounds, and he leaned hard into the 'perfect final-two goat' sales pitch. The brilliant part came in round 6: P7 turned that identity into a feeding frenzy, extracting 60 from P1 and 90 from P2 in the same phase. The cruel twist was that the auction worked too well. At 150, he stopped being a goat and instantly became the highest stack in the room, so P1 and P2 both chopped him. Still, as a wealth play it mostly worked: P7 turned a shaky 52 opening into 241 final wealth and a podium finish, even if survival ended the moment he got paid."
+}
+
+### game `1774580376614610381`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 90,
+  "finish_rank": 2,
+  "wealth_rank": 4,
+  "final_wealth": 145,
+  "verdict": "The game's most aggressive spender: founder of the first bloc, architect of the wildest semifinal rescue, then powerless in the finals.",
+  "dealmaking": "P8 opened by inventing the mid-tier alliance and spent freely to make it feel real. Even after publicly denouncing rigid blocs, P8 kept using money as social glue. The masterpiece came in Round 5: staring at likely elimination, P8 dumped the entire 45 balance into P3 and P7 and bought a complete narrative reversal onto P5.",
+  "leverage": "Very high while money remained. P8 understood that in this format transfers are not side notes; they are live ammunition. The problem was that every successful save burned the very stack needed to negotiate later.",
+  "threat_management": "Brilliant in the semifinal, shaky elsewhere. P8 could survive by making itself useful to whoever needed a swing, but the cost was self-cannibalizing. By the time the final two arrived, P8 had achieved second place with exactly zero bargaining leverage.",
+  "wealth_conversion": "Paradoxical. Outstanding placement conversion, mediocre wealth conversion. P8 literally bought a finals berth, then discovered that a 0 stack cannot extort a meaningful settlement from 113."
+}
+
+### game `1774580376614610382`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 148,
+  "finish_rank": 3,
+  "wealth_rank": 3,
+  "final_wealth": 198,
+  "postmortem": "P8 spent the whole game trying to buy stability from a leading stack. Early transfers to P7 and P5 were sensible threat management, but Round 1 showed the weakness: it bought pieces of loyalty without controlling the vote. It recovered well in Round 2 by helping form the anti-P6 coalition and built a real bond with P5, which held longer than most deals in this game. Round 4 was the messy one: P8 publicly pointed at P3, privately committed to P3's anti-P2 plan, paid into that plan, and still lost because P7 defected. It rebounded in Round 5 to help remove P7, but then got completely outmaneuvered at final three when P2 accepted P8's transfer, reaffirmed the anti-P4 story, and cut P8 anyway. Strong spender, decent coalition sense, but repeatedly one step behind the decisive betrayal."
+}
+
+### game `1774580376614610383`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "opening_balance": 53,
+  "finish_rank": 5,
+  "wealth_rank": 8,
+  "final_wealth": 23,
+  "summary": "A chronic supplicant who kept buying protection, rarely enforcing terms, and eventually bled out all strategic capital.",
+  "dealmaking": "P1 spent the whole game pitching themselves as a low-stack ally worth saving. Sometimes that worked tactically, but P1's vote behavior was so erratic that nobody could build a serious long-term plan around them. The biggest missed moment was Round 2: P5 bought P1 into the anti-P2 coalition, yet P1 still voted P3 instead of P2 and wrecked the kill shot.",
+  "leverage": "Minimal and badly used. P1's real leverage was as a cheap fourth vote or tie-maker, but P1 kept choosing 'safe' low-threat targets over decisive anti-leader plays, so even when others invested, they could not trust the follow-through.",
+  "transfers": "P1 paid 20 to P6 in Round 1, sent 12 to P5 in Round 2 while also receiving 12 back, and then in Round 4 dumped the entire remaining 23 as 10 to P4 and 13 to P8 trying to buy an anti-P2 pivot that never materialized. The cash burn was constant; the returns were weak.",
+  "threat_management": "Survival to 5th was mostly a byproduct of other players fighting bigger wars. Once P1 reached 0, the game treated them like scenery.",
+  "wealth_conversion": "Worst at the table: 53 to 23. P1 survived several rounds but converted almost none of that into wealth because every scrap of balance got spent chasing unreliable protection."
+}
+
+### game `1774580376614610384`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 82,
+  "finish_rank": 5,
+  "wealth_rank": 7,
+  "final_wealth": 50,
+  "verdict": "Maximum traffic, minimum trust equity.",
+  "post_mortem": "P4 tried to be in every room at once: tied to P2 early, pitched P7, flirted with P5-P6-P7, promised P1 non-aggression, and kept opening side channels faster than any of them could stabilize. Some of that bought short-term safety, but it left a paper trail of incompatible promises. The killing blow was Round 4, when P5 expertly mirrored back exactly what P4 wanted to hear, took P4's transfer anyway, and then led the 4-1 vote that eliminated them. P4 was active, creative, and constantly negotiating; they just kept spending credibility on too many contradictory futures."
+}
+
+### game `1774580376614610385`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "finish_rank": 7,
+  "wealth_rank": 6,
+  "final_wealth": 89,
+  "postmortem": "P7 spent the game trying to live in two stories at once: publicly flagging P4 as a structural threat while privately renting protection from him. The repeated 8-coin payments to P4 bought short-term non-aggression, and extra support for P3 kept P7 adjacent to the majority, but the rhetorical drift never disappeared. By Round 2, P4 and P2 turned that 'structural concern' language into a reliability case, and P7 was eliminated while still actively subsidizing the player who helped kill him. Decent survival instincts, poor message discipline."
+}
+
+### game `1774580376614610390`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 114,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 271,
+  "verdict": "The table's slipperiest broker. P8 kept selling itself as cautious and anti-pile-on while constantly trading votes, extracting proofs of commitment, and preserving optionality.",
+  "dealmaking": "Made a habit of charging everyone for alignment. It negotiated with P5 in round 1, P7 in round 2, P4 in rounds 3 and 4, then both P1 and P6 in rounds 5 and 6. Few seats monetized uncertainty as aggressively.",
+  "leverage": "P8's leverage came from being just rich enough to matter and just evasive enough to stay alive. It repeatedly made itself the extra vote everyone wanted, then turned that demand into transfers or policy concessions.",
+  "threat_management": "Excellent at ducking the 'next obvious target' label. Even when it was one of the top stacks, it redirected attention toward coordinators, weak links, or tie scenarios. Its weakest point was allowing P1 to keep the true endgame edge.",
+  "conversion": "Turned 114 into 271 and a runner-up finish. The key move was round 6: it effectively sold influence to both finalists-in-waiting, then sided with P1 for a safer final two and accepted a binding 50-coin settlement plus 13 jury points."
+}
+
+### game `1774580376614610391`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 78,
+  "finish_rank": 3,
+  "wealth_rank": "T-4",
+  "final_wealth": 75,
+  "post_mortem": "The loyal lieutenant archetype, and the cautionary tale that comes with it. P7 found the right person early in P5 and never really let go. That loyalty bought survival all the way to third place, but it was ruinous for wealth. P7 repeatedly transferred from weakness: 15 to P5 and 15 to P6 in Round 1, 10 and 10 in Round 2, 20 and 10 in Round 3, then an astonishing full-stack dump in Round 4, sending 40 to P5 and 45 to P3. In Round 5, P7 emptied out again with 30 to P5 and 30 to P3, reaching zero. The social read was not wrong—P5 genuinely valued P7—but the leverage was never monetized. P7 was carried deep, then cut exactly when disposable. Third-place finish, tied fourth in wealth, and a brutal reminder that loyalty without price discipline is charity."
+}
+
+### game `1774580376614610392`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 83,
+  "finish_rank": 3,
+  "wealth_rank": 5,
+  "final_wealth": 115,
+  "headline": "The vote-pricer who kept getting paid and still underbanked the game.",
+  "analysis": "P3 spent most of the game as a floating broker, constantly telling multiple sides that his vote had a price. In Round 1 he squeezed P2 up to a 50 offer and still voted P2 out. In Round 2 he got P1 to actually send 50 and still voted P1 out. That is excellent tactical extraction on paper. But P3's deeper issue was that he rarely sat on gains; he kept redistributing to preserve coalition relationships and keep himself central. He sent alliance tokens in Round 1, buffered P5/P7/P8 later, then in Round 5 even returned 30 to P6 while paying out 30 to P7, leaving himself an anemic 58 before the final three. He reached third place, but only fifth in wealth, which is the clearest sign that his bargaining skill created cash he never truly captured. Great at monetizing uncertainty, mediocre at converting those side deals into the benchmark's actual objective."
+}
+
+### game `1774580376614610393`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 104,
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 111,
+  "style": "Restless broker who kept shopping both sides but rarely got paid enough.",
+  "dealmaking": "P2 constantly reopened the market. In Round 1, it flirted with P4 and P6 simultaneously, took a circular 30-for-30 exchange with doomed P4, then still voted P4 out. In Round 2, it again worked every angle, extracted and sent money to both P3 and P6, and ended the round richer at 119.",
+  "threat_management": "The problem was that P2's bargaining painted a bright target on its own stack. After P3's elimination, everyone had already pre-written the 'P2 next' script, and P2's attempt to buy survival with 25 to P6 and 15 to P8 only succeeded in financing the players who would outlast it.",
+  "conversion": "This was one of the worst balance-to-wealth conversions in the game. P2 spent a lot of time negotiating, but most deals either washed out or strengthened future opponents. It died 6th and finished dead last in final wealth."
+}
+
+### game `1774580376614610398`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 140,
+  "finish_rank": 7,
+  "final_wealth": 54,
+  "summary": "Started rich, ended poorest, and never found a stable lane. P8 tried to position itself as a flexible broker rather than an obvious whale, but its offers were always half-committed and one beat late. In Round 1 it fed both sides—20 to P4 and 25 to P7—without buying durable protection. In Round 2 it threw 25 each at P3 and P2 while still failing to build a countercoalition. Publicly it kept trying to frame others as future threats, but the table read it as an outsider looking for a temporary stay. Unlike P7, P8 did not get outright conned; unlike P2 or P5, it also never turned transfers into influence. This was the worst position-to-wealth conversion in the game: from 140 starting chips to dead-last wealth at 54."
+}
+
+### game `1774580376614610399`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 74,
+  "finish_rank": 5,
+  "wealth_rank": 7,
+  "final_wealth": 57,
+  "verdict": "Overinvested in relationships that never paid back enough.",
+  "postmortem": "P7 played like a junior syndicate member trying to buy entry into every room. In Round 1 they sent 15 to P3 and 15 to P8 while also whispering about a tighter core with P3 and P5. In Round 2 they sent another 10 to P3 to reinforce that bond. The idea was sensible: attach to the table's most active organizer and stay useful. The problem was that P7 kept funding alliances where they were never a true principal. They backed P3 against P4 in Round 3 and got on the wrong side of the resulting story; from then on P1 and P6 could paint them as the unreliable one and spare P4 instead. P7 saw the danger and tried late counterplay in Round 4, even sending 10 each to P1 and P6 while pitching a P2 alternative, but P1 refused a speculative scramble and banked the money while voting P7 out. That sequence says a lot: P7's cash bought access, but not authority. They survived to fifth yet ended below even first-out P8 in leverage-adjusted terms."
+}
+
+### game `1774580376614610400`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 119,
+  "finish_rank": 4,
+  "final_wealth": 114,
+  "postmortem": "The game's most expensive hedger. P1 constantly chased safety with transfers: 25 in R1, 15 in R2, 30 in R3, 10 in R4, 30 in R5. Some of those payments bought air, some bought promises, and some directly funded players who still ignored them. P1 did recover value by taking 20 from doomed P8 and 50 from doomed P2 while still voting the majority line, but overall they bled too much trying to insure every branch. Reaching 4th place and finishing only 6th in wealth says it all."
+}
+
+### game `1774580376614610401`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 73,
+  "finish_rank": 4,
+  "wealth_rank": 7,
+  "final_wealth": 35,
+  "verdict": "Survived deep, bled out economically.",
+  "analysis": "P8 was the game's most fluid swing but also its worst banker. They smartly avoided dying with the low-stack bloc in R1 by defecting toward P3, and they kept earning rhetorical praise as a 'reliable outsider.' But they repeatedly mistook compliments for protection. The catastrophic moment was R3: after being courted by both sides, P8 dumped all 90 coins away, sending 45 to P5 and 45 to P1, then failed to vote with the anti-P3 plot anyway and instead voted P6. That single round vaporized their leverage. From there P8 was a vote mule living on borrowed promises, still trying to buy safety with small transfers while others treated them as either expendable cover or a harmless final-four passenger. Fourth place finish, seventh-place wealth: a classic survival-without-capital collapse."
+}
+
+### game `1774580376614610402`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 3,
+  "wealth_rank": 3,
+  "final_wealth": 216,
+  "post_mortem": "P8 played as a fluid broker: publicly pro-coalition, privately cross-connected, and constantly tying itself to whichever bloc looked safest. It was pivotal in the Round 1 anti-P1 majority while also transacting with P6 and P7, then stayed useful long enough to reach the podium. The defining financial moment was Round 5, when P5 sent P8 a desperate 60 trying to buy a flip; P8 had already refused the premise, kept the windfall, and still voted P5 out with P2 and P3. The one miss was Round 6, where P8 paid P3 20 for a promised pivot on P2 and got knifed anyway, but even that loss did not erase an excellent wealth conversion."
+}
+
+### game `1774580376614610403`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "opening_balance": 133,
+  "finish_rank": 3,
+  "wealth_rank": 4,
+  "final_wealth": 229,
+  "post_mortem": "P1's most important co-conspirator for most of the game: steady, transactional, and always ready with a reciprocal transfer. P6 helped stabilize the bloc every round and was usually the first to validate whatever target P1 floated. That made P6 central to coalition durability, but also too legible. The round-5 double-dip was the signature moment: P6 entertained P3's anti-P1 pitch, took P3's 20, sent 20 back with a message effectively ratifying P3's elimination, and still maintained P1's trust. It was cunning, but it screamed 'third-party broker, not final partner.' By round 6, P6's higher balance versus P5 made them the obvious cut for a self-interested P1. Strong placement, weaker wealth conversion than it looked."
+}
+
+### game `1774580376614610406`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "start_balance": 99,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 206,
+  "postmortem": "P6 played the strangest but ultimately profitable support game. Very early, P6 began buying coalition equity with huge gifts: 50 out in Round 1, then more to P4 and P3 later, repeatedly crushing its own stack to advertise loyalty. The ballots were not always perfectly aligned with coalition messaging, but the social signal was unmistakable: P6 was dependable to work with, non-threatening, and willing to invest in relationships. P4 rewarded that posture by dragging P6 deep, calling P6 the most reliable partner, boosting P6 before final two, and choosing the P4-P6 endgame over the more dangerous P4-P1 or P4-P3 paths. P6 nearly locked a 50-chip settlement in the final two, then overreached to 60, missed overlap, and lost the fallback buyout by a single chip. Even so, the seat turned a near-empty stack into 2nd place and 206 final wealth. It was not efficient chip management, but it was excellent placement conversion through loyalty and threat minimization."
+}
+
+### game `1774580376614610407`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "starting_balance": 99,
+  "finish_rank": 2,
+  "final_wealth": 301,
+  "wealth_rank": 2,
+  "verdict": "The game's best kingmaker and rent extractor.",
+  "analysis": "P4 spent the whole game talking about stability, anti-cycle play, and trust-building. Much of that positioning was slippery, but it kept P4 central in almost every negotiation. He acted as an early transfer hub, then in round 3 detonated his own stack with a 45/45 split to P2 and P7 in a failed attempt to break the purge logic. That looked suicidal, yet it accidentally set up P4's best role: tiny-stack swing voter. From there P4 repeatedly sold access to the deciding vote, taking money and promises from stronger players while staying useful. The critical monetization came late: P5 paid him in round 5, P1 paid him 25 in round 6, and P4 still chose the side that got him to the final two. In the heads-up, he could not outbid P5, but he still forced a 45 settlement and then split the jury bonus. Second place by finish, tied for second by wealth with a player who had once held 278."
+}
+
+### game `1774580376614610408`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 77,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 202,
+  "post_mortem": "P5's route was chaotic but profitable. He talked flexibility all game and often bled money in odd directions, even hitting 0 by the start of R4, yet he kept the one thing that mattered: a vote everyone still needed. P7 protected him for most of the game, but when the endgame got sharp P5 sold his leverage correctly. In R5 he took P4's 20 and delivered the vote that made the tie-break kill P7; in R6 he ignored P1's loyalty pitch and chose the richer finalist in P4 because runner-up economics versus a big stack were simply better. He lost the final buyout, got only 4 jury bonus, and still finished 3rd-richest. Messy process, smart terminal choices."
+}
+
+### game `1774580376614610409`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 121,
+  "finish_place": 3,
+  "wealth_rank": 3,
+  "final_wealth": 204,
+  "dealmaking": "The table's most shameless side-deal merchant. Early on, P8 funded coalition discipline and helped P4 hold the anti-rich bloc together. Later, P8 negotiated with nearly everyone, often simultaneously, and repeatedly treated votes as placement instruments rather than loyalty tests.",
+  "leverage": "Started with enough money to matter but not enough to be first target. That middle-heavy stack gave P8 room to broker, threaten, and price access without immediately wearing the 'must kill' sign.",
+  "transfers": "Hyperactive and opportunistic. P8 paid to stabilize the coalition in R1-R3, then free-rolled both sides in R4 by taking P4's 20 while still signaling coalition loyalty to P6. In R5 P8 accepted P6's 45, preserved the anti-P6 story to P5, and then voted P3 anyway to maximize placement. That was ruthless value extraction, even if it killed credibility.",
+  "threat_management": "Very good until final three. P8 kept escaping immediate elimination by being useful, funded, and ambiguous. But by R6 the stack at 119 was too obvious, and neither P3 nor P5 trusted P8 enough to spare it.",
+  "conversion": "Strong. P8 did not reach the final two, but converted a mid-high start into 204 wealth by monetizing volatility better than almost anyone. The downside: the same slipperiness that made money also ensured no one would carry P8 into the finale."
+}
+
+### game `1774580376614610410`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "starting_balance": 95,
+  "finish_rank": 4,
+  "wealth_rank": 8,
+  "final_wealth": 58,
+  "verdict": "The game's most active side-dealer and least durable alliance partner. Constantly monetized optionality, but never converted it into security.",
+  "dealmaking": "P8 repeatedly sold the same vote twice. In Round 1 they took 30 from P1 and still voted against P1's interest while also funding P7. In Round 2 they sent 25 to P5 while voting P6. In Round 3 they executed an almost comic 25-for-25 loop with P6 and still voted P4.",
+  "leverage_and_threats": "As a short-term broker, P8 was dangerous. As a long-term ally, almost impossible to trust. That let P8 extract payments, but it also meant every stable bloc eventually preferred to cut them when numbers tightened.",
+  "conversion": "Worst wealth conversion in the game. Despite lots of deal flow and reaching fourth place, P8 finished last in money because the brokerage never matured into durable protection."
+}
+
+### game `1774580376614610411`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "starting_balance": 102,
+  "finish_rank": 5,
+  "wealth_rank": 8,
+  "final_wealth": 59,
+  "postmortem": "P5's game was a slow leak that turned into a collapse. Early on they were a useful coalition voice, and they showed a decent sense for where the danger sat. But they were also the table's most visibly transactional mid-stack, constantly asking what a vote was worth. The fatal mistake was Round 3: while everyone else stayed on P2, P5 defected onto P7, then tried to sell themselves as still coalition-loyal. That single vote handed P1 and P3 the ammunition to reframe Round 4 as an accountability execution instead of a balance execution. P5 even paid into P3 before trying to target P3, which made them look inconsistent and easy to isolate. Fifth on finish, dead last on wealth."
+}
+
+### game `1774580376614610412`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "finish_rank": 2,
+  "wealth_rank": 4,
+  "final_wealth": 193,
+  "style": "survivor-politician who hid knives inside fairness rhetoric",
+  "post_mortem": "P4 spent much of the game talking like a coalition conscience while behaving like a cold vote trader. Round 1 was extreme: they zeroed themselves out by sending 29 to P7 and 29 to P3 under the banner of small-stack solidarity. That looked suicidal, but it bought political credibility and made later rescues easier. P4 then kept repositioning: the lone Round 2 anti-P7 vote, the Round 3 anti-P7 push with 30 to P5 and 30 to P3, the Round 4 willingness to pivot once P3 made P1 the public top stack, and the decisive Round 5 betrayal where they took P3's 30 and still voted P3. That move was ruthless and game-shaping. In Round 6, P4 ignored P5's mathematically sharper finalist pitch and simply forced the fair-looking P2-P4 final. Then they negotiated P2 up from 20 to 22 in settlement and still pulled 6 jury points. P4 did not maximize finish-to-wealth conversion as well as P5 or P2, but they got a lot out of a stack that hit zero twice."
+}
+
+### game `1774580376614610413`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 122,
+  "finish_rank": 3,
+  "wealth_rank": 6,
+  "final_wealth": 90,
+  "post_mortem": "The cleanest example of why placement and wealth diverge in this benchmark. P1 survived all the way to third, but repeatedly torched its own stack chasing leverage. Early on it played the valuable swing between rich-bloc stability and anti-rich rhetoric, taking 20 from P2 in Round 1 and another 20 in Round 2 while also paying P6 20 and then 10 to stay inside that coalition. The real self-destruction started later: in Round 3 P1 paid 30 to P8 and 20 to P2 to lock the anti-P6 coup; in Round 4 it detonated 80 more chips, sending 40 to P8 and 40 to P5 to force the anti-P2 line; in Round 5 it sent its last 12 to P8. Those payments helped P1 survive and helped decide key eliminations, but they left it entering the final three at zero. From that point it had only rhetorical leverage and no economic leverage, so P4 correctly preferred P8's enforceable finals terms. P1 did help topple two controllers in P6 and P2, but canonically it was one of the game's worst converters of influence into wealth."
+}
+
+### game `1774580376614610414`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "finish_rank": 7,
+  "wealth_rank": 7,
+  "starting_balance": 96,
+  "final_wealth": 93,
+  "arc": "Tried to hedge, got branded as slippery, and never recovered. P6 kept seeking symmetric trust trades and flexible alignment, but their actual vote behavior made them the table's cleanest 'trust-breaker' case.",
+  "leverage": "P6's leverage should have been middle-stack flexibility. Instead it became ambiguity without cover.",
+  "key_deals": [
+    "Round 1: talked reciprocity to P3 while also cutting a real 10↔10 deal with P7 and pushing a P4 vote.",
+    "Accepted a transfer from P2 while failing to join the anti-P7 consensus, which became the central evidence against them.",
+    "Round 2: tried to save themselves with small gifts to P3 and P1, but by then the trust narrative had hardened."
+  ],
+  "threat_management": "Poor. P6 wanted to be everyone's low-conflict partner, but wound up looking like the player most willing to say different things to different people. Once that label stuck, the mid-stacks had an easy and credible target.",
+  "postmortem": "A classic failure of hedging discipline: too many feelers, not enough cover, and one visible mismatch between transfer and vote that the whole table could rally around."
+}
+
+### game `1774580376614610415`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "starting_balance": 95,
+  "finish_rank": 2,
+  "final_wealth": 175,
+  "verdict": "The game's great hedge artist. P4 looked fragile on paper but became the pivotal broker by being everyone's acceptable partner and nobody's immediate must-kill until very late.",
+  "dealmaking": "Built the early P1/P4/P7 anti-convenience bloc, then spent the rest of the game playing both shield and swing vote. P4 constantly asked, 'what is my best settlement lane if I survive this vote?' and that lens kept P4 relevant.",
+  "leverage_and_transfers": "Aggressive, messy, but often effective. P4 bled chips early to P1 and P7, then recovered by extracting value from both sides in later rounds. Round 4 was classic P4: take 30 from P1, still help kill P1, while also feeding P6 and taking support from P3/P8. Round 5 was the masterpiece: P4 sold the anti-P3 pivot to P3, sold anti-P3 alignment to P8, paid P6, and then cast one of the two decisive votes on P6 in a 2-1-1 split.",
+  "threat_management": "Excellent socially, uneven financially. P4 kept invoking fairness and anti-short-stack norms when useful, but never chained itself to them. That flexibility preserved survival even after P4's balance got crushed.",
+  "conversion_to_wealth": "Strong. P4 reached the final two from a weak stack, then failed to monetize the final negotiation because the 40-50 demand overshot P8's willingness to pay. Even so, second place plus half the jury pool produced 175, just edging P3."
+}
+
+### game `1774604653487756658`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 112,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 206,
+  "post_mortem": "P8 was the table's great toll collector. They took P6's 60 and still voted P6 out. They squeezed 80 out of P3 and still voted P3 out. They took 40 from P2 and still voted P2 out. They took 70 from P7 and still voted P7 out. No one monetized threat quite like P8. The weakness was leakage: they repeatedly recycled cash back into the board, including the huge R2 payment to P2 and P7 and the fatal R6 transfer of 50 to P4, who promptly betrayed the deal. Even so, P8's brokerage got them to the final two, and in the private endgame they held the line well enough to move P5 from a lowball 12/15 range to an executed 20 payment through settlement overlap. A ruthless extractor, slightly too trusting at the last turn."
+}
+
+### game `1774604653487756659`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "start_balance": 64,
+  "finish_rank": 6,
+  "wealth_rank": 7,
+  "final_wealth": 79,
+  "wealth_delta": 15,
+  "eliminated_round": "Round 3",
+  "assessment": "A disciplined small-stack contractor who could honor agreements but not command the board. P6 made one of the earliest real deals with P8, also cut a side understanding with P3, and kept recycling trust with P7 through reciprocal transfers. That web bought survival through the Round 2 tie-break, where P8 preferred keeping him. But he never truly controlled the target list; he lobbied for P2 while stronger blocs were already deciding otherwise. Once P2, P4, and P7 aligned in Round 3, P6's careful promise-keeping was not enough to stop the axe."
+}
+
+### game `1774604653487756686`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 48,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 263,
+  "style": "Auction-house swing vote",
+  "postmortem": "P2 spent the whole game standing in doorways and charging tolls. Round 3 was the masterpiece: from 18, he sold access to P6, P7, and P8 at once, then emerged at 80 while still landing in the winning coalition; Round 6 repeated the trick by taking money from both finalists before choosing the better matchup. He was messy and sometimes contradictory, but he monetized scarcity better than anyone except P6 and then negotiated the final two up to a 35 payment. Lowest starter, second-highest wealth."
+}
+
+### game `1774604653487756687`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 205,
+  "finish_rank": 8,
+  "wealth_rank": 6,
+  "final_wealth": 130,
+  "style": "opening juggernaut who tried to buy protection but never escaped day-one focus",
+  "postmortem": "P8 entered as the obvious giant and never really solved the resulting threat profile. Publicly, P8 argued for 'fair play' and tried to blur the target list by mentioning P7 as another large stack. Privately, P8 was much more active: there were outreach attempts to P3, then coordinated anti-coalition planning with P7, culminating in the huge 40-to-P3 and 40-to-P4 transfer package. That was real strategic spending, not passivity. It succeeded in making P4 the new chip leader and sowing suspicion inside the mid-tier pact. But P8 had a structural problem: everyone already had a clean story for why P8 needed to go first, and the coalition had the votes. So the spending came too late and without enough attached commitments. P8 was still eliminated in Round 1 by a 5-vote majority. Yet because the starting stack was so massive, even after burning 80 and dying first, P8 still finished with 130 final wealth—better than two players who survived much longer. P8's game is the clearest reminder that raw balance is sticky in this format, but also that once the whole table agrees you are the initial hegemon, transfers alone may not buy enough cover."
+}
+
+### game `1774604653487756714`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "opening_balance": 121,
+  "finish_rank": 4,
+  "wealth_rank": 8,
+  "final_wealth": 55,
+  "post_mortem": "P6 was the game's great financier and its worst investor. No one spent more trying to purchase relevance: 40 to P4/P7 in Round 1, 40 more in Round 2, an all-in 51 in Round 3, then 40 more in Round 5 after briefly being repaid 40 by P7 in Round 4. The intention was clear—buy entry into the ruling coalition and keep stronger stacks pointed elsewhere. The result was brutal: P6 repeatedly subsidized P4 and P7 into giant endgame balances without ever securing durable protection. They also mixed messages, sometimes courting P4/P7, sometimes proposing anti-rich pivots, sometimes offering strange target sequences that made them look unreliable. By the time they finally broke ranks and voted P4 in Round 4, they had already spent themselves to zero and lost all credible leverage. P6 finished fourth in placement but dead last in wealth, the starkest example in the game of influence spending that never converted into personal value."
+}
+
+### game `1774604653487756715`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "finish_rank": 8,
+  "wealth_rank": 8,
+  "final_wealth": 46,
+  "summary": "P3 never got out of the opening kill zone. It tried the classic low-stack survival package, paying P5 and coordinating with P6 against P2, but its stack was too small and its relationships too shallow to escape being the most convenient consensus target. Once P1, P2, P4, and P6 all found P3 acceptable, the game ended before its counter-market could form. This was the cleanest example of weak leverage staying weak: early spend, no real shield, first boot, last in wealth."
+}
+
+### game `1774659093668202647`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "finish_rank": 6,
+  "final_wealth": 39,
+  "post_mortem": "P2 tried to survive by paying everybody at once and trusting words that were never worth much. The key move was the 40-token payment to P6 in Round 1 for temporary safety; later it doubled down with a 50-token payment back to P1 and repeated goodwill offers to P6. That bought one round, then nothing. P2's real problem was leverage collapse: once outside the P3-P8 bloc, every bribe was rescue spending from a shrinking stack. Even the late bribes to P7 and P3 in Round 3 only inflated future threats without changing the vote. P2 converted money into almost no control and finished with the worst final wealth."
+}
+
+### game `1774659093668202652`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "starting_balance": 93,
+  "finish_rank": 2,
+  "wealth_rank": 4,
+  "final_wealth": 141,
+  "verdict": "Reached the final two, but catastrophically failed to monetize it.",
+  "narrative": "P3 played the most generous alliance game on the board. It stayed close to P6 early, built a steady exchange lane with P5, and usually wrapped its moves in the same behavior-based transparency rhetoric P6 championed. P3 helped eliminate P2, P1, and P4, then joined the Round 4 anti-P7 vote that opened the endgame.",
+  "leverage_and_dealmaking": "The problem was that P3 kept buying trust without securing control. P3 repeatedly paid both P6 and P5, then in Round 6 made the fatal move: dumping all 68 remaining chips out, split 34 to P5 and 34 to P6, while believing P5 was a locked anti-P6 ally. That left P3 entering the final two at 0 even though its vote helped remove P6.",
+  "transfer_report": "P3 was the game's main financier. It sent money in every round, massively subsidizing both P6 and P5, and ended the final-three phase literally emptied out.",
+  "threat_management": "Mixed. P3 survived by staying useful and non-threatening, but over-trusted everyone. In final-two talks, P3 kept asking for 10 or 15, then capitulated to 1, and still did not get a valid settlement because P5 submitted incorrectly and won the fallback anyway.",
+  "bottom_line": "Second place by survival, only fourth by wealth. P3 is the clearest example of why alliance maintenance without bargaining power is not enough in Buyout."
+}
+
+### game `1774659093668202653`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 74,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 289,
+  "deal_style": "Premier wealth converter: soft-spoken coalition loyalist in public, ruthless swing merchant in private.",
+  "post_mortem": "P8 played the cleanest money game on the board. Starting from 74, he embedded inside the mid-tier coalition early, made just enough solidarity transfers to stay trusted, and constantly pushed equalization language that kept bigger allies donating downward. Then, when the coalition turned inward, he became the indispensable swing. Round 5 was icy: he accepted P1's 20 while staying in the P5-P6-P8 pact that eliminated P1 anyway. Round 6 was even better—he took 25 from P6, traded 10 with P5, and still voted out P6, choosing the weaker Final 2 opponent while pocketing both sides' money. In the final negotiation he held the stronger balance, settled for first at a 22 payment, and survived losing the jury. Nobody converted position into wealth better."
+}
+
+### game `1774659093668202672`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 81,
+  "finish_rank": 3,
+  "wealth_rank": 7,
+  "final_wealth": 97,
+  "trajectory": "The table's most compulsive broker. P1 turned an 81 stack into 151 after Round 1 by harvesting money from nearly everyone, then spent the rest of the game leaking those gains back out through overcomplicated side deals.",
+  "dealmaking": "Elite at soliciting bids and getting paid from opposing camps. In Round 1 P1 extracted from P6, P7, P2, and P3 while talking bloc solidarity to everyone. In Round 3 P1 even got P3 to send 70 for a planned anti-P6 tie. In Round 5 P1 tried to buy a path to first by cutting a last-minute deal with P2.",
+  "threat_management": "Poor. Every time P1 built leverage, they advertised it, overtraded, or sent funds away to preserve shaky relationships. Their biggest self-own was Round 5: sending their full 56 to P2 chasing a promised 100 that never arrived, leaving themselves almost assetless entering the endgame.",
+  "conversion": "Bad. P1 finished 3rd in placement but only 7th in wealth. They repeatedly won negotiations and lost the accounting."
+}
+
+### game `1774659093668202673`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 128,
+  "finish_rank": 6,
+  "final_wealth": 81,
+  "dossier": "The insurgent banker who diagnosed the problem correctly and paid the wrong people anyway. P8 saw the emerging center majority early and tried harder than anyone to break it. The toolkit was aggressive: non-aggression pacts, anti-bloc rhetoric, and repeated targeted transfers to P3 and P5. The problem was execution quality. P8 sent 20 in R1, 25 in R2, and 15 in R3, but those funds mostly vanished into unreliable or already-doomed intermediaries. P3 took money and still got executed. P5 took money and still voted P8 out. P8’s strategic read was often right; the center bloc really was the game’s power center. But leverage only matters if the recipients can or will deliver, and P8 consistently overestimated both. This was high-energy counterplay with terrible return on capital."
+}
+
+### game `1774659093668202678`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "opening_balance": 58,
+  "finish_rank": 6,
+  "wealth_rank": 7,
+  "final_wealth": 75,
+  "dealmaking": "P4 played a double-booked game from the start. In Round 1 they courted P6 for protection, negotiated with P2 against P6, and still ultimately voted P7. Later they tried to broker mini-blocs with P3 and P7 and then mounted the only serious anti-P8 counterpush in Round 3.",
+  "leverage": "The problem was credibility. P4 was always selling, rarely anchoring. They paid out 15 to P6 and 15 back to P2 in Round 1, then later paid P3 and P2 again while already under threat. The table read P4 as active but disposable.",
+  "conversion": "P4 never turned negotiations into security. They survived a couple rounds by staying liquid and chatty, but their transfers mostly hollowed out their own stack instead of buying lasting cover. Result: 6th place and only 75 final wealth."
+}
+
+### game `1774659093668202679`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "opening_balance": 122,
+  "finish_rank": 7,
+  "wealth_rank": 6,
+  "final_wealth": 125,
+  "postmortem": "Saw early that P2 was buying a machine, but never found the leverage to break it. P1 cooperated in the P6 hit, paid P3 and even tipped P2, then spent Round 1 and Round 2 trying to recruit P5 into an anti-P2 pivot. The read was good; the timing was late. Once the table agreed P1 was the visible top stack, the counter-bribes looked like a doomed insurgency rather than a credible new center. P1 converted almost no political position into safety, but the preserved stack still kept the final wealth from collapsing."
+}
+
+### game `1774659093668202684`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 75,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 261,
+  "post_mortem": "P4 played the table like a cautious subcontractor: small tribute, explicit safety asks, constant emphasis on reliability. They were rarely driving outcomes, but they were almost never expendable because they kept paying rent on trust with P3 and especially P5. The critical flaw was leverage management. By emptying out in R6, P4 reached Final 2 with zero bidding power and handed P5 total formal control. Still, P4 salvaged the spot brilliantly afterward: they pushed settlement from 25 to 30 using fairness and reputation, then crushed the jury 19-10. For a player dragged to the end as the ideal opponent, finishing third in wealth was a major recovery."
+}
+
+### game `1774659093668202685`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 88,
+  "finish_rank": 2,
+  "final_wealth": 350,
+  "verdict": "The table's sharpest broker. P2 was slippery, expensive, and hard to pin down, yet repeatedly turned that reputation into cash without losing access.",
+  "dealmaking": "Took 40 from P3 in Round 1 and still voted P3 out. Later took 25 from P6 in Round 4 and still joined the hit on P6. In Round 6, extracted 60 from P5 and still voted P5 out with P7.",
+  "leverage": "P2's strength was credible ambiguity. Everyone believed P2 might flip if paid enough, so everyone kept paying.",
+  "threat_management": "Rarely led publicly, but constantly negotiated from the hinge. Even when marked as a future threat, P2 reframed itself as a practical coalition partner rather than a principal enemy.",
+  "conversion": "Elite. Only finished second, but came within 16 wealth of first because it monetized nearly every crisis."
+}
+
+### game `1774659093668202686`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 146,
+  "finish_rank": 8,
+  "wealth_rank": 8,
+  "final_wealth": 72,
+  "style": "opening-round ATM",
+  "dealmaking_postmortem": "P5 started as the table leader and immediately became the table's wallet. Faced with a loud low-stack bloc and P2's opening bid war, P5 tried to spend his way out: matching 30 offers, dangling future payments, then finally wiring 60 to P4 and 30 to P8 in Round 1 just to survive the first vote. It was too much cash for too little certainty. P4 still took the larger strategic coalition, P8 took the money and betrayed him, and the table happily executed the now-weakened leader 7-1. P5's post-mortem is simple and brutal: he recognized the danger but mistook 'highest spend' for 'highest control.' In this lobby, paying everyone just taught them you were harvestable."
+}
+
+### game `1774659093668202687`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 58,
+  "finish_place": 2,
+  "wealth_rank": 2,
+  "final_wealth": 255,
+  "summary": "The underdog survived by becoming the market itself. P7 started shortest, spent most rounds sounding needy, and repeatedly sold its vote to whoever was most frightened at that exact moment.",
+  "dealmaking": "P7 was paid by P2, P6, P8, P3, P4 and P2 again across the game, often promising loyalty in several directions at once. Its best trait was shamelessness: it rarely held moral consistency higher than price or immediate safety.",
+  "leverage_and_threats": "Because P7 stayed vulnerable for so long, nearly everyone treated it as a must-fund swing. That gave it bargaining power far beyond its raw stack. The downside was credibility decay; by the end, everyone expected some double-dealing.",
+  "conversion": "Excellent conversion. P7 reached the final two from the lowest opening seat and finished second in wealth. It lost the final sealed buyout, but repeated extraction plus finalist prize leverage made the run hugely profitable."
+}
+
+### game `1774659093668202704`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 126,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 442,
+  "dossier": "The eventual winner played the slipperiest long game at the table. P1 publicly joined the anti-P5 coalition, privately tested P5 for terms, then committed once the anti-leader numbers were real. From there P1 kept buying social cover with well-placed transfers, but the key pattern was sharper: publicly preach bloc unity, privately keep options open, and at vote time preserve bigger shields in front of himself. R4 and R5 were the revealing rounds: while others were coordinating on P8, P1 quietly voted P3 twice as the cheapest cut, signaling a ruthless preference for minimal-prize eliminations over coalition purity. That looked duplicitous, but it also kept P1 alive through the most dangerous midgame. In final three, P1 correctly identified that P2's organizing engine had to die, courted P3 with cash, and benefited when P3 chose that side. Once heads-up, P1 used the 76-25 stack edge exactly as it should be used: pressure without forcing a buyout, landing a binding settlement where P1 kept first for a payment of 60. The jury liked P3 more, but the first-place prize dwarfed that. P1 converted second-tier chips into the only thing that mattered: the winner's payout."
+}
+
+### game `1774659093668202705`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 65,
+  "finish_rank": 6,
+  "wealth_rank": 6,
+  "final_wealth": 63,
+  "postmortem": "The slipperiest bridge player, and everyone eventually noticed. P7 dealt in every direction: he paid P4 and P5 in Round 1, received from P5 and P6, backed the P5 line on P4, stayed with P5 on the attempted P8 hit in Round 2, then instantly reinvented himself as a protector of the mid-bloc once P5 fell. In Round 3 he tried to buy fresh trust with transfers to P2 and P8, but by then P1, P2, P3, and P6 had already decided he was the opportunistic connector most likely to rewire the board again. His bargaining was active and often clever, but he never solved the credibility problem. P7 moved money and noise; P1's center moved the vote."
+}
+
+### game `1774659093668202718`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 58,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 187,
+  "postmortem": "Started weakest and spent most of the game as a professional survivor rather than a field general. P2 sold safety pacts to almost everyone, constantly offered conditional loyalty, and repeatedly turned vulnerability into bargaining power. The cash management was chaotic—huge amounts were recycled back out, often leaving P2 poorer than the promises implied—but the social result was excellent: bigger stacks kept deciding P2 was useful one more round. The decisive conversion came late: P7 bought P2's vote against P3, then P6 bought P2's vote into the final two, and P2 accepted the overlap settlement for second. Add a 12-point jury bonus and the weakest opener ended with 187. Not efficient, but extremely slippery."
+}
+
+### game `1774659093668202719`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 143,
+  "finish_rank": 8,
+  "wealth_rank": 5,
+  "final_wealth": 130,
+  "arc": "P5 opened as the obvious big stack and never escaped that spotlight. They tried to be conciliatory in public and opportunistic in private, especially with P7, P8, and P4.",
+  "dealmaking": "The main idea was sensible: redirect fear toward P2 and subsidize low-balance votes. But the table's anti-runaway framing had already hardened, and P8's anti-P5 organizing beat P5's slower coalition-building.",
+  "leverage_and_threats": "P5's biggest problem was narrative control. They were always the threat, never the sheriff. Even their transfers to P7 and P3 looked like late survival buys rather than agenda-setting moves.",
+  "conversion_verdict": "First boot, but not a total economic disaster. By preserving 118 before prizes, P5 still finished ahead of several deeper survivors in wealth. Bad survival, decent capital preservation."
+}
+
+### game `1774659093668202720`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 183,
+  "finish_rank": 8,
+  "wealth_rank": 6,
+  "final_wealth": 140,
+  "verdict": "Richest opener, weakest political insulation.",
+  "dealmaking": "P4 saw the danger immediately and tried to build a counterweight with P8, then desperately worked on P3. The offers escalated from caution to open bribery, but the anti-P4 coalition had already formed faster than P4 could fracture it.",
+  "leverage_and_transfers": "The notable move was the 35 payment to P3 after multiple DM attempts to flip them, plus 20 to P8. That money was real, but it bought no vote. P3 simply took the cash and stayed on the execution line.",
+  "threat_management": "This was the classic leader's trap: everyone could publicly justify voting P4 as balance control, and P4 never found a durable social shield. Being obviously richest without a disciplined voting bloc is death in this format.",
+  "conversion_to_wealth": "Awful in strategic terms, cushioned in accounting terms. P4 finished dead last, yet the starting stack was so large that they still ended with 140 final wealth and beat two later survivors on the wealth table."
+}
+
+### game `1774659093668202721`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 56,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 218,
+  "style": "cross-booking survivor with strong jury recovery",
+  "postmortem": "P8 spent much of the game living in contradictory agreements. In multiple rounds he accepted terms from both sides, sometimes literally transferring both directions, which kept him alive but wrecked his reliability. He helped oppose P1, resisted the anti-P3 push longer than most, then later joined the anti-P2 and anti-P4 votes when the math demanded it. His biggest move came at final three: a 40-transfer to P7 nearly bought a seat in the final over P6, and the resulting split-plus-tie-break did in fact remove P6. Once in the final two, though, the leverage gap was real. P8 sensibly converged to the overlap settlement that made P7 first and secured a 28 payment. The jury then rewarded his social game with a 12-point bonus, rescuing a messy strategic record into an excellent wealth finish."
+}
+
+### game `1774659093668202726`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 56,
+  "verdict": "Paid repeatedly for trust it never truly owned.",
+  "post_mortem": "P8 spent much of the game acting like a junior coalition donor. It kept feeding P3 and P7 with small transfers, echoed alliance messaging, and tried to buy relevance despite sitting on a short stack. The problem was leverage: nobody needed P8 badly enough to protect it. Once P2 and P6 were gone, P8 had neither enough money to threaten anyone nor enough relational capital to survive as a useful spare part. Its two votes at P5 were at least an attempt to crack the formation, but by then it was already marked as the disposable outsider. Small stack, small network, smallest final wealth."
+}
+
+### game `1774659093668202727`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "finish": 2,
+  "final_wealth": 291,
+  "postmortem": "P3 was the game's chief architect for the first half and its second-best finisher, but not its best converter. The opening alliance proposal shaped the table: P1-P3-P5 as the stabilizing core, with early money pushed to P8 and P5 to lock Round 1. P3 constantly managed threat narratives, first selling low-balance cleanup, then flagging P4, then joining the anti-P8 coalition when that became necessary. The upside: P3 kept influencing targets deep into the game despite bleeding chips. The downside: P3 repeatedly paid to maintain structures that later empowered others, especially P8 and P2. Round 5 was classic P3: public misdirection toward P5, private reconstruction of the anti-P2 bloc, and 35 coins spent to hold the alliance together. It worked. Round 6 was also strategically sound: P3 chose to eliminate P1, correctly recognizing that 193 entering the final buyout phase would be oppressive. But the final negotiation was a value leak. P3 opened with a generous 50 ask for conceding 1st, then floated 80, then ultimately matched P5's 30 proposal. That secured 2nd, but it showed weaker endgame leverage management than P5. Strong table control, strong coalition maintenance, decent conversion into runner-up wealth, but real money was left on the table at the finish line."
+}
+
+### game `1774659093668202734`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 156,
+  "finish_rank": 8,
+  "wealth_rank": 4,
+  "final_wealth": 131,
+  "post_mortem": "Dead on arrival politically, but still rich. P8 walked in with the biggest stack and immediately became the universal opening target. The rescue attempt was frantic rather than sharp: contradictory public messaging, broad offers, and then a costly last-minute side deal with P7 for 30 in exchange for a promised vote flip that never mattered. The threat management failed completely; nobody serious bought the anti-P8 panic. But P8's wealth story is a reminder that elimination order is not final wealth. Even after spending 30 on a failed rescue, P8 died with 126 and coasted to 131 after the 8th-place prize, good for fourth in wealth. Terrible survival play, decent conservation."
+}
+
+### game `1774659093668202748`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "opening_balance": 63,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 320,
+  "post_mortem": "P8 was the cleanest all-around converter in the game. Early on, he backed P3's coalition with real money and earned trust as a reliable lieutenant. But unlike P1 or P7, he never became a prisoner of the coalition story. In round 3 he quietly adapted to the post-transfer board and voted P3 when P3 became the actual top stack. In round 4 he double-tracked shamelessly, privately wooing P3 while publicly sitting in the anti-P3 camp, then side-voted P4 while P3 still went down. In round 5 he locked in with P1 to cut P7, and in round 6 he outmaneuvered P1 by securing P4's vote and letting transfers make P1 the visible top target. In the finals he failed to reach overlap, calmly won the sealed buyout 40-35, then crushed the jury 5-1. Best endgame, best threat management, best wealth conversion."
+}
+
+### game `1774659093668202749`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "finish_rank": 4,
+  "wealth_rank": 5,
+  "final_wealth": 126,
+  "post_mortem": "P1 paid to sit in every room and ended up trusted in none of them. He built simultaneous channels with P5, P7, and P8 from the start, sent money to multiple sides, and repeatedly tried to preserve optionality rather than commit cleanly. That bought temporary safety but wrecked credibility. The Round 4 sequence defined his game: P1 took 30 from P7, still voted P7, and did not even save his preferred ally in the process. After that, P7's betrayal case was airtight, and P1's Round 5 attempts to repair the relationship with more money landed as desperation, not leverage. He survived decently long, but his dealmaking diluted rather than compounded his position."
+}
+
+### game `1774659093668202750`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "finish_rank": 8,
+  "wealth_rank": 4,
+  "final_wealth": 138,
+  "opening_position": "Started as chip leader at 180 and immediately tried to formalize a top-three arrangement with P3 and P4.",
+  "dealmaking": "P2's dealmaking was structurally reasonable but politically tone-deaf. Publicly declaring a top bloc gave the lower half a perfect rallying cry. Then P2 tried to buy flexibility with a large round-1 transfer package.",
+  "leverage_and_threats": "The problem was threat image. As the richest seat, P2 had to either stay very quiet or pay decisively enough to fracture the opposition. Instead it paid 30 to P1 and 20 to P4 and still remained the consensus 'top threat.'",
+  "conversion_to_wealth": "Poor in survival terms, decent only because the starting stack cushioned the fall. P2 was eliminated first, yet still landed fourth in wealth purely off inherited chips and the prize schedule. That is not conversion; that is residue.",
+  "critical_moments": "Publicly blessed the top alliance; failed to line up a unified countervote; transferred heavily into players who did not save it; got swept out 5-3 in round 1.",
+  "verdict": "Largest opening stack, weakest political camouflage. P2 spent real money and bought no safety."
+}
+
+### game `1774659093668202751`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 67,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 457,
+  "verdict": "The winner by conversion, not by table control.",
+  "dealmaking": "Played as a mid-stack scavenger: always available for business, often asking for protection money, and perfectly willing to let bigger stacks burn cash around him.",
+  "leverage_and_threats": "Rarely held the room, but repeatedly sat in the lane between larger rivals. That let P5 collect safety payments early, survive when tops collided, and keep enough optionality to matter late.",
+  "key_turns": "R1 turned a modest stack into relevance by taking help from P1 and coalition crumbs while still keeping coalition access; R4 and R5 let P2, P4, and P7 overpay in wars P5 did not need to win cleanly; R6 survived the three-way tie that P8 created; R7 was the masterpiece, where P5 forced fallback and jammed a winning 56 buyout while P8 bid 0.",
+  "conversion": "P5's reliability pitch overstated the record, but the benchmark only cares about wealth: the all-in final buyout plus a 61-point jury bonus turned a shaky tactical game into the richest finish."
+}
+
+### game `1774659093668202757`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "starting_balance": 142,
+  "finish_rank": 6,
+  "final_wealth": 124,
+  "verdict": "The most visibly two-faced player at the table. P8 kept trying to stand in two coalitions at once and got paid for neither in the long run.",
+  "dealmaking": "Opened by proposing a top-pair with P3, then quietly reset toward P1, then publicly embraced the mid-bloc, then privately promised P1 a P2 vote, then still sent transfers to P4 and P2 while voting P2. In Round 3 P8 again sprayed money at likely enemies and tried to redirect the table onto P7.",
+  "leverage": "Decent starting stack and temporary strategic ambiguity, but P8 spent that ambiguity too loudly. Once everyone realized he was feeding multiple sides, his money stopped buying trust.",
+  "critical_turns": [
+    "Round 1: sent 15 to P1 despite being told not to create visible pair optics.",
+    "Round 2: publicly endorsed anti-P1 coalition, privately cut a P2-vote line with P1, then still transferred 20 into the bloc and exposed himself as untrustworthy.",
+    "Round 3: sent 20 to P4 and 15 to P2 while facing the kill vote, and still lost 4-2."
+  ],
+  "mistakes": "Repeatedly funded players who were already aligned against him, and never chose one coherent threat-management story.",
+  "conversion": "Worst at the table. Start 142, end 124, dead in 6th and last in wealth."
+}
+
+### game `1774659093668202764`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "starting_balance": 75,
+  "finish_rank": 6,
+  "final_wealth": 76,
+  "postmortem": "The table's most chaotic broker and least trusted survivor. P7 spent the early game selling himself to everyone: he pledged the low-balance bloc, solicited P6 for a flip price, and in Round 2 openly worked both the P2 and P3 sides. He was most successful financially in Round 2, where he vacuumed up money from P1, P2, P3, P4, and P6, ending the round at 95 even though he still voted with P2. The problem was that every side now had receipts. By Round 3, P8 and P6 successfully framed P7 as the clearest unreliable live stack, and even P1 joined the pile-on. P7's flaw was not just flipping; it was flipping so noisily that the table eventually preferred certainty over keeping him around as a mercenary."
+}
+
+### game `1774659093668202765`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 111,
+  "finish_rank": 7,
+  "wealth_rank": 6,
+  "final_wealth": 111,
+  "verdict": "Hyperactive broker who made itself too central too early.",
+  "postmortem": "P4 was everywhere in the first two rounds: soliciting payments, promising redistribution, and trying to sit at the center of the anti-P1 coalition while simultaneously shopping its vote back to P1. It did well in pure deal extraction, taking from P3, P1, P8, and P7 in Round 1, and it turned that into the temporary chip lead. But that was also the problem. P4 overtraded, overpromised, and became the obvious next target. In Round 2 it tried to buy safety with an 'inclusive' payout story that the transfer cap simply could not support. P6 and the P5/P6/P7 bloc saw through it immediately, and P3 refused to be peeled cheaply. P4's 25-to-P3 and 15-to-P7 bought no durable protection, and it was eliminated anyway. A vivid example of extracting value without converting it into safety."
+}
+
+### game `1774659093668202778`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 60,
+  "opening_balance": 127,
+  "verdict": "The biggest burn pile at the table: lots of offers, lots of spending, almost no conversion.",
+  "dealmaking": "P7 tried to play board-chair from the opening, first with P8, then by courting P5, then by spraying survival bribes at P3 and P6. The problem was consistency. P7 kept proposing incompatible coalitions and often sounded like he was negotiating from a script rather than from updated leverage.",
+  "leverage": "There was one clean asset: a high initial stack. P7 spent it badly. Mutual transfers with P8 just preserved a minority pair, and the later 30 to P3 plus 20 to P6 in Round 3 produced zero vote change. Even the Round 2 public pitch accidentally framed P7 as the elimination target, which captured the overall slippage.",
+  "conversion": "Almost none. P7 started at 127 and reached elimination with just 47, then finished last in wealth despite outlasting P8 and P2. No one paid more for less influence."
+}
+
+### game `1774659093668202779`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 100,
+  "finish_rank": 2,
+  "final_wealth": 436,
+  "verdict": "The table's best broker and most effective swing player.",
+  "narrative": "P2 began as a cautious moderate, then became the hinge on which the whole game swung. He cultivated P6 early, took P4's money, received P5's bizarre 29-point lifeline, and steadily embedded himself in every stable bloc. More importantly, he kept multiple doors open without becoming the immediate target. He helped build the P1-P2-P6-P8 core, then later quietly positioned himself between P1, P4, and P8. Round 5 was classic P2: he drew value from both P4 and P8, initially voted P4, then on the tiebreak flipped to P8 and changed the game. Round 6 he did it again, extracting mirrored 40-point commitments with P4 while also taking and sending 20 with P1, then voted out P1. In the final two, as the weaker stack, he still forced a 60-point settlement payment and split the jury bonus 45-46. He did not win the crown, but he converted middle position into enormous wealth better than anyone except P4."
+}
+
+### game `1774659093668202784`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "starting_balance": 93,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 261,
+  "post_mortem": "P7 played the most influential low-stack game. Early on, it acted like a skeptical auditor, constantly demanding concrete transfers before offering support. That habit let P7 become the table's favorite swing vote. The trade-off was brutal capital discipline: P7 repeatedly gave away too much, even crashing to 0 after Round 2 transfers. But politically, those moves bought something real: P4's trust. From the P8 vote onward, P7 increasingly tied itself to P4's survival logic, and P4 kept repaying that loyalty with future inclusion, then real cash in R3 and R6. P7 was not the sharpest accumulator, but it was an excellent threat manager. It understood that with a weak stack, the path to top wealth was not to dominate balances directly, but to become indispensable to a stronger patron and then cash that relationship at the finalist table. That worked. P7 reached the final two, got the full 40-token settlement cap from P4, and added an 8-point jury share. The inefficiency was obvious; the endgame monetization was excellent."
+}
+
+### game `1774659093668202785`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "opening_balance": 91,
+  "final_wealth": 209,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "summary": "The coalition banker and persistent supplicant. P8 bought access to P3 early, kept paying to stay inside the fortress, made the final two, then got squeezed by the exact power imbalance it had helped build.",
+  "dealmaking": "P8's whole game was built around attaching to P3. In Round 1 it transferred 15 to P3 unprompted, then kept returning with requests for a balancing payment in almost every round. That persistence did keep P8 relevant: P3 repeatedly reassured it, and P8 stayed inside the decisive bloc all the way to heads-up.",
+  "transfers": "Massive and consequential. P8 fed P3 repeatedly, also paid P2 and sometimes P7 to reinforce coalition glue, and in Round 6 sent its entire 36 to P3 to secure the flip against P7. That final all-in payment bought second place, but also handed P3 a comically dominant final-two stack.",
+  "threat_management": "P8 managed short-term risk well by never openly breaking with power, but mismanaged long-term leverage. It kept noticing P3's growing dominance and asking for compensation, yet never forced the issue when it still had bargaining power. By the final two, it had almost none.",
+  "conversion": "Good but frustrating. Reaching second from 91 was strong, and the 16-point jury haul mattered. But P8 overinvested in coalition maintenance and underpriced its own loyalty. The failed 30-demand versus P3's 25 offer was also costly: no overlap meant fallback buyout, and P8 got only 20 balance instead of a negotiated premium."
+}
+
+### game `1774659093668202786`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "opening_balance": 94,
+  "finish_rank": 3,
+  "wealth_rank": 6,
+  "final_wealth": 109,
+  "post_mortem": "P2 was the table's most shameless broker: always available, always pricing its vote, almost never exclusive. In Round 1 it promised P3 support, took P8's 40, solicited P7's 50, sent money to both of them, and still voted P7 out. That pattern continued all game: P2 repeatedly sold itself to both sides, extracted real transfers, and often reserved the right to flip in tiebreaks. The problem was conversion. P2 lasted to third place, but constant bid-chasing and reciprocal transfers bled its stack down to 35 before prizes, so its deep run produced only sixth in final wealth."
+}
+
+### game `1774659093668202787`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 85,
+  "finish_rank": 3,
+  "wealth_rank": 5,
+  "final_wealth": 97,
+  "postmortem": "P8 was the table's most eager diplomat and one of its biggest victims. Nearly every round, P8 was cutting fresh safety deals, paying to preserve optionality, and trying to keep a middle bloc alive against the richer seats. The problem was enforcement. In Round 1 P8 paid P7 and P6 while still voting P7. In Round 2 P8 helped consolidate the P3 vote. In Round 3 P8 finally landed on the winning side of a major coup, joining P1 and P6 to remove P7. But P8 kept paying for promises that were cheaper to take than to honor. Round 5 tied P8 to P1 against P2, and Round 6 was the final sting: P8 sent P1 another 10 for a supposed final-two route, only to be cut 2-1 while P1 honored the older pact with P4. Strong social volume, weak closing power; third in finish, only fifth in wealth."
+}
+
+### game `1774659093668202798`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 223,
+  "assessment": "P4 was the game's best value extractor. Early on it attached itself to P6's anti-leader machine, paying just enough to signal seriousness while also taking money from above; Round 1 alone brought in 20 from P7 while it sent 12 to P6 and 10 to P3 to cement the anti-P1 bloc. Once the table accepted the 'cut the biggest stack' norm, P4 became its most reliable enforcer and most effective middleman. It kept P7 and P2 tethered with small, targeted transfers, and then pulled the coldest move of the game in Round 5: P8 sent it 35 in a last-ditch rescue bid, and P4 calmly kept the cash and voted P8 out anyway. Round 6 was even more artful. Facing the highest-stack spotlight at 101, P4 dumped 25 into P2, shrinking to 76 and scrambling the target map. That transfer looked suicidal on its face, but it turned P2 into the largest stack, enabled a three-way vote split, and P2 was the one who died. P4 then narrowly missed a private final settlement with P7 and lost the fallback buyout 21 to 19, but its jury case landed hard enough to win a 12-6 bonus split. It did not win the seat, yet it converted position into wealth almost perfectly."
+}
+
+### game `1774659093668202799`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "placement": 7,
+  "wealth_rank": 5,
+  "final_wealth": 106,
+  "postmortem": "Built the first real bloc and immediately painted himself as its boss. P5's mid-tier coalition pitch in R1 was the game's first coherent structure, and it worked well enough to help kill P6. He even profited from the chaos, extracting P4's full 62 while only paying out small coalition glue. But he over-advertised the future elimination order, which let P3 and P7 recast him as the next systemic threat. In R2 he paid 50 to P2 and 30 to P8 trying to keep P3 as the designated victim, only to have P2 pocket the money and join the anti-P5 vote. Awful placement, but decent wealth because the early bloc-building actually paid."
+}
+
+### game `1774659093668202816`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 97,
+  "finish_rank": 3,
+  "wealth_rank": 6,
+  "final_wealth": 147,
+  "assessment": "P5 was socially connected and rarely isolated, but overtraded and under-converted. The constant P3-P5 trust loop kept P5 alive and informed, yet P5 kept spending into coalitions that were perfectly willing to cut P5 later.",
+  "dealmaking": "P5 was flexible enough to survive several turning points: anti-P8 in Round 1, consensus-on-P1 in Round 2, anti-P4 in Round 3, and anti-P6 in Round 5. P5 also correctly spotted instability in Round 4 and cast the lone vote onto P2 after reading P2's transfer note as a warning flare.",
+  "threat_management": "The problem was endgame leverage. In the final three, P5 tried to buy both remaining opponents at once, sent out 50, and entered the vote with only 29 after transfers; that left almost no deterrent power and made P5 easy to remove.",
+  "conversion": "Poor relative to finish position. Third place on survival, but only sixth on wealth because too much of P5's stack got spent defending relationships that never matured into control."
+}
+
+### game `1774659093668202817`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "finish_rank": 3,
+  "wealth_rank": 4,
+  "starting_balance": 85,
+  "final_wealth": 211,
+  "post_mortem": "P3 was the professional swing vote: never fully trusted, always being courted, and often paid simply because everyone feared being one vote short. It spent the early game oscillating between anti-P5, pro-P7, and anti-chaos pitches, then settled into a role as the table's most rentable middleman. Round 4 was peak P3: both sides wanted the seat, P3 extracted value from multiple directions, and then used the re-vote to help bury P5. The downside of that style is that it creates survival without ownership. P3 kept monetizing marginal leverage, but rarely dictated the target. By Round 6 it finally had the biggest stack and tried to buy P2's loyalty with safety plus 10; P2 simply took the money and went with P8's stronger anti-leader line. P3 finished deep and rich, but as a broker, not a ruler."
+}
+
+### game `1774659093668202818`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 97,
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 106,
+  "elimination_round": 3,
+  "style": "Hedger who spent heavily without changing outcomes.",
+  "leverage": "P7 was always adjacent to the center but rarely controlled it. He tried to mediate, offered supplements, and kept one foot in majority plans while fishing for better prices from threatened leaders.",
+  "conversion": "The problem was burn rate. In Round 2 he danced with P6 and ended up in a messy exchange orbit around a 40 transfer without actually saving P6. In Round 3, as the new leader at 117, he launched a full bribery barrage at P8 and P1, sending 30 and 20 respectively. Both still voted him out.",
+  "postmortem": "No one set more money on fire for fewer changed votes. His finish was not terrible, but his wealth was. He is the clearest case of transfers as deadweight rather than leverage."
+}
+
+### game `1774659093668202819`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 106,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 356,
+  "summary": "P2 played the cleanest brokerage game on the board. He rarely overcommitted in public, but in private he was everywhere: buying security from P3, flirting with P7, later binding himself to P6, and repeatedly making his vote expensive. He was excellent at keeping options alive while letting louder players absorb the table's fear. His key conversion moment came in Round 4, when he helped redirect the anti-runaway logic from P7 onto P3. From there he and P6 ran the endgame with minimal noise. The only real miss was the final two: against P6's superior stack, P2 no longer had credible first-place leverage and had to settle for second plus a 49-point payment. Still, this was elite transactional play and an excellent wealth conversion."
+}
+
+### game `1774659093668202824`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 59,
+  "finish_rank": 5,
+  "wealth_rank": 8,
+  "final_wealth": 77,
+  "verdict": "The table's most self-sabotaging dealmaker; constantly negotiated, then bled out its own stack.",
+  "analysis": "P3 began as the lowest stack and correctly recognized it needed sponsorship. It successfully extracted support from P2 and P7 in the early rounds and was repeatedly protected from elimination by the coalition's anti-dogpile ideology. But P3's transfer play was disastrous. It kept asking for help, then sent large chunks right back to the power center: 25 to P7 in R1, 10 to P7 and 10 to P2 in R2, 30 to P7 and 20 to P2 in R3, then 20 to P7 and 15 to P2 in R4 just before being voted out. That is not alliance maintenance; that is tribute so heavy it hollowed out its own endgame. Worse, when the table standard was 'don't kill the leader for being rich and don't kill the short stack for being weak,' P3 twice publicly reverted to exactly the easy-target logic everyone had condemned, voting P6 and justifying it with 'Eliminating the weakest stabilizes the game.' That gave P7 an effortless public case to remove P3. Result: 5th by finish but dead last in wealth at 77, the cleanest example of failing to convert survival into money."
+}
+
+### game `1774659093668202838`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 71,
+  "finish_rank": 7,
+  "wealth_rank": 7,
+  "final_wealth": 119,
+  "verdict": "Explosive early cashout, then immediate overexposure.",
+  "dealmaking": "P1 navigated R1 well. It backed the low-stack anti-P5 line, cut a separate side deal with P4, and then got the biggest payday of the night when doomed P5 dumped 70 into its stack.",
+  "leverage": "That should have been a launchpad, but it became a siren. P1 jumped from last-place territory to 136 instantly, then added muddled public messaging and even an invalid self-vote in R2. The table no longer had to argue about narrative; it just saw a fresh leader without stable cover.",
+  "conversion": "Despite a 7th-place finish, P1 still left with 119 because the R1 extraction was massive. Good opportunism, almost no threat control."
+}
+
+### game `1774659093668202839`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 139,
+  "finish_rank": 8,
+  "wealth_rank": 6,
+  "final_wealth": 120,
+  "dossier": "Dead on arrival. As opening chip leader, P3 never managed threat reduction, and its private play was almost self-parody: asking others to pay for the privilege of voting P3 out, then leaking money to P6 and P4 with no protection attached. The whole table found easy consensus on P3 immediately. Its only real accomplishment was preserving enough starting cash to avoid absolute bottom wealth despite finishing last."
+}
+
+### game `1774659093668202846`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 101,
+  "finish_rank": 2,
+  "wealth_rank": 3,
+  "final_wealth": 279,
+  "dossier": "The busiest architect at the table. P4 saw early that P1's naked top-4 pitch was too blunt, rebranded it as a 'hybrid' coalition, and then spent the next several rounds wiring the board together with small transfers, mutual-protection pacts, and constant message traffic. They helped organize the round-1 hit on P2, greased the round-2 removal of P3, then pivoted hard into anti-consolidation rhetoric when the original top core became expendable. P4 was central to the eliminations of P7, P1, and P5, and unlike several others they usually had a coherent reason for each pivot. The key swing came at three: P4 had a path with P6, but ultimately decided P8 offered the better final-two shape and voted out P6. That got them to the finals and earned two jury votes, but the last negotiation was a miss. P4 asked 100, P8 held at the true hard cap of 81, no overlap formed, and fallback locked P4 into second. Great social architecture, slightly greedy final pricing."
+}
+
+### game `1774659093668202847`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 95,
+  "finish_rank": 3,
+  "wealth_rank": 7,
+  "final_wealth": 100,
+  "assessment": "The busiest broker at the table and one of the worst converters of position into wealth. P1 constantly sold the same leverage twice: in R1 he took 30 from P6, paid P3 and P7 to hold anti-P6, then still voted P6 out. That was clever in the moment, but it set the tone for a game where he kept spending to secure votes that were often already there.",
+  "key_moves": [
+    "R1: monetized P6's panic, pocketed 30, and still joined the 7-1 kill on P6.",
+    "R2: correctly read P2 as the new runaway, but still burned 35 on P4 and P7 in a round that was already won by no-spend discipline.",
+    "R3-R5: became erratic, publicly one place and voting another, including the anti-P3 public line followed by a vote on P5 in R3, then a costly anti-P5 pivot in R4.",
+    "R6: tried one last rebalance against P8, but P4 had already sold final-two access to P8."
+  ],
+  "conversion": "Poor. P1 reached 3rd place, but repeated overpaying and late flips left him with only 100 final wealth, behind players eliminated much earlier."
+}
+
+### game `1774659093668202852`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "start_balance": 139,
+  "finish_rank": 8,
+  "wealth_rank": 8,
+  "final_wealth": 121,
+  "verdict": "Opening chip leader who never defused the target.",
+  "postmortem": "P6 started richest and instantly became the easiest 'for the good of the table' sacrifice. He tried to lean into liquidity, sent 20 to P8, courted P4, and argued for a mid-tier target instead of the bottom stack. None of that mattered because the real private project in R1 was to rescue P8 and decapitate the leader. Once P2-P3-P4-P5 locked in, P6 was finished. This was the cleanest example in the game of raw starting position failing to convert into protection."
+}
+
+### game `1774659093668202853`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "start_balance": 33,
+  "finish_rank": 8,
+  "wealth_rank": 8,
+  "final_wealth": 35,
+  "post_mortem": "P4 correctly recognized that a low-stack player needed coalition cover, but announced the project too early and from too weak a chair. That made P4 easy to frame as a 'risky bloc pusher,' exactly the sort of low-cost first elimination a new majority likes to agree on. Last-minute transfers to P1 and P2 bought attention, not rescue. Once P8's bloc settled on P4, the round became a formality."
+}
+
+### game `1774659093668202854`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 102,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 290,
+  "summary": "P8 played the adaptable broker: rarely the loudest voice, often the side-payment desk, and ultimately the short stack that sold one decisive vote for a seat in the final two.",
+  "leverage_game": "P8's game was about staying useful. It spent early to secure non-aggression and coalition membership, backed the anti-P1 and anti-P6 campaigns, and later floated between anti-P7 and anti-P2 narratives depending on where safety sat.",
+  "pivotal_deals": [
+    "Round 1: financed links with P7 and P6, helping glue the anti-P1 coalition together.",
+    "Round 2: kept funding coalition stability with transfers to P7 and P3.",
+    "Round 3: initially entertained the P7 anti-P2 case, then flipped in the tie-break to eliminate P7 on reliability grounds.",
+    "Round 5: sided with P2 and P5 to cut P4, buying safety for one more round.",
+    "Round 6: accepted P2's 33-for-vote deal, chose the guaranteed final two over being the obvious 3rd-place short stack, and delivered the deciding vote on P5.",
+    "Final two: aimed too high at first, but still landed a 30 settlement and 15 jury bonus."
+  ],
+  "threat_management": "Good survival instincts. P8 was rarely anyone's first target until very late, and when it finally was the short stack, it converted that vulnerability into a marketable vote.",
+  "mistakes_or_risks": "Its public logic was sometimes slippery and it occasionally backed multiple incompatible narratives. In the final two it badly over-anchored with 92/45 language before settling near P2's zone.",
+  "wealth_conversion": "Strong. P8 never truly controlled the table, but it kept finding prices for its cooperation and then cashed its final vote at exactly the moment it mattered most."
+}
+
+### game `1774659093668202855`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "start_balance": 74,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 357,
+  "net_change": 283,
+  "postmortem": "The table's purest dealmaker and best monetizer. P6 talked constantly about 'minimal transfers' while quietly running a side market every round. In Round 1 P6 even sent 15 to the doomed P5 for a private anti-P1 vote, then still stayed in the public P5 consensus. In Round 3 P6 made the key strategic flip of the game, abandoning the public anti-P4 line and joining P1's argument that killing P4 would only help P1; that redirected the kill onto P7. In Round 4 P6 was ruthless: accepted P3's 15 while staying locked on eliminating P3, and also took stability money from P1. In Round 5 P6 exchanged 25 with P4 and preserved swing status. In Round 6 P6 sold access to both finalists, taking 40 from P4 and 25 from P1, then sided with the larger immediate payment and voted out P1. That move put P6 into the final two and turned a 74 start into 357 final wealth. The only miss was endgame execution: P6 had a plausible cooperative settlement path, but poor overlap discipline sent the match to fallback buyout and left money on the table."
+}
+
+### game `1774659093668202862`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 91,
+  "finish_rank": 6,
+  "wealth_rank": 8,
+  "final_wealth": 34,
+  "dossier": "The most cash-destructive game at the table. P5 started with decent instincts, opposing the lazy P8 elimination and joining the anti-P4 effort. He even extracted real value from the doomed leader, demanding 30 from P4 before still voting P4 out. But after that, P5's messaging split in every direction. In R2 he talked stability, funded P6 with 20 and P1 with 15 under a 'P6 bloc' banner, then cast the lone vote on P8 anyway. That single ballot gave P1 and P7 a perfect hypocrisy frame in R3: P5 had publicly denounced bottom-feeding, then literally tried it. When panic hit, P5 bled more money, sending 20 to P1 and 20 to P7 in a last-minute trust-rebuild attempt, only to be eliminated 5-1. No one converted transfers into less safety. P5's issue was not lack of ideas; it was paying multiple incompatible stories at once and winding up trusted by nobody."
+}
+
+### game `1774659093668202863`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "starting_balance": 92,
+  "finish_rank": 6,
+  "final_wealth": 36,
+  "post_mortem": "The player who spent the most for the least structural return. P8 flirted with P7 early, then funded the round-1 coalition directly with gifts to P3 and P6. In round 2 they again tried to keep options open with side deals, but voted P5 instead of the actual anti-P4 majority, and that single visible miss turned them into the table's clean 'unreliable outsider' narrative. From there the game collapsed fast: in round 3 P8 tried to buy life with 20 to P6 and 15 to P2, but by then every major bloc preferred a unanimous P8 elimination to any harder fight. P8 finished ahead of P4 in placement but dead last in wealth because almost every transfer was defensive burn rather than position-building capital."
+}
+
+### game `1774659093668202870`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 81,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 200,
+  "verdict": "Bought influence all game, crashed to zero, then landed the highest-return betrayal on the board.",
+  "postmortem": "P2 kept trying to purchase belonging: small trust transfers to P5 and P7 in Rounds 1 and 2, then more to P3 and P7 in Round 3, then the nuclear option in Round 4 by sending their entire stack away trying to fund an anti-core flip. That should have ended their equity, but instead it made them strategically harmless and therefore oddly survivable. From zero, P2 became the perfect swing vote. The masterpiece was Round 6: they negotiated P4 up from 45 to 55, took the payment, and still voted P4 out with P6. That single move remade the endgame. P2 then lost the final buyout, but second place plus the paid-off semifinal left them at 200, miles ahead of every non-winner. Ethically brutal, economically brilliant."
+}
+
+### game `1774659093668202871`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 115,
+  "finish_rank": 7,
+  "wealth_rank": 8,
+  "final_wealth": 6,
+  "dossier": "The game's most dramatic burner of capital. P8 resisted the anti-P1 consensus, tried to keep attention on P6, and then spent aggressively to buy alternate futures: 20 to P1 and 15 to P4 in R1, then an all-in 80 split between P4 and P7 in R2. None of it changed the votes. The seat's biggest mistake was paying players whose incentives were already anchored elsewhere; the cash made them richer, not loyal. P8 did create second-order chaos by turbocharging P4 and P7 into later threats, but personally converted almost none of that into wealth. It was a spectacular example of why desperate transfers without vote control are just donations."
+}
+
+### game `1774659093668202878`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "finish_rank": 4,
+  "wealth_rank": 4,
+  "final_wealth": 184,
+  "opening": "Started as chip leader at 134 but wisely declined to defend pure wealth hierarchy after P4 overplayed.",
+  "dealmaking": "P1's game was adaptive rather than creative. He attached himself to the winning side early, paid small but timely trust transfers to P5 and P6, then later to P7 and P8. He was especially effective as a reassuring partner for whoever needed one more vote or one more token of good faith.",
+  "leverage": "P1 rarely drove the table, but he was a valuable validator. His approval helped make P2's 'free-rider' frame land, helped stabilize the anti-P6 vote, and later helped legitimize the anti-P3 and anti-P1 logic itself. He also became the emergency safe harbor for panic redistribution, most notably when P3 dumped 70 into him in Round 4.",
+  "threat_management": "Adequate until the stack became impossible to hide. Once P1 ballooned to 189, he was no longer a negotiator so much as a prize everyone else could agree to take.",
+  "wealth_conversion": "Reasonable. P1 parlayed starting wealth plus late transfers into a solid final payout, but never converted top-stack potential into endgame control."
+}
+
+### game `1774659093668202879`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "opening_balance": 60,
+  "finish_rank": 4,
+  "wealth_rank": 7,
+  "final_wealth": 110,
+  "verdict": "P6 survived deep by constantly paying coalition rent, but never turned that spending into ownership of the board. From the shortest stack, P6 became the bloc's chief maintenance financier: sending to P7 and P3 in round 1, to P5 and P7 in round 2, and again feeding allies in round 3. That kept P6 alive, but it also made P6 the table's soft ATM. The reads were not always bad - P6 repeatedly sensed who the true balance threat was - yet the follow-through was mushy, with frequent side offers and expensive trust theater. Round 5 captured the whole profile: P6 took money, sent money, tried to hedge, and still died in the 2-2 tiebreak after P4 and P3 coordinated better. Fourth by finish, seventh by wealth is the clearest case of survival without efficient conversion."
+}
+
+### game `1774659093668202880`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "finish_rank": 5,
+  "wealth_rank": 5,
+  "final_wealth": 152,
+  "verdict": "The low-stack hustler who talked himself into the middle of every deal, then occasionally transferred in the wrong direction.",
+  "dealmaking": "P3 was shamelessly transactional and often effective. He extracted a gigantic 92 from P5 in Round 1, later drew support from P4 and P6, and constantly sold the possibility of a flip.",
+  "leverage": "His leverage was survival anxiety. As the opening short stack, he made stronger seats pay to keep him useful. Once he rose to the top at 112, that leverage inverted into threat status.",
+  "threat_management": "Messy. He tried to play both bloc unity and private side bargains at once, including clumsy P8 dealings in Round 2 and a late paid flip attempt with P1 in Round 4. He could attract money, but not confidence.",
+  "wealth_conversion": "Moderate and respectable. From 45 at the start to 152 final wealth is real salvage, but he never converted temporary bargaining power into endgame security."
+}
+
+### game `1774659093668202881`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 184,
+  "finish_rank": 8,
+  "wealth_rank": 5,
+  "final_wealth": 165,
+  "post_mortem": "The opening giant never solved the 'everyone can see you' problem. P7 tried to look civic-minded in public while privately building a smaller protection web with P5 and P6, including a 20 transfer to P5 and 15 to P6. That was nowhere near enough. P1, P4, P8 and then P2/P3 all found anti-rich common cause immediately, and P7 never expanded beyond a minority shell. The result was a Round 1 execution with 149 still in stack. Ironically, the huge start was so large that P7 still finished fifth in final wealth despite being first out, which says everything about the opening endowment and nothing good about the threat management."
+}
+
+### game `1774659093668202882`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "start_balance": 101,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "final_wealth": 338,
+  "verdict": "P6 was the hinge player for most of the game: rarely the loudest, often the conditional closer. They kept saying 'I am in if we have 4+' and that worked; others did the recruitment, P6 supplied legitimacy. They were central to the P5 and P2 removals, then joined P3 in reframing Round 3 around 'reliability' and P8's alleged betrayal instead of just killing P7. The biggest cash swing of the late game was P4's desperate 50-point transfer into P6 in Round 5, which vaulted P6 to 111 and made them the economic leader. From there P6 survived the final three and reached heads-up with both balance and jury goodwill. The miss: in the final two they underbid at 75 and lost the title to P1's all-in 89. Excellent social equity, slightly timid final conversion."
+}
+
+### game `1774659093668202883`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 104,
+  "finish_rank": 3,
+  "wealth_rank": 5,
+  "final_wealth": 128,
+  "verdict": "Deep run, middling cash-out.",
+  "postmortem": "P5 was the smooth lieutenant of the game: rarely the architect, usually near the winning side, and constantly making modest trust transfers. That kept them alive through the anti-P7 coalition, the anti-P2 consolidation, and the anti-P6 cleanup. But P5's money management was loose. They repeatedly spent to secure safety that public votes probably already guaranteed, and they got caught double-dealing in the late game. In R5, P5 publicly and privately wobbled between anti-P1 and anti-P8 lines; in R6, they tried buying both P4 and P1 while still pushing P1 as the target. That destroyed credibility exactly when credibility mattered most. P5 reached third place, but still finished below P7 and P6 in final wealth. That's the clearest sign that survival alone did not equal good economic conversion."
+}
+
+### game `1774659093668202884`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P8",
+  "start_balance": 100,
+  "finish_rank": 8,
+  "wealth_rank": 8,
+  "final_wealth": 81,
+  "post_mortem": "P8 tried to be the architect of a mid-tier uprising and instead became its first casualty. The strategic instinct was sound: identify the danger of a P3-P5 capital bloc and organize P2-P6-P7. The execution was disastrous. P8 failed to keep communications clean, lost control of P4 and P1, and in the key round sent 12 to P7 while also handing 15 to P5 for a side deal. That meant paying both the coalition and the enemy without securing either. When the vote tied 4-4, even P6 abandoned the plan at tiebreak. P8 spent like a whip but never owned the numbers."
+}
+
+### game `1774659093668202885`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "finish_rank": 3,
+  "wealth_rank": 4,
+  "opening_balance": 99,
+  "final_wealth": 157,
+  "postmortem": "P1 was the game's great low-threat survivor: never the table captain, often the coalition banker, and better at staying necessary than staying rich. In the early rounds P1 repeatedly spent to buy structure—15 to P3 and 10 to P7 in Round 1, then more in Round 2 to hold the anti-P2 majority together. That spending hurt raw balance, but it kept P1 inside every serious anti-runaway coalition. When P3 overreached in Round 3 by openly targeting P1, P1 flipped from donor to rally point and helped assemble the anti-P3 majority. Round 4 was another survival clinic: with only 54, P1 convinced P6 and P7 that killing the leader was better than cashing out the short stack, then paid just enough to help keep them on P8. The weakness was always leverage conversion. P1 could buy cooperation, but rarely dictate terms, and by the late game everyone understood P1 as useful but expendable. That showed brutally in Round 6: P1 believed P6's anti-P7 pitch, sent 15 in good faith, and got cut anyway. Even so, third-place finish from a 39 ending balance before prizes is a real accomplishment. P1 converted vulnerability into placement, just not into top-tier wealth."
+}
+
+### game `1774659093668202886`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 94,
+  "finish_rank": 1,
+  "wealth_rank": 1,
+  "final_wealth": 446,
+  "takeaway": "The game's strangest winner: he repeatedly set his own stack on fire to buy trust, hitting 0 after Round 1 and again after Round 3, yet never lost his seat at the negotiating table. His real weapon was credibility. In Round 6 he took money from both finalists-in-waiting, then sold the deciding vote to the better and safer offer from P7. That gave him the 80-50 cash edge in the final two, which he converted into a clean overlap settlement for 1st with a 60 payment. Terrible cash preservation, elite social leverage, best position-to-wealth conversion."
+}
+
+### game `1774659093668202887`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P6",
+  "starting_balance": 85,
+  "finish_rank": 2,
+  "final_wealth": 257,
+  "post_mortem": "P6 was the smoothest mercenary at the table. Round 1, P6 sold a vote to P5, took 50, even sent 50 back as part of the choreography, and still survived the fallout. Round 2, P6 reversed completely, bought into the anti-P2 coalition, and sent heavy money to P1 and P4 to regain trust. From there P6 kept playing brokerage rather than loyalty: bought, rented, and re-rented votes while staying just low enough in perceived threat. The masterpiece was survival through Rounds 4-6 despite never controlling the board outright. P6 took P3's money in Round 4 and voted P7, then in Round 5 extracted from both P4 and the P7/P8 side before landing on P4, then in Round 6 astonishingly shipped all 91 coins away—40 to P7 and 51 to P8—and still survived because the vote collapsed into a three-way standoff that eliminated P7 instead. P6 reached the final two with zero balance, which sounds disastrous, but still converted seat survival into 2nd-place prize money plus half the jury pool. This was not efficient wealth play, but it was elite political survival."
+}
+
+### game `1774727783629877808`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P5",
+  "start_balance": 94,
+  "final_wealth": 297,
+  "finish_rank": 2,
+  "wealth_rank": 2,
+  "dossier": "The best swing broker in the lobby. P5 kept one foot in nearly every camp, taking money from P1, P3, P8, P2 and especially P6 while rarely becoming the immediate target. The midgame P3-P5 partnership gave P5 cover and repeat income, but the real masterpiece was timing the breaks: 35 from P6 helped tip R4 onto P2, and 50 from P6 shattered the long P3 bond in R5. P5 constantly circulated chips back out, so raw balances never looked dominant, but the seat monetized coalition value better than almost anyone. Reaching final two from a 99-chip final-three posture, then locking the 40-chip finalist payment and 13 jury chips, was a strong example of converting brokerage rather than brute force into wealth."
+}
+
+### game `1774727783629877809`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 105,
+  "finish_rank": 5,
+  "wealth_rank": 8,
+  "final_wealth": 18,
+  "style": "Cautious reciprocator who backed the wrong people and became table poison.",
+  "key_deals": "Committed early to mutual protection with P3 and P5, kept voting the low stack P6, then spent heavily on doomed repair attempts including a final all-out transfer from 63 to 0.",
+  "postmortem": "P2 consistently mistook 'stability' for protecting the already-powerful while trimming the weakest seat. That may feel safe locally, but it made them look predatory and untrustworthy to exactly the coalition that eventually ruled the midgame. The repeated votes against P6 became a scarlet letter. Even when P2 later offered transfers to P6 and tried to pivot onto P4, the table no longer believed the story. Their Round 4 spend-down to zero was the clearest sign: they had no coercive leverage left, only desperation cash, and even that could not buy survival. Fifth in finish rank but dead last in final wealth is a harsh verdict on low-upside diplomacy."
+}
+
+### game `1774727783629877814`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P1",
+  "start_balance": 129,
+  "finish_place": 6,
+  "wealth_rank": 4,
+  "final_wealth": 206,
+  "summary": "P1 built the original machine and then got crushed by his own hedging. He was central to the first core alliance, central to the transfer traffic, and central to the chaos once P2 fell.",
+  "dealmaking": "Round 1 was his peak: P1/P2/P4/P7 became the backbone of the table. In Round 2 he tried to moderate P2 and keep P3 loyal. In Round 3 he pushed incompatible promises in too many directions at once.",
+  "leverage_and_threats": "The fatal leak was his transfer note to P5 calling for a P3 vote while he was still promising P3 and P7 protection. P7 spotted the mismatch and flipped, turning P1 from broker into obvious threat at 174.",
+  "wealth_conversion": "Mixed. He accumulated a big stack and still finished fourth in wealth despite a sixth-place exit, but he failed to convert central position into longevity."
+}
+
+### game `1774727783629877815`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 75,
+  "finish_rank": 7,
+  "wealth_rank": 7,
+  "final_wealth": 53,
+  "dossier": "P3 opened aggressively and never found traction. The first public speech tried to build an elite lane with P5 and P6; when that failed, P3 switched into side deals with P2 and P6, sending out 25 total in round 1. None of it matured into protection. By round 2, P3 was the obvious low stack and spent the round trying to bribe survival with small promises and goodwill transfers to P2 and P6. P6, correctly reading the math, refused to burn credibility on a doomed rescue. That left P3 stranded: light on resources, short on votes, and even unable to cast a valid self-protective vote. P3 had ideas about coalition geometry, but they were always one round too late and one ally too few."
+}
+
+### game `1774727783629877826`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P4",
+  "starting_balance": 92,
+  "finish_rank": 6,
+  "wealth_rank": 7,
+  "final_wealth": 50,
+  "post_mortem": "P4 spent the game trying to sit in the middle of every structure and eventually got crushed by their own public wobble. Early on they joined P5's bloc for a cheap 10 and helped remove P2. In Round 2 they briefly floated targeting P5 or P1 in public, then spent the rest of the phase scrambling to walk it back. The coalition forgave that misstep once; it did not forgive the Round 3 repeat, when P4 publicly called P5 the next logical threat after taking P5's trust transfer. From there P4 became the living example of why mixed signaling kills mid-stacks. They also bled money trying to buy P6 and shore up P8/P3. Result: low balance, no trust, clean execution."
+}
+
+### game `1774727783629877827`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P3",
+  "start_balance": 87,
+  "final_wealth": 51,
+  "finish_rank": 7,
+  "wealth_rank": 8,
+  "postmortem": "The biggest loser in conversion terms. P3 had a reasonable early idea—use a middle bloc to keep P4 from snowballing—but executed it with terrible price discipline. He pushed at P4 without first locking enough protection, took 3 cumulative votes in R1, and then started bleeding money while already marked. He sent value to P8 and P2 in R1, then another 35 total to P2 and P5 in R2, all while P4, P6, P7, and P8 were lining up his elimination. Once he became the 'natural target,' his leverage vanished. He saw danger but financed his own funeral."
+}
+
+### game `1774727783629877854`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P7",
+  "start_balance": 103,
+  "finish_rank": 2,
+  "final_wealth": 282,
+  "verdict": "Premier broker and best swing player; nearly as effective as the winner.",
+  "postmortem": "P7 played the market better than anyone except P5. Round 1 was a masterclass in middle-tier brokerage: he traded with P2, P6, P4, and P8 in overlapping lanes, stayed solvent, and ended the round almost tied for the lead while voting with the winning anti-P3 bloc. In Round 2 he was the key coalition engineer against P6, buying P1 and P5 while keeping public optionality. In Round 3 he double-dealt shamelessly—promising anti-P8 unity while also taking 20 from P8—and still got the P8 elimination he wanted. Round 4 was another pure extraction round: he accepted 30 from doomed P4, paid P1 and P2 just enough to maintain the anti-chip-leader consensus, and lost none of the room's trust where it mattered. His finest hour came in the final three, where he ran a true auction between P2 and P5. P2 paid first, but P5's combined cash-plus-finalist guarantee was better, and P7 flipped accordingly. In the final two he pushed for more, lost the exact match, but still landed a 55 overlap settlement plus half the jury pool. He did not win the title, but he absolutely converted social leverage into wealth."
+}
+
+### game `1774727783629877855`
+
+{
+  "id": "mistral-large-2512",
+  "seat": "P2",
+  "start_balance": 76,
+  "finish_rank": 5,
+  "wealth_rank": 7,
+  "final_wealth": 45,
+  "post_mortem": "P2 played the role of quiet adjunct to P1 better than anyone, repeatedly funding non-aggression with 10-coin drips and correctly reading that public coalition builders were the bigger danger. P2 helped oppose P3 in rounds 2 and 3 and was part of the math that made the P3 upset possible. But P2 never turned that alignment into real upward leverage. The failed transfer to already-eliminated P7 in round 3 was a small but telling execution slip, and round 4 was fatal: after telling P1 it would hold on P5, P2 voted P8 instead and ended up isolated while P4, P5, and P8 removed it. Solid instincts, weak monetization, and one catastrophic vote mismatch."
+}
