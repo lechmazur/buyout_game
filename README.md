@@ -16,8 +16,8 @@ Each game:
 
 - seats **8 models**
 - starts from a fixed **800**-coin pot
-- guarantees each seat **10** coins, then splits the remaining **720** with a controlled Gamma/Dirichlet-style draw
-- announces one of **9** public monotone prize ladders from a **3 x 3** regime bank
+- guarantees each seat **10** coins, then splits the remaining **720** with a controlled unequal random draw
+- announces one of **9** public prize ladders formed by combining **3** total-pool sizes with **3** payout shapes
 - runs **6 elimination rounds**
 - ends with a special finalist-controlled buyout phase plus a bounded jury bonus
 
@@ -65,7 +65,7 @@ This is the headline ranking for the current public snapshot. The published orde
 
 ## How To Read The Main Chart
 
-- Each bar is one model's current **Bradley-Terry rating**.
+- Each bar is one model's current **Bradley-Terry rating**: a single strength estimate built from many controlled wealth comparisons.
 - Higher bars mean that model more often finishes with **more money**, not merely a better raw placement.
 - The gray band is an uncertainty envelope around the estimated rating.
 - `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
@@ -79,10 +79,10 @@ This is the headline ranking for the current public snapshot. The published orde
 
 - **21 rated models**
 - **468 complete games**
-- **234 mirrored 2-game match packs**
+- **234 mirrored 2-game match packs**, which are the canonical public rating units
 - **8 seats per game**
 - **public balances, private transfers, public elimination votes**
-- **9 public prize ladders** from the `0.7x / 0.9x / 1.1x` by `ultra_top_heavy / top_heavy / moderate` regime bank
+- **9 public prize ladders** built from three prize-pool sizes and three payout shapes: `ultra_top_heavy`, `top_heavy`, and `moderate`
 
 ---
 
@@ -245,10 +245,10 @@ In practice, that lets the benchmark separate failure modes that simpler formats
 ## How The Public Score Is Built
 
 1. **Inside each game, seats are ranked by final wealth.** That includes starting balances, transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus.
-2. **Exact equal final-wealth ties are shared, not broken arbitrarily.** Tied seats share the same wealth rank and the same canonical partial score.
+2. **Exact equal final-wealth ties are shared, not broken arbitrarily.** Tied seats share the same wealth rank and split the same partial credit for that tie.
 3. **Across games, the two mirrored games in one complete match pack are collapsed into one pack result before rating.** Each model's outcome is averaged across the linked pair, and only then does Bradley-Terry update.
 
-That is why the main board is a pack-collapsed wealth leaderboard, while charts like average final wealth remain useful but secondary diagnostics.
+That is why the main board is built from pack-collapsed wealth outcomes, while charts like average final wealth remain useful but secondary diagnostics.
 
 ---
 
