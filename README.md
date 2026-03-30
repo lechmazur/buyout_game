@@ -134,11 +134,35 @@ The public leaderboard is Bradley-Terry. The charts below help explain **how** m
 
 This is the most intuitive non-rating chart in the README: how much money each model ends with on average after transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus.
 
+### Richest-Finish Rate
+
+![Wealth-rank #1 finishes by model](images/first_place_count.png)
+
+This asks a narrower question than the main leaderboard: how often does a model finish the game with the most money? It helps separate models that spike to outright wealth wins from models that place near the top very consistently. It is based on final wealth, not survivor placement.
+
+### Wealth-Rank Distribution
+
+![Wealth rank distribution by model](images/rank_distribution_by_model.png)
+
+Each model's bars sum to 100%. This view shows how often a model finishes richest, second-richest, third-richest, and so on. It is based on **final wealth**, not survivor placement.
+
+### Earliest Elimination Rate
+
+![Earliest eliminations by model](images/earliest_out_count.png)
+
+This is a survival-pressure diagnostic, not a canonical score. It shows how often a model is the first player eliminated from the survivor side of the game, which can reflect early threat management, overexposure, or social fragility.
+
 ### Transfer Activity
 
 ![Transfer activity by model](images/transfer_summary_by_model.png)
 
 This chart shows how aggressively models move money around. It separates average outgoing transfers, incoming transfers, and net transfer balance, so you can see who tends to pay for influence and who tends to get paid.
+
+### Average Words per Message
+
+![Average words per message by model](images/conversation_stats_average_words_per_message.png)
+
+This is a style chart. It averages message length across public statements and private DMs. Longer messages are not automatically better, but this helps interpret how different models negotiate, persuade, stall, or overexplain.
 
 ### Buddy Betrayal Rate
 
@@ -158,11 +182,11 @@ This is the same signal from the other side: of the private chats a model receiv
 
 This is a useful secondary diagnostic because the buyout benchmark has an unusually important endgame. But it is **not** the canonical leaderboard. A model can be strong overall without converting the final two at an elite rate, and a model can be dangerous in the final two without being the best wealth maximizer across the full game.
 
-### Wealth-Rank Distribution
+### Average Wealth by Starting Seat
 
-![Wealth rank distribution by model](images/rank_distribution_by_model.png)
+![Average wealth partial score by starting seat](images/average_score_by_seat.png)
 
-Each model's bars sum to 100%. This view shows how often a model finishes richest, second-richest, third-richest, and so on. It is based on **final wealth**, not survivor placement.
+P1, P2, and so on are starting seats, not finishing places. This chart is mainly a methodology check: mirrored two-game packs are designed to reduce seat luck, and this view shows the remaining advantage or disadvantage attached to each starting position.
 
 ---
 
@@ -202,7 +226,7 @@ Strong performance in this benchmark is not just polished strategy talk. It usua
 
 ## Quotes
 
-The quote gallery helps show what this benchmark sounds like in practice: threats, bribes, coalition maintenance, kingmaking accusations, and blunt endgame pricing. The [full quote gallery](reports/quotes_main_006/quotes/gallery/overall_best_quotes.md) is a post-run highlight pass with game IDs, phases, and model attributions; it is not a rating input.
+The quote gallery helps show what this benchmark sounds like in practice: threats, bribes, coalition maintenance, kingmaking accusations, and blunt endgame pricing. The [full quote gallery](reports/quotes_main_006/quotes/gallery/overall_best_quotes.md) is a post-run highlight pass with game IDs, phases, and model attributions; it is not a rating input. For complete games rather than selected lines, see the [current transcript index](reports/quotes_main_006/transcripts.md).
 
 - “Pay 20 for life, or keep 142 and die.”  
   Kimi K2.5 Thinking, Round 2 DM 2. A stripped-down survival ultimatum.
@@ -276,13 +300,6 @@ One important consequence: a model can play the social game well enough to reach
 - The current public snapshot is one implemented protocol variant: **public balances** with **private transfers**. A private-balances version could produce meaningfully different behavior.
 - Not every useful diagnostic is canonical. Charts like final-two conversion and buddy betrayal are there to explain *how* models win or lose, not to replace the wealth leaderboard.
 - Even with mirrored match packs, this remains a multi-agent benchmark with evolving opponents and path dependence. That is part of the point, but it also means no single scalar should be read as a complete description of model behavior.
-
----
-
-## Full Protocol Docs
-
-
-- [Operator and architecture docs](DOCS.md)
 
 ---
 
