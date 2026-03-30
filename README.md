@@ -109,7 +109,7 @@ That is why the headline board is **Bradley-Terry over wealth-based pairwise res
 
 ## What It Measures
 
-This is not just a conversation benchmark in a game wrapper. The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
+The strategic target keeps moving from round to round. Public talk changes coalition incentives. Private DMs change trust and information flow. Transfers change who can threaten whom. Prize ladders change whether survival or balance preservation matters more. The final two then turns placement itself into a bargaining problem.
 
 That pressure exposes several different abilities at once:
 
