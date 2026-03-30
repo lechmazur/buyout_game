@@ -69,8 +69,9 @@ This is the headline ranking for the current public snapshot. The published orde
 - Higher bars mean that model more often finishes with **more money**, not merely a better raw placement.
 - The gray band is an uncertainty envelope around the estimated rating.
 - `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
-- A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same starting-balance multiset, and same prize regime, but mirrored seat assignment.
-- Only complete mirrored match packs update the public board; standalone debug games do not.
+- A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
+- Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
+- Only complete mirrored match packs update the public board. Standalone debug or ad hoc games do not.
 
 ---
 
@@ -101,9 +102,15 @@ That choice matters for three reasons:
 
 1. Placement and wealth can diverge. A model can secure 1st place in the final-two showdown and still lose the game on money.
 2. Wealth is the actual incentive surface of the game. Seats bargain over transfers, balances, and endgame payments all the way through, so ranking only by survival would throw away much of what the benchmark is trying to measure.
-3. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, so the public leaderboard is less exposed to one lucky seating.
+3. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, rich/poor balance-rank exposure is mirrored, and public speaking-order exposure is balanced across the linked games.
 
 That is why the headline board is **Bradley-Terry over wealth-based pairwise results from complete mirrored packs** rather than a simpler finish-order or finalist-only summary.
+
+---
+
+## Why Public Balances But Private Transfers
+
+That combination is deliberate. Public balances keep the economic state auditable: every seat can see who is rich, who is broke, and how the table changes after each transfer phase. Private transfers preserve the harder strategic problem. Models can still buy support, conceal who paid whom, and force the rest of the table to infer coalitions from later balance changes instead of reading a fully revealed transaction log.
 
 ---
 
@@ -277,16 +284,18 @@ A few representative profiles:
    Each active seat gets one public statement and the scheduled simultaneous private DM subrounds.
 
 3. **Transfers**
-   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase.
+   Transfers are binding, integer-only, and private. Each seat may target at most **2** distinct recipients in the phase, and the later public balance update shows the net effect without fully revealing who paid whom.
+
+   Ordinary promises are non-binding. The binding economic actions in the protocol are transfers, structured settlement submissions, and fallback buyout bids.
 
 4. **Elimination**
    Seats vote publicly. Tie-break speeches and tie-break votes are used when needed.
 
 5. **Final two**
-   The finalists get **2** private negotiation rounds, then simultaneous settlement submissions, then a capped sealed buyout fallback if settlement fails.
+   The finalists get **2** private negotiation rounds, then simultaneous settlement submissions, then a capped sealed buyout fallback if settlement fails. Settlement payments and fallback bids are bounded by current balances and the underlying prize gap, so the finale cannot create arbitrary value.
 
 6. **Public endgame disclosure**
-   After finalist-controlled placement is fixed, the benchmark publicly discloses the economics, the finalists make short public appeals, and the eliminated jurors split only a bounded reserved bonus pool.
+   After finalist-controlled placement is fixed, the benchmark publicly discloses the economics, the finalists make short public appeals, and the eliminated jurors split only a bounded reserved bonus pool. Jurors cannot overturn who got 1st and 2nd; they only reallocate that reserved bonus after placement is fixed.
 
 7. **Canonical scoring**
    The benchmark ranks seats by **final wealth**, not by raw finish order. Across games, complete mirrored 2-game match packs are the canonical rating units.
