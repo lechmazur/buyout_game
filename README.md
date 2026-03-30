@@ -71,6 +71,7 @@ This is the headline ranking for the current public snapshot. The published orde
 - `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
 - A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
 - Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
+- For rating purposes, one complete pack counts as **one** unit, not two independent samples. Each model's outcome is first averaged across the paired games, then that pack-collapsed result is used for the public leaderboard update.
 - Only complete mirrored match packs update the public board. Standalone debug or ad hoc games do not.
 
 ---
@@ -102,7 +103,8 @@ That choice matters for three reasons:
 
 1. Placement and wealth can diverge. A model can secure 1st place in the final-two showdown and still lose the game on money.
 2. Wealth is the actual incentive surface of the game. Seats bargain over transfers, balances, and endgame payments all the way through, so ranking only by survival would throw away much of what the benchmark is trying to measure.
-3. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, rich/poor balance-rank exposure is mirrored, and public speaking-order exposure is balanced across the linked games.
+3. Raw coin totals are not directly comparable across different prize ladders and starting-balance scenarios. The canonical board therefore uses wealth-derived pairwise / partial-score outcomes rather than simply ranking models by average final coins.
+4. Mirrored 2-game match packs reduce seat and scenario artifacts. The same lineup, starting-balance multiset, and prize regime are reused while seat assignments are permuted, rich/poor balance-rank exposure is mirrored, and public speaking-order exposure is balanced across the linked games.
 
 That is why the headline board is **Bradley-Terry over wealth-based pairwise results from complete mirrored packs** rather than a simpler finish-order or finalist-only summary.
 
@@ -117,11 +119,12 @@ That combination is deliberate. Public balances keep the economic state auditabl
 ## Why This Benchmark Is Controlled
 
 - **Starting balances are controlled, not ad hoc.** Every game starts from `800`. Each seat gets a guaranteed floor of `10`, and the remaining `720` is split with a Gamma/Dirichlet-style draw using concentration `6.0`. In ordinary runs that draw is deterministic from the game seed. In mirrored evaluation packs, the exact starting-balance multiset is reused across both linked games.
-- **Prize variation is explicit and bounded.** The game announces one public monotone ladder chosen from `9` regimes: `0.7x / 0.9x / 1.1x` crossed with `ultra_top_heavy / top_heavy / moderate`. The ladder stays fixed for the whole game. Eliminations and transfers do not confiscate balances or rewrite the prize pool.
+- **Prize variation is explicit and bounded.** The game announces one public monotone ladder chosen from `9` regimes: `0.7x / 0.9x / 1.1x` crossed with `ultra_top_heavy / top_heavy / moderate`. The ladder stays fixed for the whole game. Eliminations and transfers do not confiscate balances or rewrite the prize pool. In top-heavy ladders, upgrading placement matters more; in more moderate ladders, preserving balance matters more.
 - **Simultaneous phases reduce action-order artifacts.** Private DMs follow a fixed `4,4,3,3,3,2` schedule. In each DM subround, outbound choices are made from the same frozen state, then delivered at once, and seats may reply to up to `2` non-mutual inbound DMs. Transfers are also chosen from one frozen balance snapshot and applied simultaneously, so money received in that phase cannot be re-spent immediately.
 - **The information split is intentional.** Public balances make the economic state auditable. Private transfers keep bargaining, concealment, and coalition inference live because other seats only see later net balance changes, not the full transfer log.
 - **Binding commitments are narrow and explicit.** Ordinary promises, threats, and alliance claims are cheap talk. The binding actions are executed transfers, structured settlement submissions, and sealed fallback buyout bids.
 - **The endgame is rule-bound.** Finalists get `2` private negotiation rounds, then simultaneous settlement submissions. Settlement only executes if both finalists designate the same `1st`-place seat and the feasible payment bounds overlap. Otherwise the game falls to a capped sealed buyout. After placement is fixed, jurors can only reallocate a reserved bounded bonus pool; they cannot reopen `1st` vs `2nd`.
+- **The jury bonus has an anti-noise control.** The bonus pool is reserved out of the original `1st`-place prize rather than created after the fact, and low juror turnout shrinks the effective split back toward `50-50` so a tiny number of votes cannot swing the whole reserved pool too aggressively.
 - **Prompts expose the game state without coaching a house style.** They surface rules, payoffs, and current visible context, but are designed not to tell the models what strategy to use or how to "play correctly."
 
 ---
@@ -151,7 +154,7 @@ The public leaderboard is Bradley-Terry. The charts below help explain **how** m
 
 ![Average final wealth by model](images/wealth_summary_average_final_wealth.png)
 
-This is the most intuitive non-rating chart in the README: how much money each model ends with on average after transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus.
+This is the most intuitive non-rating chart in the README: how much money each model ends with on average after transfers, finish prizes, settlement or buyout resolution, and the bounded jury bonus. It is easier to read than the canonical board, but it is **not** methodologically stronger: raw coin totals move with prize regime and starting-balance context, which is why the public ranking still uses pack-collapsed wealth-based rating outcomes instead.
 
 ### Richest-Finish Rate
 
