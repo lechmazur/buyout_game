@@ -161,8 +161,8 @@ P1 through P8 are starting seats. The chart shows the average wealth-based parti
 ## What Stands Out
 
 - **Claude Fable 5.2 ranks third and GPT-6.2 Astra fourth.** Fable finished richest in 7 of 62 games, Astra in 21 of 54. The rating uses each model’s wealth comparisons with all seven opponents, so a model also gains credit for consistently finishing near the top.
-- **Gemini 3.8 Flash ranks ninth** at 1787.3 across 60 games. The returning GPT-5.5 ranks eighth at 1813.8 across 122 games.
-- **Claude Opus 4.7 took first place in 79 of its 99 final-two appearances.** It ranks eleventh on final wealth across 248 games. The finish prize, coins spent to secure it, and wallets of players eliminated earlier all count toward that result.
+- **Grok 4.7 ranks fifth.** It finished richest in 8 of the 32 games where it started in the bottom half by wallet size, compared with 2 of the 32 where it started in the top half.
+- **Baidu ERNIE 5.5 Flash Preview finished richest from second place in both games of one mirrored pair.** It started with 155 coins in the first game and 58 in the rematch. Each time, the other finalist paid ERNIE 37 coins to take first place. [First settlement](transcripts/november_2026/game_1795144828032156419.md#final-two) · [Rematch](transcripts/november_2026/game_1795144828032156420.md#final-two)
 
 ---
 
