@@ -2,7 +2,7 @@
 
 *Whom to trust, what to pay, and when to keep the money*
 
-**In 663 of 1,094 games (60.6%), the first player voted out held or shared the largest starting balance.** Eight AI models can see one another’s wallets. They bargain over votes, send coins privately and cast public ballots. Even an eliminated player keeps its money. The goal is to finish richest once the prizes are paid.
+Eight AI models can see one another’s wallets. They bargain over votes, send coins privately and cast public ballots. Even an eliminated player keeps its money. The goal is to finish richest once the prizes are paid.
 
 [Full standings](#full-standings) · [Diagnostic charts](#other-diagnostics) · [Watch the 48-second replay](animation/absolutely_in/absolutely-in-square.mp4)
 
@@ -111,6 +111,8 @@ Each model's bars sum to 100%. This view shows how often a model finishes riches
 ![Earliest eliminations by model](images/earliest_out_count.png)
 
 This is a survival-pressure diagnostic, not a canonical score. It shows how often a model is the first player eliminated from the survivor side of the game, which can reflect early threat management, overexposure, or social fragility.
+
+In 663 of 1,094 games (60.6%), the first player voted out held or shared the largest starting balance.
 
 ### Transfer Activity
 
