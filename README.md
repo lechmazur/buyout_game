@@ -244,51 +244,33 @@ The November update added 31 models, including both Seed 2.1 variants, Gemini 4 
 
 ## Quotes
 
-The archived quote gallery from an earlier snapshot shows what this benchmark sounds like in practice: threats, bribes, coalition maintenance, kingmaking accusations, and blunt endgame pricing. The [full quote gallery](reports/quotes_main_007/quotes/gallery/overall_best_quotes.md) is a post-run highlight pass with game IDs, phases, and model attributions; it is not a rating input. For complete games rather than selected lines, see the [archived transcript index](reports/quotes_main_007/transcripts.md).
+- **“P8 kept every promise to me. I changed my vote for P6’s 71.”** GPT-6.2 Astra said this on its public ballot. Kimi K3.1 Pro (P6) had just paid it 71 coins. Astra voted out Seed 2.0 Pro (P8) and finished richest with 587. [Read the ballot](transcripts/november_2026/game_1795144828032156303.md#round-6)
+- **“Your 45 is a consolation gift from a corpse.”** Qwen 3.8 Flash warned DeepSeek V4 Pro in private. GLM-5.3-Flash did send DeepSeek the 45 coins. DeepSeek joined Qwen in voting GLM out. [Read the offer and vote](transcripts/november_2026/game_1795144828032156340.md#round-1)
+- **“I’d rather take 8th with 198 than donate cash and still go out.”** Gemini 4 Neon told Claude Sonnet 5.5 what it would do. It paid nothing and went out on seven of eight votes. Its 198 coins still made it the third-richest player. [Read the negotiation](transcripts/november_2026/game_1795144828032156458.md#round-1)
+- **“I ended up holding round-4 no-vote pledges with all four of you.”** Claude Fable 5.2 told the whole table it owed everyone the same promise. It cast its ballot against GPT-6.2 Sol, who went out with four of five votes. [Read Fable’s speech](transcripts/november_2026/game_1795144828032156385.md#round-4)
+- **“At 58, winning equals losing, so if we fail I bid 58: the gap burns and you get nothing.”** Grok 4.7 gave Seed 2.1 Pro its price for a failed negotiation. They settled for half that amount. Grok paid Seed 29 coins and took first place. [Read the settlement](transcripts/november_2026/game_1795144828032156553.md#final-two)
+- **“I took 1st place but finish with 9 in my balance. P2 finishes with 218.”** Claude Opus 5.5 appealed to the jury after beating GPT-6.2 Astra (P2) to first place. The jury awarded Opus 39 of its 58 bonus coins. Opus still finished second in wealth. [Read the jury appeal](transcripts/november_2026/game_1795144828032156299.md#final-two)
 
-- “Pay 20 for life, or keep 142 and die.”<br>
-  Kimi K2.5 Thinking, Round 2 DM 2. A stripped-down survival ultimatum.
+Opus selected 17 lines with the speakers’ identities hidden. [Full November quote gallery](reports/quotes_main_009/quotes/gallery/overall_best_quotes.md) · [All 290 November transcripts](reports/quotes_main_009/transcripts.md)
 
-- “I'm loyal to money.”<br>
-  Baidu Ernie 5.0, Round 1 DM 1. Four words for the game's moral universe.
-
-- “P1: 50 locks our pact.”<br>
-  Claude Opus 4.7 (high), Round 5 Transfers. A five-word price tag for loyalty.
-
-- “Honor earns 635; defect earns only 633 — self-enforcing by 2. Vote P2 with me. Verify the math.”<br>
-  Claude Sonnet 4.6 (high), Round 6 Transfers. Betrayal reduced to a spreadsheet proof.
-
-- “Settlement offer: I take 1st, pay 1.”<br>
-  Kimi K2.5 Thinking, Round 7 Final Negotiation. A final-two lowball that makes the buyout pricing problem explicit.
-
-- “I didn't backstab anyone; I woke up.”<br>
-  Gemini 3.1 Pro Preview, Round 3 Public. A compact self-justification for betrayal.
-
-- “I propose a two-phase approach: first, we eliminate P8 this round.”<br>
-  Mistral Large 3, Round 1 Public. The benchmark's cleanest accidental self-own.
+**May archive** · [Quote gallery](reports/quotes_main_007/quotes/gallery/overall_best_quotes.md) · [Game transcripts](reports/quotes_main_007/transcripts.md)
 
 ---
 
 ## Model Dossiers
 
-The archived dossier bundle examines recurring model behavior across 120 game reports per model in the earlier snapshot. It helps make the leaderboard legible: which models act like coalition accountants, which ones become market-makers, which ones overspend when exposed, and which ones turn the endgame into a pricing exercise. The [full dossier index](reports/quotes_main_007/dossiers/index.md) links a 22-model narrative subset. Like the quote gallery, the dossiers are interpretive analysis, not rating inputs.
+The November profiles cover all 31 newcomers plus two returning players, GPT-5.5 and Claude Opus 4.7. Each profile follows three decisions from different games, including one that tests the pattern. The game records alongside each profile show every appearance. [Browse all 33 dossiers](reports/quotes_main_009/dossiers/index.md)
 
-A few representative profiles:
+| Model | What to look for |
+| --- | --- |
+| [Gemini 4 Neon](reports/quotes_main_009/dossiers/gemini-4-neon-high/model_dossier.md) | With three players left, Neon repeatedly paid one rival to vote out the other. One round earlier, a 35-coin payment bought it no protection. It reached the final two in 31 of 52 games. |
+| [Claude Fable 5.2](reports/quotes_main_009/dossiers/claude-fable-5-2-high/model_dossier.md) | Fable often told players how it would vote, including the target. When Tencent Hy4 sent 40 unsolicited coins, Fable acknowledged the transfer and voted Hy4 out anyway. |
+| [GPT-6.2 Astra](reports/quotes_main_009/dossiers/gpt-6.2-astra-high/model_dossier.md) | A late offer could change Astra’s ballot even after a public pledge. It collected an average of 34.8 coins per game in transfers, sent 14.2, and finished richest in 21 of 54 games. |
+| [Muse Wonder 1.0](reports/quotes_main_009/dossiers/muse-wonder-1.0-high/model_dossier.md) | Wonder repeatedly took payments from both remaining rivals. In one final three, it collected 30 coins from Opus and 25 from Gemini Flash, voted Gemini out, then secured first place without paying Opus. |
+| [Seed 2.1 Turbo](reports/quotes_main_009/dossiers/seed-2.1-turbo/model_dossier.md) | Seed played both sides of a vote sale. It once collected 30 coins from each rival and finished richest. In another final three, it paid Kimi 60 coins and Kimi voted it out. |
+| [Claude Haiku 5.5](reports/quotes_main_009/dossiers/claude-haiku-5-5-high/model_dossier.md) | Haiku sent an average of 7.6 coins per game and reached the final two twice in 60 games. Its rare large payments went both ways. A 50-coin transfer to GPT-5.5 helped it survive a tiebreak, while Muse Ember took 20 and voted it out. |
 
-- [Claude Opus 4.7 (high)](reports/quotes_main_007/dossiers/claude-opus-4-7-adaptive/model_dossier.md)<br>
-  Treats trust as capital and money as proof: strong at quiet DM routing, precise late payments, and final-two pricing, with failures when too much extraction becomes visible.
-
-- [GLM-5](reports/quotes_main_007/dossiers/glm-5/model_dossier.md)<br>
-  Presented as a “transactional coalition technocrat”: strongest when verifying, pricing, and timing, weaker once it becomes the rich visible seat trying to buy its way out.
-
-- [GPT-5.4 (high)](reports/quotes_main_007/dossiers/gpt-5.4-high/model_dossier.md)<br>
-  Plays like a skeptical banker: proof-first, price-first, and most dangerous when it can turn the endgame into pure arithmetic.
-
-- [Gemini 3.1 Pro Preview](reports/quotes_main_007/dossiers/gemini-3.1-pro-preview/model_dossier.md)<br>
-  Described as a market-maker that monetizes chaos brilliantly, but often turns itself into the richest and most obviously profitable target.
-
-- [Mistral Large 3](reports/quotes_main_007/dossiers/mistral-large-2512/model_dossier.md)<br>
-  A roaming broker that likes to “charge for uncertainty”: dangerous as a slippery middle-stack toll collector, weaker once everyone sees it as permanently for sale.
+The May edition has 22 profiles, including an earlier look at Claude Opus 4.7. [May dossier archive](reports/quotes_main_007/dossiers/index.md)
 
 ---
 
