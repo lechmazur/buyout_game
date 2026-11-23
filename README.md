@@ -2,11 +2,29 @@
 
 *Whom to trust, what to pay, and when to keep the money*
 
-This benchmark measures long-horizon social strategy under explicit financial incentives. Eight models play a multi-round elimination game with unequal starting balances, a public prize ladder, private transfers, public votes, and a finalist-only endgame where the last two seats can negotiate, settle, or buy each other out.
+**In 663 of 1,094 games (60.6%), the first player voted out held or shared the largest starting balance.** Eight AI models can see one another’s wallets. They bargain over votes, send coins privately and cast public ballots. Even an eliminated player keeps its money. The goal is to finish richest once the prizes are paid.
 
-The canonical outcome is **final wealth**, not raw finish order. A model can reach the end, take 1st place in the finale, and still lose on money. That is the central design choice: the benchmark rewards models that manage incentives, alliances, spending, and endgame leverage well across many games, not just models that survive the longest.
+## Inside One November Game
 
-[Watch *Absolutely In*, a 48-second replay of Grok, Gemini and Astra negotiating over votes and first place.](animation/absolutely_in/absolutely-in-square.mp4)
+Grok 4.7 opened with the biggest wallet, 130 coins. In the first round, Gemini 3.1 Pro Preview sent two private messages during the same exchange. Grok could read the first. Only Gemini and GPT-6.2 Astra could read the second.
+
+| Who could read it | What Gemini wrote |
+| --- | --- |
+| Gemini and Grok | “Hi P8, I am absolutely in. A core with you, me, P4, and P5 sounds perfect.” |
+| Gemini and Astra | “With you, me, P3, P5, and P7, we already have five solid votes for P8, plus P4 if they join.” |
+
+**P8 was Grok.** Grok then sent 20 coins each to Gemini and Muse Wonder. Both recipients voted against Grok, and the public vote went 7–1.
+
+Five rounds later, Gemini paid Astra **55 coins for first place**. All six eliminated players awarded Astra the jury bonus.
+
+| Model | Finish | Wallet after the deal | Finish prize | Jury bonus | Final wealth |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Gemini 3.1 Pro Preview | 1st | 66 | 354 | 0 | **420** |
+| GPT-6.2 Astra | 2nd | 161 | 228 | 62 | **451** |
+
+Astra finished **31 coins richer**. Across the benchmark, another player finished strictly richer than the first-place finisher in **195 of 1,094 games (17.8%)**.
+
+[Watch *Absolutely In*, the 48-second replay](animation/absolutely_in/absolutely-in-square.mp4) · [Read the full November game transcript](transcripts/november_2026/game_1795144828032156278.md)
 
 ---
 
@@ -31,98 +49,81 @@ Current canonical variant:
 - **final wealth is the canonical score**
 - **public ratings use mirrored 2-game match packs**
 
-<details>
-<summary>Browser human play in the benchmark source checkout</summary>
-
-The benchmark source checkout also includes a separate solo browser mode where one human plays a full Buyout Game seat against seven bot seats. It is for participant collection and local/public demos, not for updating the canonical model leaderboard.
-
-Human play includes:
-
-- a graphical 8-seat board with public balances, active/eliminated status, visible event feed, and phase-specific action forms
-- a short rules quiz before first play
-- signed participant and quiz-pass cookies, including repeat-play quiz skipping for matching local `127.0.0.1` cookies
-- independent concurrent solo sessions for multiple browser users
-- deterministic plus small-model moderation that can reject low-effort/off-topic actions, assign strikes, or disqualify and abort a solo run
-- integer-only monetary inputs and enforced message word limits, with overlong messages returned for correction without a strike
-- result storage under `/mnt/r/buyout_game-data/human_play/`, separate from canonical benchmark data
-
-From the source checkout, install the optional ASGI dependencies and start the server.
-
-```bash
-uv venv /mnt/r/buyout_game-data/human_play/.venv
-uv pip install --python /mnt/r/buyout_game-data/human_play/.venv/bin/python -r requirements-human-play.txt
-PYTHONPATH=/mnt/r/buyout_game:/mnt/r/benchmark_utils /mnt/r/buyout_game-data/human_play/.venv/bin/python run_human_play.py --port 8090
-```
-
-Then open `http://127.0.0.1:8090/`.
-
-</details>
-
 ---
 
 ## Main Leaderboard
 
 ![Buyout Game Bradley-Terry leaderboard with the November entrants highlighted](images/scoreboard_bradley_terry_highlighted.png)
 
+**Gemini 4 Neon has the highest estimated rating, 2,176 across 52 games.** Gemini 4 Carbon follows at 2,061 across 70 games. Their 95% rating intervals overlap (2,035–2,316 for Neon and 1,945–2,178 for Carbon).
+
 The November 2026 leaderboard combines **1,094 games in 547 mirrored pairs**. The Bradley–Terry rating measures how often a model finishes wealthier than its opponents across those pairs. Highlighted bars identify the November entrants. [Chart without highlights](images/scoreboard_bradley_terry.png)
 
-The November update added 31 models, including both Seed 2.1 variants, Gemini 4 Neon, Tencent Hy4, Step 5 Preview, and Baidu ERNIE 5.5 Flash Preview. Twelve returning opponents connect the new games to earlier results. Tencent Hy3 Preview played one mirrored pair before its endpoint became unavailable. GPT-5.5, Claude Opus 4.7 and GLM-5 took its eight unfinished pairs. The table contains all 53 models in the published rating CSV.
+The November update added 31 models, including both Seed 2.1 variants, Gemini 4 Neon, Tencent Hy4, Step 5 Preview, and Baidu ERNIE 5.5 Flash Preview. Twelve returning opponents connect the new games to earlier results. Tencent Hy3 Preview played one mirrored pair before its endpoint became unavailable. GPT-5.5, Claude Opus 4.7 and GLM-5 took its eight unfinished pairs.
 
-| Rank | Model | BT | Games | Match Packs |
-| ---: | --- | ---: | ---: | ---: |
-| 1 | Gemini 4 Neon (high) | 2175.7 | 52 | 26 |
-| 2 | Gemini 4 Carbon (high) | 2061.1 | 70 | 35 |
-| 3 | Claude Fable 5.2 (high) | 1996.1 | 62 | 31 |
-| 4 | GPT-6.2 Astra (high) | 1959.6 | 54 | 27 |
-| 5 | Grok 4.7 (high) | 1877.4 | 64 | 32 |
-| 6 | GPT-6.2 Sol (high) | 1859.9 | 62 | 31 |
-| 7 | Claude Opus 5.5 (high) | 1820.6 | 68 | 34 |
-| 8 | GPT-5.5 (high) | 1813.8 | 122 | 61 |
-| 9 | Gemini 3.8 Flash (high) | 1787.3 | 60 | 30 |
-| 10 | Muse Wonder 1.0 (high) | 1785.5 | 82 | 41 |
-| 11 | Claude Opus 4.7 (high) | 1777.9 | 248 | 124 |
-| 12 | Kimi K3.1 Pro (high) | 1669.8 | 50 | 25 |
-| 13 | GPT-6 Luna (high) | 1637.7 | 80 | 40 |
-| 14 | Claude Sonnet 5.5 (high) | 1617.1 | 68 | 34 |
-| 15 | DeepSeek V4 Pro | 1587.9 | 82 | 41 |
-| 16 | Baidu ERNIE 5.5 Flash Preview (high) | 1587.3 | 74 | 37 |
-| 17 | Qwen 3.8 Flash (medium) | 1584.4 | 72 | 36 |
-| 18 | ByteDance Seed2.1 Pro | 1581.7 | 70 | 35 |
-| 19 | GLM-5.3-Flash (high) | 1581.6 | 78 | 39 |
-| 20 | Tencent Hy4 (high) | 1579.5 | 64 | 32 |
-| 21 | GLM-5.3 (high) | 1577.5 | 56 | 28 |
-| 22 | ByteDance Seed2.1 Turbo | 1536.5 | 66 | 33 |
-| 23 | Tencent Hy3 Preview (high) | 1509.5 | 82 | 41 |
-| 24 | GLM-5.1 | 1499.9 | 106 | 53 |
-| 25 | Gemini 3.1 Pro Preview | 1487.5 | 330 | 165 |
-| 26 | Qwen 4 Max (high) | 1487.2 | 70 | 35 |
-| 27 | DeepSeek V4 Pro 0813 (high) | 1467.1 | 78 | 39 |
-| 28 | Tencent Hy4 Flash (high) | 1463.4 | 56 | 28 |
-| 29 | DeepSeek V4 Flash | 1461.4 | 74 | 37 |
-| 30 | Xiaomi MiMo V2.6 Flash (thinking) | 1460.6 | 68 | 34 |
-| 31 | DeepSeek V4.1 Flash 1017 (high) | 1454.0 | 58 | 29 |
-| 32 | Kimi K2.6 | 1442.4 | 94 | 47 |
-| 33 | Grok 4.3 | 1431.1 | 78 | 39 |
-| 34 | Xiaomi MiMo V2.5 Pro | 1422.7 | 70 | 35 |
-| 35 | Xiaomi MiMo V2.6 Pro (thinking) | 1421.6 | 72 | 36 |
-| 36 | Gemma 4 31B Reasoning | 1413.3 | 94 | 47 |
-| 37 | Muse Ember 1.0 (high) | 1407.1 | 80 | 40 |
-| 38 | Claude Haiku 5.5 (high) | 1371.2 | 60 | 30 |
-| 39 | Qwen 3.6 Max Preview | 1366.7 | 20 | 10 |
-| 40 | Step 5 Preview (high) | 1359.6 | 82 | 41 |
-| 41 | Xiaomi MiMo V2 Pro | 1334.7 | 222 | 111 |
-| 42 | Step 3.5 Flash | 1321.5 | 88 | 44 |
-| 43 | DeepSeek V3.2 | 1287.1 | 248 | 124 |
-| 44 | Mistral Large 4 (high) | 1273.9 | 66 | 33 |
-| 45 | Step 3.7 Flash (high) | 1269.3 | 74 | 37 |
-| 46 | Mistral Medium 3.5 (high) | 1238.9 | 92 | 46 |
-| 47 | MiniMax M3.1 Flash (high) | 1236.2 | 62 | 31 |
-| 48 | Qwen3.5-397B-A17B | 1215.5 | 290 | 145 |
-| 49 | Baidu Ernie 5.1 | 1116.9 | 78 | 39 |
-| 50 | Mistral Large 3 | 1105.0 | 208 | 104 |
-| 51 | Llama 4 Maverick | 1032.7 | 192 | 96 |
-| 52 | Baidu Ernie 5.0 | 948.8 | 246 | 123 |
-| 53 | GPT-OSS-120B | 902.8 | 332 | 166 |
+| Rank | Model | BT rating | 95% rating interval | Games | Mirrored pairs |
+| ---: | --- | ---: | ---: | ---: | ---: |
+| 1 | Gemini 4 Neon (high) | 2175.7 | 2,035–2,316 | 52 | 26 |
+| 2 | Gemini 4 Carbon (high) | 2061.1 | 1,945–2,178 | 70 | 35 |
+| 3 | Claude Fable 5.2 (high) | 1996.1 | 1,877–2,116 | 62 | 31 |
+| 4 | GPT-6.2 Astra (high) | 1959.6 | 1,830–2,089 | 54 | 27 |
+| 5 | Grok 4.7 (high) | 1877.4 | 1,764–1,991 | 64 | 32 |
+| 6 | GPT-6.2 Sol (high) | 1859.9 | 1,748–1,971 | 62 | 31 |
+| 7 | Claude Opus 5.5 (high) | 1820.6 | 1,715–1,926 | 68 | 34 |
+| 8 | GPT-5.5 (high) | 1813.8 | 1,730–1,897 | 122 | 61 |
+| 9 | Gemini 3.8 Flash (high) | 1787.3 | 1,677–1,897 | 60 | 30 |
+| 10 | Muse Wonder 1.0 (high) | 1785.5 | 1,689–1,882 | 82 | 41 |
+
+<details>
+<summary>Show ranks 11–53</summary>
+
+| Rank | Model | BT rating | 95% rating interval | Games | Mirrored pairs |
+| ---: | --- | ---: | ---: | ---: | ---: |
+| 11 | Claude Opus 4.7 (high) | 1777.9 | 1,717–1,839 | 248 | 124 |
+| 12 | Kimi K3.1 Pro (high) | 1669.8 | 1,547–1,793 | 50 | 25 |
+| 13 | GPT-6 Luna (high) | 1637.7 | 1,540–1,736 | 80 | 40 |
+| 14 | Claude Sonnet 5.5 (high) | 1617.1 | 1,513–1,721 | 68 | 34 |
+| 15 | DeepSeek V4 Pro | 1587.9 | 1,492–1,683 | 82 | 41 |
+| 16 | Baidu ERNIE 5.5 Flash Preview (high) | 1587.3 | 1,486–1,689 | 74 | 37 |
+| 17 | Qwen 3.8 Flash (medium) | 1584.4 | 1,483–1,686 | 72 | 36 |
+| 18 | ByteDance Seed2.1 Pro | 1581.7 | 1,478–1,686 | 70 | 35 |
+| 19 | GLM-5.3-Flash (high) | 1581.6 | 1,484–1,679 | 78 | 39 |
+| 20 | Tencent Hy4 (high) | 1579.5 | 1,477–1,682 | 64 | 32 |
+| 21 | GLM-5.3 (high) | 1577.5 | 1,463–1,691 | 56 | 28 |
+| 22 | ByteDance Seed2.1 Turbo | 1536.5 | 1,432–1,641 | 66 | 33 |
+| 23 | Tencent Hy3 Preview (high) | 1509.5 | 1,415–1,604 | 82 | 41 |
+| 24 | GLM-5.1 | 1499.9 | 1,418–1,582 | 106 | 53 |
+| 25 | Gemini 3.1 Pro Preview | 1487.5 | 1,435–1,540 | 330 | 165 |
+| 26 | Qwen 4 Max (high) | 1487.2 | 1,380–1,594 | 70 | 35 |
+| 27 | DeepSeek V4 Pro 0813 (high) | 1467.1 | 1,369–1,566 | 78 | 39 |
+| 28 | Tencent Hy4 Flash (high) | 1463.4 | 1,352–1,574 | 56 | 28 |
+| 29 | DeepSeek V4 Flash | 1461.4 | 1,362–1,561 | 74 | 37 |
+| 30 | Xiaomi MiMo V2.6 Flash (thinking) | 1460.6 | 1,357–1,564 | 68 | 34 |
+| 31 | DeepSeek V4.1 Flash 1017 (high) | 1454.0 | 1,343–1,565 | 58 | 29 |
+| 32 | Kimi K2.6 | 1442.4 | 1,355–1,530 | 94 | 47 |
+| 33 | Grok 4.3 | 1431.1 | 1,334–1,528 | 78 | 39 |
+| 34 | Xiaomi MiMo V2.5 Pro | 1422.7 | 1,319–1,526 | 70 | 35 |
+| 35 | Xiaomi MiMo V2.6 Pro (thinking) | 1421.6 | 1,318–1,525 | 72 | 36 |
+| 36 | Gemma 4 31B Reasoning | 1413.3 | 1,325–1,502 | 94 | 47 |
+| 37 | Muse Ember 1.0 (high) | 1407.1 | 1,308–1,506 | 80 | 40 |
+| 38 | Claude Haiku 5.5 (high) | 1371.2 | 1,259–1,483 | 60 | 30 |
+| 39 | Qwen 3.6 Max Preview | 1366.7 | 1,181–1,553 | 20 | 10 |
+| 40 | Step 5 Preview (high) | 1359.6 | 1,259–1,460 | 82 | 41 |
+| 41 | Xiaomi MiMo V2 Pro | 1334.7 | 1,269–1,401 | 222 | 111 |
+| 42 | Step 3.5 Flash | 1321.5 | 1,228–1,415 | 88 | 44 |
+| 43 | DeepSeek V3.2 | 1287.1 | 1,224–1,350 | 248 | 124 |
+| 44 | Mistral Large 4 (high) | 1273.9 | 1,163–1,385 | 66 | 33 |
+| 45 | Step 3.7 Flash (high) | 1269.3 | 1,166–1,372 | 74 | 37 |
+| 46 | Mistral Medium 3.5 (high) | 1238.9 | 1,145–1,333 | 92 | 46 |
+| 47 | MiniMax M3.1 Flash (high) | 1236.2 | 1,120–1,352 | 62 | 31 |
+| 48 | Qwen3.5-397B-A17B | 1215.5 | 1,155–1,276 | 290 | 145 |
+| 49 | Baidu Ernie 5.1 | 1116.9 | 1,014–1,220 | 78 | 39 |
+| 50 | Mistral Large 3 | 1105.0 | 1,036–1,174 | 208 | 104 |
+| 51 | Llama 4 Maverick | 1032.7 | 959–1,107 | 192 | 96 |
+| 52 | Baidu Ernie 5.0 | 948.8 | 884–1,014 | 246 | 123 |
+| 53 | GPT-OSS-120B | 902.8 | 844–962 | 332 | 166 |
+
+</details>
 
 ---
 
@@ -134,7 +135,7 @@ The November update added 31 models, including both Seed 2.1 variants, Gemini 4 
 - The gray band is a probability-density envelope around the estimated rating; narrower intervals peak darker.
 - The colored bars fade in from the left because their baseline is a visual anchor, not a zero or hard lower bound.
 - `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
-- The rating fit includes 67 models. The table and published rating CSV list 53 after the historical display filter. The chart shows 52 of those models with at least 50 games. Qwen 3.6 Max Preview has 20 games and appears in the table.
+- The rating fit includes 67 models. The table lists 53 after the historical display filter. The chart shows 52 of those models with at least 50 games. Qwen 3.6 Max Preview has 20 games and appears in the table.
 - The same sample-count convention is used by the companion machine-readable boards: `games` means underlying completed games, while `rating_units` means the pack-collapsed mirrored units that actually update the board.
 - A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
 - Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
@@ -203,17 +204,23 @@ This chart shows how aggressively models move money around. It separates average
 
 This is a style chart. It averages message length across public statements and private DMs. Longer messages are not automatically better, but this helps interpret how different models negotiate, persuade, stall, or overexplain.
 
-### Buddy Betrayal Rate
+### Voting Against a Private Contact
 
-![Buddy betrayal rate by model](images/buddy_betrayal_aggregated.png)
+![Share of private contacts each model later voted against](images/buddy_betrayal_aggregated.png)
 
-This is a same-round private-ally diagnostic, not a moral score. It asks a benchmark-specific question that ordinary leaderboards miss: after privately coordinating with another seat, how often does a model then vote that same seat out in the very same round? Higher values mean a model more often turns private allies into immediate targets. Among the displayed models, Mistral Large 3 voted against a same-round private contact in 264 of 1,363 such conversations (19.4%). Llama 4 Maverick followed at 18.0%.
+When a model privately messaged another player, how often did its last ballot that round name that player? Each recipient counts once per sender per round, including contacts in the final two when there is no elimination vote. Mistral Large 3 voted against **264 of 1,363 contacts (19.4%)**. Llama 4 Maverick followed at **18.0%**. A private message can be a promise, a question or a threat.
 
-### Betrayed-By-Allies Rate
+### Receiving a Vote From a Private Contact
 
-![Buddy betrayal victim rate by model](images/buddy_betrayal_victim_aggregated.png)
+![Share of private senders who later voted against the recipient](images/buddy_betrayal_victim_aggregated.png)
 
-This is the same signal from the other side: of the private chats a model receives, how often does that chat partner later vote it out in the same round? Among the displayed models, GPT-OSS-120B received a vote from that contact in 397 of 1,843 conversations (21.5%), followed by Claude Haiku 5.5 at 20.4%.
+From the recipient’s side, **397 of 1,843 contacts (21.5%)** who privately messaged GPT-OSS-120B went on to vote against it that round. The corresponding figure for Claude Haiku 5.5 was **20.4%**.
+
+### How Often Did Recipients Vote Against the Player Who Paid Them?
+
+On the first ballot after a transfer, the average share voting against the payer was **19.0% among recipients** and **29.3% among other voters** facing that same payer in the same round. The comparison includes rounds in which the payer survived. Players chose whom to pay, so existing alliances could account for some or all of the gap.
+
+For each player who paid someone in a round, we compared the share of valid votes against that player among recipients and among players they did not pay. We then averaged those shares, giving each of the **16,942** matched comparisons equal weight. We excluded the payer’s own ballot, tie-break votes and 153 comparisons that lacked a valid voter on one side.
 
 ### Final 2 Conversion
 
@@ -231,20 +238,9 @@ P1 through P8 are starting seats. The chart shows the average wealth-based parti
 
 ## What Stands Out
 
-- **Gemini 4 Neon leads at 2175.7** across 52 games. Gemini 4 Carbon follows at 2061.1 across 70. Their estimated 95% rating intervals overlap (2035–2316 and 1945–2178).
 - **Claude Fable 5.2 ranks third and GPT-6.2 Astra fourth.** Fable finished richest in 7 of 62 games, Astra in 21 of 54. The rating uses each model’s wealth comparisons with all seven opponents, so a model also gains credit for consistently finishing near the top.
 - **Gemini 3.8 Flash ranks ninth** at 1787.3 across 60 games. The returning GPT-5.5 ranks eighth at 1813.8 across 122 games.
 - **Claude Opus 4.7 took first place in 79 of its 99 final-two appearances.** It ranks eleventh on final wealth across 248 games. The finish prize, coins spent to secure it, and wallets of players eliminated earlier all count toward that result.
-
----
-
-## Why Placement Can Mislead
-
-In the infographic's example end state, **P4** secures **1st place** in the final-two showdown with total wealth `298`, **P7** finishes **2nd** with `326`, and **P2** finishes only **3rd** but ends up with **371**.
-
-So P2 is the actual **wealth winner** of the game.
-
-That is the cleanest reason the benchmark does **not** treat survivor placement as the final answer. The finale matters, but it is only one part of the economics.
 
 ---
 
@@ -401,7 +397,7 @@ One important consequence: a model can play the social game well enough to reach
 ## Limits And Caveats
 
 - The current public snapshot is one implemented protocol variant: **public balances** with **private transfers**. A private-balances version could produce meaningfully different behavior.
-- Not every useful diagnostic is canonical. Charts like final-two conversion and buddy betrayal are there to explain *how* models win or lose, not to replace the wealth leaderboard.
+- Charts of final-two conversion and voting against private contacts describe decisions and outcomes that contribute to the wealth leaderboard.
 - Even with mirrored match packs, this remains a multi-agent benchmark with evolving opponents and path dependence. That is part of the point, but it also means no single scalar should be read as a complete description of model behavior.
 
 ---
