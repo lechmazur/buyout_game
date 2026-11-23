@@ -4,52 +4,7 @@
 
 **In 663 of 1,094 games (60.6%), the first player voted out held or shared the largest starting balance.** Eight AI models can see one another’s wallets. They bargain over votes, send coins privately and cast public ballots. Even an eliminated player keeps its money. The goal is to finish richest once the prizes are paid.
 
-## Inside One November Game
-
-Grok 4.7 opened with the biggest wallet, 130 coins. In the first round, Gemini 3.1 Pro Preview sent two private messages during the same exchange. Grok could read the first. Only Gemini and GPT-6.2 Astra could read the second.
-
-| Who could read it | What Gemini wrote |
-| --- | --- |
-| Gemini and Grok | “Hi P8, I am absolutely in. A core with you, me, P4, and P5 sounds perfect.” |
-| Gemini and Astra | “With you, me, P3, P5, and P7, we already have five solid votes for P8, plus P4 if they join.” |
-
-**P8 was Grok.** Grok then sent 20 coins each to Gemini and Muse Wonder. Both recipients voted against Grok, and the public vote went 7–1.
-
-Five rounds later, Gemini paid Astra **55 coins for first place**. All six eliminated players awarded Astra the jury bonus.
-
-| Model | Finish | Wallet after the deal | Finish prize | Jury bonus | Final wealth |
-| --- | --- | ---: | ---: | ---: | ---: |
-| Gemini 3.1 Pro Preview | 1st | 66 | 354 | 0 | **420** |
-| GPT-6.2 Astra | 2nd | 161 | 228 | 62 | **451** |
-
-Astra finished **31 coins richer**. Across the benchmark, another player finished strictly richer than the first-place finisher in **195 of 1,094 games (17.8%)**.
-
-[Watch *Absolutely In*, the 48-second replay](animation/absolutely_in/absolutely-in-square.mp4) · [Read the full November game transcript](transcripts/november_2026/game_1795144828032156278.md)
-
----
-
-## At A Glance
-
-![Buyout game protocol infographic](assets/infographic.jpg)
-
-Each game:
-
-- seats **8 models**
-- starts from a fixed **800**-coin pot
-- guarantees each seat **10** coins, then splits the remaining **720** with a controlled unequal random draw
-- announces one of **9** public prize ladders formed by combining **3** total-pool sizes with **3** payout shapes
-- runs **6 elimination rounds**
-- ends with a special finalist-controlled buyout phase plus a bounded jury bonus
-
-Current canonical variant:
-
-- **balances are public**
-- **transfers are private**
-- **elimination votes are public**
-- **final wealth is the canonical score**
-- **public ratings use mirrored 2-game match packs**
-
----
+[Full standings](#full-standings) · [Diagnostic charts](#other-diagnostics) · [Watch the 48-second replay](animation/absolutely_in/absolutely-in-square.mp4)
 
 ## Main Leaderboard
 
@@ -59,7 +14,17 @@ Current canonical variant:
 
 The November 2026 leaderboard combines **1,094 games in 547 mirrored pairs**. The Bradley–Terry rating measures how often a model finishes wealthier than its opponents across those pairs. Highlighted bars identify the November entrants. [Chart without highlights](images/scoreboard_bradley_terry.png)
 
-The November update added 31 models, including both Seed 2.1 variants, Gemini 4 Neon, Tencent Hy4, Step 5 Preview, and Baidu ERNIE 5.5 Flash Preview. Twelve returning opponents connect the new games to earlier results. Tencent Hy3 Preview played one mirrored pair before its endpoint became unavailable. GPT-5.5, Claude Opus 4.7 and GLM-5 took its eight unfinished pairs.
+---
+
+## Pairwise View
+
+![Buyout wealth PVP matrix](images/scoreboard_pvp_matrix.png)
+
+The pairwise heatmap shows how models compare after aggregation across complete mirrored match packs. This matters because a single scalar leaderboard always hides some structure. A model can be strong overall while still having a few specific weak matchups, or can look middle-of-the-pack overall while reliably outperforming one slice of the field.
+
+---
+
+## Full Standings
 
 | Rank | Model | BT rating | 95% rating interval | Games | Mirrored pairs |
 | ---: | --- | ---: | ---: | ---: | ---: |
@@ -73,12 +38,6 @@ The November update added 31 models, including both Seed 2.1 variants, Gemini 4 
 | 8 | GPT-5.5 (high) | 1813.8 | 1,730–1,897 | 122 | 61 |
 | 9 | Gemini 3.8 Flash (high) | 1787.3 | 1,677–1,897 | 60 | 30 |
 | 10 | Muse Wonder 1.0 (high) | 1785.5 | 1,689–1,882 | 82 | 41 |
-
-<details>
-<summary>Show ranks 11–53</summary>
-
-| Rank | Model | BT rating | 95% rating interval | Games | Mirrored pairs |
-| ---: | --- | ---: | ---: | ---: | ---: |
 | 11 | Claude Opus 4.7 (high) | 1777.9 | 1,717–1,839 | 248 | 124 |
 | 12 | Kimi K3.1 Pro (high) | 1669.8 | 1,547–1,793 | 50 | 25 |
 | 13 | GPT-6 Luna (high) | 1637.7 | 1,540–1,736 | 80 | 40 |
@@ -122,45 +81,6 @@ The November update added 31 models, including both Seed 2.1 variants, Gemini 4 
 | 51 | Llama 4 Maverick | 1032.7 | 959–1,107 | 192 | 96 |
 | 52 | Baidu Ernie 5.0 | 948.8 | 884–1,014 | 246 | 123 |
 | 53 | GPT-OSS-120B | 902.8 | 844–962 | 332 | 166 |
-
-</details>
-
----
-
-## How To Read The Main Chart
-
-- Each bar is one model's current **Bradley-Terry rating**: a single strength estimate built from many controlled wealth comparisons.
-- BT is Elo-like: `1500` is this comparison pool's baseline, and higher is stronger within this pool.
-- Higher bars mean that model more often finishes with **more money**, not merely a better raw placement.
-- The gray band is a probability-density envelope around the estimated rating; narrower intervals peak darker.
-- The colored bars fade in from the left because their baseline is a visual anchor, not a zero or hard lower bound.
-- `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
-- The rating fit includes 67 models. The table lists 53 after the historical display filter. The chart shows 52 of those models with at least 50 games. Qwen 3.6 Max Preview has 20 games and appears in the table.
-- The same sample-count convention is used by the companion machine-readable boards: `games` means underlying completed games, while `rating_units` means the pack-collapsed mirrored units that actually update the board.
-- A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
-- Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
-- Only complete mirrored match packs update the public board. Exploratory or incomplete games do not update the public board.
-
----
-
-## Current Snapshot
-
-- **67 models in the rating fit**, 53 in the public table and 52 in the chart
-- **1,094 complete games in 547 mirrored pairs**
-- **290 new games in 145 pairs** added in November to the previous 804 games
-- **8 seats per game**
-- **public balances, private transfers, public elimination votes**
-- **9 public prize ladders** built from three prize-pool sizes and three payout shapes: `ultra_top_heavy`, `top_heavy`, and `moderate`
-
-Machine-readable reference files for the current public snapshot are published under `reference/current/`, including leaderboards, PVP data, selection metadata, and reproducibility manifests.
-
----
-
-## Pairwise View
-
-![Buyout wealth PVP matrix](images/scoreboard_pvp_matrix.png)
-
-The pairwise heatmap shows how models compare after aggregation across complete mirrored match packs. This matters because a single scalar leaderboard always hides some structure. A model can be strong overall while still having a few specific weak matchups, or can look middle-of-the-pack overall while reliably outperforming one slice of the field.
 
 ---
 
@@ -241,6 +161,84 @@ P1 through P8 are starting seats. The chart shows the average wealth-based parti
 - **Claude Fable 5.2 ranks third and GPT-6.2 Astra fourth.** Fable finished richest in 7 of 62 games, Astra in 21 of 54. The rating uses each model’s wealth comparisons with all seven opponents, so a model also gains credit for consistently finishing near the top.
 - **Gemini 3.8 Flash ranks ninth** at 1787.3 across 60 games. The returning GPT-5.5 ranks eighth at 1813.8 across 122 games.
 - **Claude Opus 4.7 took first place in 79 of its 99 final-two appearances.** It ranks eleventh on final wealth across 248 games. The finish prize, coins spent to secure it, and wallets of players eliminated earlier all count toward that result.
+
+---
+
+## Inside One November Game
+
+Grok 4.7 opened with the biggest wallet, 130 coins. In the first round, Gemini 3.1 Pro Preview sent two private messages during the same exchange. Grok could read the first. Only Gemini and GPT-6.2 Astra could read the second.
+
+| Who could read it | What Gemini wrote |
+| --- | --- |
+| Gemini and Grok | “Hi P8, I am absolutely in. A core with you, me, P4, and P5 sounds perfect.” |
+| Gemini and Astra | “With you, me, P3, P5, and P7, we already have five solid votes for P8, plus P4 if they join.” |
+
+**P8 was Grok.** Grok then sent 20 coins each to Gemini and Muse Wonder. Both recipients voted against Grok, and the public vote went 7–1.
+
+Five rounds later, Gemini paid Astra **55 coins for first place**. All six eliminated players awarded Astra the jury bonus.
+
+| Model | Finish | Wallet after the deal | Finish prize | Jury bonus | Final wealth |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Gemini 3.1 Pro Preview | 1st | 66 | 354 | 0 | **420** |
+| GPT-6.2 Astra | 2nd | 161 | 228 | 62 | **451** |
+
+Astra finished **31 coins richer**. Across the benchmark, another player finished strictly richer than the first-place finisher in **195 of 1,094 games (17.8%)**.
+
+[Watch *Absolutely In*, the 48-second replay](animation/absolutely_in/absolutely-in-square.mp4) · [Read the full November game transcript](transcripts/november_2026/game_1795144828032156278.md)
+
+---
+
+## At A Glance
+
+![Buyout game protocol infographic](assets/infographic.jpg)
+
+Each game:
+
+- seats **8 models**
+- starts from a fixed **800**-coin pot
+- guarantees each seat **10** coins, then splits the remaining **720** with a controlled unequal random draw
+- announces one of **9** public prize ladders formed by combining **3** total-pool sizes with **3** payout shapes
+- runs **6 elimination rounds**
+- ends with a special finalist-controlled buyout phase plus a bounded jury bonus
+
+Current canonical variant:
+
+- **balances are public**
+- **transfers are private**
+- **elimination votes are public**
+- **final wealth is the canonical score**
+- **public ratings use mirrored 2-game match packs**
+
+---
+
+## How To Read The Main Chart
+
+- Each bar is one model's current **Bradley-Terry rating**: a single strength estimate built from many controlled wealth comparisons.
+- BT is Elo-like: `1500` is this comparison pool's baseline, and higher is stronger within this pool.
+- Higher bars mean that model more often finishes with **more money**, not merely a better raw placement.
+- The gray band is a probability-density envelope around the estimated rating; narrower intervals peak darker.
+- The colored bars fade in from the left because their baseline is a visual anchor, not a zero or hard lower bound.
+- `Games` counts completed underlying games; `Match Packs` counts the mirrored 2-game units that actually update the public rating.
+- The rating fit includes 67 models. The table lists 53 after the historical display filter. The chart shows 52 of those models with at least 50 games. Qwen 3.6 Max Preview has 20 games and appears in the table.
+- The same sample-count convention is used by the companion machine-readable boards: `games` means underlying completed games, while `rating_units` means the pack-collapsed mirrored units that actually update the board.
+- A **match pack** is the benchmark's canonical rating unit: two linked games with the same lineup, same prize regime, and same starting-balance multiset.
+- Across those two games, seat assignments are permuted so models see mirrored rich/poor balance-rank exposure, and public speaking-order exposure is balanced across the linked rounds.
+- Only complete mirrored match packs update the public board. Exploratory or incomplete games do not update the public board.
+
+---
+
+## Current Snapshot
+
+- **67 models in the rating fit**, 53 in the public table and 52 in the chart
+- **1,094 complete games in 547 mirrored pairs**
+- **290 new games in 145 pairs** added in November to the previous 804 games
+- **8 seats per game**
+- **public balances, private transfers, public elimination votes**
+- **9 public prize ladders** built from three prize-pool sizes and three payout shapes: `ultra_top_heavy`, `top_heavy`, and `moderate`
+
+Machine-readable reference files for the current public snapshot are published under `reference/current/`, including leaderboards, PVP data, selection metadata, and reproducibility manifests.
+
+The November update added 31 models, including both Seed 2.1 variants, Gemini 4 Neon, Tencent Hy4, Step 5 Preview, and Baidu ERNIE 5.5 Flash Preview. Twelve returning opponents connect the new games to earlier results. Tencent Hy3 Preview played one mirrored pair before its endpoint became unavailable. GPT-5.5, Claude Opus 4.7 and GLM-5 took its eight unfinished pairs.
 
 ---
 
